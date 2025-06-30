@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ysl2/.dotfiles/discussions]]></title><description><![CDATA[ysl2/.dotfiles/discussions]]></description><link>https://github.com/ysl2/.dotfiles/discussions</link><generator>RSS for Node</generator><lastBuildDate>Mon, 30 Jun 2025 07:42:19 GMT</lastBuildDate><atom:link href="https://cdn.jsdelivr.net/gh/ysl2/.dotfiles/output/feed.rss" rel="self" type="application/rss+xml"/><item><title><![CDATA[文献工作流]]></title><description><![CDATA[<h2 dir="auto">需求</h2>
+<ul dir="auto">
+<li>文献阅读和归档</li>
+<li>文献笔记+画图+插入图片</li>
+<li>可丝滑导出笔记+cite到latex</li>
+</ul>
+<h2 dir="auto">解决方案</h2>
+<ul dir="auto">
+<li>阅读：zotero提供文献归档、阅读标注功能，并且可通过webdav备份</li>
+<li>笔记：obsidian本身提供完备笔记功能，备份可通过git或者webdav</li>
+<li>图片：obsidian第三方drawio插件，可画图；自带图片插入功能</li>
+<li>联动：obsidian对于文件提供url，可链接到zotero</li>
+<li>导出：zotero第三方插件复制biblatex，然后手动粘贴到obsidian的笔记做链接</li>
+</ul>
+<h2 dir="auto">Known issues</h2>
+<ul dir="auto">
+<li>obsidian只提供文件url，不提供文件夹url</li>
+<li>obsidian的drawio插件，左侧工具栏默认折叠，需要手动打开</li>
+<li>obsidian的drawio插件，图片刚创建时无预览，必须切换一下笔记才能展示预览</li>
+</ul>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/107</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/107</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Fri, 27 Jun 2025 03:09:01 GMT</pubDate></item><item><title><![CDATA[zotero]]></title><description><![CDATA[<p dir="auto">Plugin list:</p>
+<ul dir="auto">
+<li><a href="https://github.com/syt2/zotero-addons">Add-on Market for Zotero</a></li>
+<li><a href="https://github.com/nutstore/zotero-plugin-nutstore">Nutstore</a></li>
+<li><a href="https://github.com/windingwind/zotero-pdf-translate">Translate for Zotero</a></li>
+<li><a href="https://github.com/retorquere/zotero-better-bibtex">Better BibTex for Zotero</a></li>
+</ul>
+<hr>
+<blockquote>
+<p dir="auto">Ref: <a href="https://github.com/windingwind/zotero-pdf-translate?tab=readme-ov-file#service">https://github.com/windingwind/zotero-pdf-translate?tab=readme-ov-file#service</a></p>
+</blockquote>
+<p dir="auto">The secret format is <code class="notranslate">MY_APPID#MY_SECRET#MY_VOCABID(optional)</code>. Apply <a href="https://ai.youdao.com/console" rel="nofollow">here</a>.</p>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/459798977-edf66f2f-2b63-4ed2-a529-5554f5174491.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NTk3OTg5NzctZWRmNjZmMmYtMmI2My00ZWQyLWE1MjktNTU1NGY1MTc0NDkxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBjMDNjOTRhNDE2MjYwYTFhN2JlM2MwZWRkOWQxZTVkMzA5OWZhNzg0YzZlMzYyNjk1MmM0YTQ4NTI0NDQyMmQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.LgPdoxF5yWitYsBWoZ1Vy1xoN1WsW3T-wtJv_8OURdk"><img width="1513" alt="Clipboard_Screenshot_1751006449" src="https://private-user-images.githubusercontent.com/39717545/459798977-edf66f2f-2b63-4ed2-a529-5554f5174491.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NTk3OTg5NzctZWRmNjZmMmYtMmI2My00ZWQyLWE1MjktNTU1NGY1MTc0NDkxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBjMDNjOTRhNDE2MjYwYTFhN2JlM2MwZWRkOWQxZTVkMzA5OWZhNzg0YzZlMzYyNjk1MmM0YTQ4NTI0NDQyMmQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.LgPdoxF5yWitYsBWoZ1Vy1xoN1WsW3T-wtJv_8OURdk" style="max-width: 100%;"></a>
+<hr>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/459799356-7336c53f-41db-4699-9e86-bfcd841c67a1.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NTk3OTkzNTYtNzMzNmM1M2YtNDFkYi00Njk5LTllODYtYmZjZDg0MWM2N2ExLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRkNzlkZDMwOGUwYTI3NTU5MTc4NjJhYjlkYjJkOWNhNDJhMzY1NWNhYjc4OTYzZTFkNGRmM2QwODVhMmZiOTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.qqGlMEbLCWJ7Yb9WsnHrPaySuHqZrY5tHVIihkScTAQ"><img width="1512" alt="Clipboard_Screenshot_1751006524" src="https://private-user-images.githubusercontent.com/39717545/459799356-7336c53f-41db-4699-9e86-bfcd841c67a1.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NTk3OTkzNTYtNzMzNmM1M2YtNDFkYi00Njk5LTllODYtYmZjZDg0MWM2N2ExLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRkNzlkZDMwOGUwYTI3NTU5MTc4NjJhYjlkYjJkOWNhNDJhMzY1NWNhYjc4OTYzZTFkNGRmM2QwODVhMmZiOTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.qqGlMEbLCWJ7Yb9WsnHrPaySuHqZrY5tHVIihkScTAQ" style="max-width: 100%;"></a>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/104</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/104</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Wed, 25 Jun 2025 04:40:36 GMT</pubDate></item><item><title><![CDATA[[research] Home]]></title><description><![CDATA[<h2 dir="auto">Google Scholar Metrics</h2>
+<ul dir="auto">
+<li><a href="https://scholar.google.com/citations?view_op=top_venues" rel="nofollow">https://scholar.google.com/citations?view_op=top_venues</a></li>
+<li><a href="https://scholar.google.com/citations?view_op=top_venues&amp;vq=eng" rel="nofollow">https://scholar.google.com/citations?view_op=top_venues&amp;vq=eng</a></li>
+</ul>
+<h2 dir="auto">CVPR 2025</h2>
+<ul dir="auto">
+<li>News: <a href="https://cvpr.thecvf.com/Conferences/2025/News" rel="nofollow">https://cvpr.thecvf.com/Conferences/2025/News</a></li>
+<li>Best papers: <a href="https://cvpr.thecvf.com/Conferences/2025/News/Awards_Press" rel="nofollow">https://cvpr.thecvf.com/Conferences/2025/News/Awards_Press</a></li>
+<li>Best paper candidates: <a href="https://cvpr.thecvf.com/virtual/2025/events/AwardCandidates2025" rel="nofollow">https://cvpr.thecvf.com/virtual/2025/events/AwardCandidates2025</a></li>
+<li>Accepted papers: <a href="https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers" rel="nofollow">https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers</a></li>
+</ul>
+<hr>
+<p dir="auto"><a href="https://github.com/kaixindelele/2025-Awesome-AI-Bloggers">https://github.com/kaixindelele/2025-Awesome-AI-Bloggers</a><br>
+<a href="https://github.com/Hannibal046/Awesome-LLM">https://github.com/Hannibal046/Awesome-LLM</a></p>
+<p dir="auto"><a href="https://lilianweng.github.io/" rel="nofollow">https://lilianweng.github.io/</a><br>
+<a href="https://papers.cool/" rel="nofollow">https://papers.cool/</a><br>
+<a href="https://huggingface.co/papers" rel="nofollow">https://huggingface.co/papers</a><br>
+<a href="https://github.com/trending">https://github.com/trending</a><br>
+<a href="https://news.mit.edu/" rel="nofollow">https://news.mit.edu/</a><br>
+<a href="https://paperswithcode.com/sota" rel="nofollow">https://paperswithcode.com/sota</a><br>
+<a href="https://www.producthunt.com/" rel="nofollow">https://www.producthunt.com/</a></p>
+<hr>
+<p dir="auto">关键词：</p>
+<p dir="auto">survey</p>
+<p dir="auto">review</p>
+<p dir="auto">roadmap</p>
+<p dir="auto">llm</p>
+<p dir="auto">agent</p>
+<p dir="auto">large language model</p>
+<hr>
+<p dir="auto">grpo ppo dpo trpo</p>
+<p dir="auto">trl verl</p>
+<p dir="auto">agent，agent memory，multi agent</p>
+<p dir="auto">mcp</p>
+<p dir="auto">sft</p>
+<p dir="auto">大模型幻觉</p>
+<p dir="auto">triton</p>
+<p dir="auto">dify</p>
+<p dir="auto">rag</p>
+<p dir="auto">bf16 fp16</p>
+<p dir="auto">kv cache</p>
+<p dir="auto">cursor</p>
+<p dir="auto">stable-diffusion</p>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/103</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/103</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Tue, 24 Jun 2025 05:40:10 GMT</pubDate></item><item><title><![CDATA[dlv]]></title><description><![CDATA[<p dir="auto">Build runfile:</p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -gcflags=&quot;all=-N -l&quot; -ldflags=&quot;-s -w&quot; -o main main.go"><pre class="notranslate">CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -gcflags=<span class="pl-s"><span class="pl-pds">"</span>all=-N -l<span class="pl-pds">"</span></span> -ldflags=<span class="pl-s"><span class="pl-pds">"</span>-s -w<span class="pl-pds">"</span></span> -o main main.go</pre></div>
+<p dir="auto">Cross build dlv without any C dependencies:</p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="git clone git@github.com:go-delve/delve.git
+cd delve
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o dlv ./cmd/dlv"><pre class="notranslate">git clone git@github.com:go-delve/delve.git
+<span class="pl-c1">cd</span> delve
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o dlv ./cmd/dlv</pre></div>
+<p dir="auto">Start debug:</p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="./dlv exec ./main -- -other_args"><pre class="notranslate">./dlv <span class="pl-c1">exec</span> ./main -- -other_args</pre></div>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/102</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/102</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Thu, 05 Jun 2025 02:37:51 GMT</pubDate></item><item><title><![CDATA[glibc]]></title><description><![CDATA[<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="wget http://ftp.gnu.org/gnu/glibc/glibc-2.34.tar.gz
+tar -xzf glibc-2.34.tar.gz
+cd glibc-2.34
+mkdir build &amp;&amp; cd build
+../configure --prefix=/opt/glibc-2.34  # Specify the install path
+make -j$(nproc) &amp;&amp; sudo make install"><pre class="notranslate">wget http://ftp.gnu.org/gnu/glibc/glibc-2.34.tar.gz
+tar -xzf glibc-2.34.tar.gz
+<span class="pl-c1">cd</span> glibc-2.34
+mkdir build <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">cd</span> build
+../configure --prefix=/opt/glibc-2.34  <span class="pl-c"><span class="pl-c">#</span> Specify the install path</span>
+make -j<span class="pl-s"><span class="pl-pds">$(</span>nproc<span class="pl-pds">)</span></span> <span class="pl-k">&amp;&amp;</span> sudo make install</pre></div>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/101</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/101</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Sun, 18 May 2025 01:27:36 GMT</pubDate></item><item><title><![CDATA[Create user and specify home path]]></title><description><![CDATA[<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="sudo chmod 755 /data/workspace
+sudo useradd -m -d /data/workspace/songliyu -s /bin/bash songliyu"><pre class="notranslate">sudo chmod 755 /data/workspace
+sudo useradd -m -d /data/workspace/songliyu -s /bin/bash songliyu</pre></div>
+<ul dir="auto">
+<li><code class="notranslate">-m</code>: Automatically create home dir</li>
+<li><code class="notranslate">-d</code>: Specify home path</li>
+<li><code class="notranslate">-s</code>: Specify default shell</li>
+</ul>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="sudo passwd songliyu"><pre class="notranslate">sudo passwd songliyu</pre></div>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="# Check permission
+ls -ld /data/workspace/songliyu
+# If permission not correct, fix it.
+sudo chown -R songliyu:songliyu /data/workspace/songliyu"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> Check permission</span>
+ls -ld /data/workspace/songliyu
+<span class="pl-c"><span class="pl-c">#</span> If permission not correct, fix it.</span>
+sudo chown -R songliyu:songliyu /data/workspace/songliyu</pre></div>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/98</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/98</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Fri, 16 May 2025 10:00:04 GMT</pubDate></item><item><title><![CDATA[uv]]></title><description><![CDATA[<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="uv init myproject -p 3.12
+uv venv
+uv add torch torchvision rich
+uv remove rich
+uv run main.py
+uv sync"><pre class="notranslate"><code class="notranslate">uv init myproject -p 3.12
+uv venv
+uv add torch torchvision rich
+uv remove rich
+uv run main.py
+uv sync
+</code></pre></div>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/97</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/97</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Thu, 15 May 2025 13:14:23 GMT</pubDate></item><item><title><![CDATA[Add sudo permission for normal user]]></title><description><![CDATA[<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="visudo
+
+## Allow root to run any commands anywhere
+root    ALL=(ALL)       ALL
+songliyu        ALL=(ALL)       NOPASSWD:ALL"><pre class="notranslate"><code class="notranslate">visudo
+
+## Allow root to run any commands anywhere
+root    ALL=(ALL)       ALL
+songliyu        ALL=(ALL)       NOPASSWD:ALL
+</code></pre></div>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/96</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/96</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Thu, 15 May 2025 09:11:11 GMT</pubDate></item><item><title><![CDATA[zathura]]></title><description><![CDATA[<h2 dir="auto">Installation</h2>
+<h3 dir="auto">Mac</h3>
+<blockquote>
+<p dir="auto">Ref: <a href="https://github.com/homebrew-zathura/homebrew-zathura">https://github.com/homebrew-zathura/homebrew-zathura</a></p>
+</blockquote>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="brew tap homebrew-zathura/zathura
+brew install zathura --with-synctex
+brew install zathura-pdf-mupdf zathura-pdf-poppler
+d=$(brew --prefix zathura)/lib/zathura ; mkdir -p $d ; for n in cb djvu pdf-mupdf pdf-poppler ps ; do p=$(brew --prefix zathura-$n)/lib$n.dylib ; [[ -f $p ]] &amp;&amp; ln -s $p $d ; done"><pre class="notranslate">brew tap homebrew-zathura/zathura
+brew install zathura --with-synctex
+brew install zathura-pdf-mupdf zathura-pdf-poppler
+d=<span class="pl-s"><span class="pl-pds">$(</span>brew --prefix zathura<span class="pl-pds">)</span></span>/lib/zathura <span class="pl-k">;</span> mkdir -p <span class="pl-smi">$d</span> <span class="pl-k">;</span> <span class="pl-k">for</span> <span class="pl-smi">n</span> <span class="pl-k">in</span> cb djvu pdf-mupdf pdf-poppler ps <span class="pl-k">;</span> <span class="pl-k">do</span> p=<span class="pl-s"><span class="pl-pds">$(</span>brew --prefix zathura-<span class="pl-smi">$n</span><span class="pl-pds">)</span></span>/lib<span class="pl-smi">$n</span>.dylib <span class="pl-k">;</span> [[ <span class="pl-k">-f</span> <span class="pl-smi">$p</span> ]] <span class="pl-k">&amp;&amp;</span> ln -s <span class="pl-smi">$p</span> <span class="pl-smi">$d</span> <span class="pl-k">;</span> <span class="pl-k">done</span></pre></div>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/95</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/95</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Tue, 06 May 2025 04:44:02 GMT</pubDate></item><item><title><![CDATA[[common] Known issues & New features]]></title><description><![CDATA[<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> 移除过时的文件，比如<code class="notranslate">~/.tmux/_</code>等</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> 重新考虑文件夹结构。比如<code class="notranslate">~/.script</code>和<code class="notranslate">~/.vocal/_</code>的统一性</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> alacritty, select mode, press <code class="notranslate">w</code> will jump to next line. hope to jump next word start.</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> 大模型排行榜。chat和database两种。找到常用大模型比如dify或者lobe。并且需要找一个agent方案，实现MCP自动化</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> browser tab fast switch. seek for some browser tiling management</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> W325: Ignoring swapfile from Nvim process 39989</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> discussion export method</li>
+</ul>
+<hr>
+<ol dir="auto">
+<li>所有内容全部移动到discussions</li>
+<li>合并.dotfiles和blog的内容</li>
+</ol>
+<p dir="auto">工具流全部换成开源，并固定长期使用。要求配置可导入导出 (方便通过git跟踪)。将这些工具记录到discussions中<br>
+比如幕布换成开源工具<br>
+TAPD、Jira的开源替代品<br>
+腾讯文档的开源替代。要求office三件套 + 可导入导出markdown</p>
+<hr>
+<p dir="auto"><a href="https://github.com/orgs/community/discussions/3315#discussioncomment-7081810">https://github.com/orgs/community/discussions/3315#discussioncomment-7081810</a></p>
+<ul dir="auto">
+<li><a href="https://github.com/intel/dffml/blob/alice/scripts/dump_discussion.py">https://github.com/intel/dffml/blob/alice/scripts/dump_discussion.py</a></li>
+<li><a href="https://github.com/intel/dffml/blob/main/scripts/discussion_dump_to_markdown.py">https://github.com/intel/dffml/blob/main/scripts/discussion_dump_to_markdown.py</a></li>
+<li><a href="https://github.com/shridhar-tl/github-2-markdown">https://github.com/shridhar-tl/github-2-markdown</a></li>
+<li><a href="https://github.com/King-of-Infinite-Space/gh-discussions-export">https://github.com/King-of-Infinite-Space/gh-discussions-export</a></li>
+<li><a href="https://github.com/jmikedupont2/meta-meme/blob/dc61ba23d9717155a7d68505abef910bffe75ff8/examples/generator/pull_git_comments.py">https://github.com/jmikedupont2/meta-meme/blob/dc61ba23d9717155a7d68505abef910bffe75ff8/examples/generator/pull_git_comments.py</a></li>
+<li><a href="https://github.com/kcorkan/discussion-exporter">https://github.com/kcorkan/discussion-exporter</a></li>
+</ul>
+<p dir="auto"><a href="https://api.github.com/repos/owner/repo/discussions?per_page=100&amp;page=1">https://api.github.com/repos/owner/repo/discussions?per_page=100&amp;page=1</a><br>
+<a href="https://api.github.com/repos/owner/repo/discussions/Discussion-ID/comments">https://api.github.com/repos/owner/repo/discussions/Discussion-ID/comments</a></p>
+<hr>
+<p dir="auto">discussion工具只能导出第一个comment。因此需要转移正文</p>
+<p dir="auto">寻找一个discussion blog page的前端页面，打造成blog。参考我自己的star列表</p>
+<p dir="auto">discussion 编辑时的tab键失效问题：<a href="https://github.com/orgs/community/discussions/127067">https://github.com/orgs/community/discussions/127067</a></p>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/94</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/94</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Sun, 04 May 2025 08:09:50 GMT</pubDate></item><item><title><![CDATA[[common] Localhost configs]]></title><description><![CDATA[<p dir="auto"><code class="notranslate">~/.config/alacritty/alacritty.localhost.toml</code></p>
+<div class="highlight highlight-source-toml notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="[font]
+size = 18
+
+[window]
+opacity = 0.7
+# opacity = 1
+
+# [terminal]
+# shell = &quot;nu&quot;
+
+# NOTE: For some specific situation, e.g, MacBook Pro
+# [keyboard]
+# bindings = [
+#     { key = '[', mods = 'Shift|Alt',  mode = '~Search',    action = 'ToggleViMode'   },
+#     { key = '[', mods = 'Shift|Alt',  mode = 'Vi|~Search', action = 'ScrollToBottom' },
+#     { key = '[', mods = 'Shift|Alt',  mode = 'Vi|~Search', action = 'ClearSelection' },
+# ]"><pre class="notranslate">[<span class="pl-en">font</span>]
+<span class="pl-smi">size</span> = <span class="pl-c1">18</span>
+
+[<span class="pl-en">window</span>]
+<span class="pl-smi">opacity</span> = <span class="pl-c1">0.7</span>
+<span class="pl-c"><span class="pl-c">#</span> opacity = 1</span>
+
+<span class="pl-c"><span class="pl-c">#</span> [terminal]</span>
+<span class="pl-c"><span class="pl-c">#</span> shell = "nu"</span>
+
+<span class="pl-c"><span class="pl-c">#</span> NOTE: For some specific situation, e.g, MacBook Pro</span>
+<span class="pl-c"><span class="pl-c">#</span> [keyboard]</span>
+<span class="pl-c"><span class="pl-c">#</span> bindings = [</span>
+<span class="pl-c"><span class="pl-c">#</span>     { key = '[', mods = 'Shift|Alt',  mode = '~Search',    action = 'ToggleViMode'   },</span>
+<span class="pl-c"><span class="pl-c">#</span>     { key = '[', mods = 'Shift|Alt',  mode = 'Vi|~Search', action = 'ScrollToBottom' },</span>
+<span class="pl-c"><span class="pl-c">#</span>     { key = '[', mods = 'Shift|Alt',  mode = 'Vi|~Search', action = 'ClearSelection' },</span>
+<span class="pl-c"><span class="pl-c">#</span> ]</span></pre></div>
+<hr>
+<p dir="auto"><code class="notranslate">~/.vocal/0/scripts/wm/autostart.localhost.sh</code></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="#!/bin/sh
+
+# Small and big:
+# xrandr --output eDP-1 --mode 1920x1080 --pos 320x1440 --rotate normal --output HDMI-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-2 --off
+# Small and middle:
+xrandr --output eDP-1 --mode 1920x1080 --pos 0x1024 --rotate normal --output HDMI-1 --off --output DP-1 --primary --mode 1280x1024 --pos 320x0 --rotate normal --output HDMI-2 --off
+# Small and TV:
+# xrandr --output eDP-1 --mode 1920x1080 --pos 0x768 --rotate normal --output HDMI-1 --primary --mode 1360x768 --pos 280x0 --rotate normal --output DP-1 --off --output HDMI-2 --off
+feh --bg-fill ~/Pictures/wallpapers/2560x1440.svg
+# feh --bg-fill ~/Pictures/flowers.jpg
+# swaybg -i ~/Pictures/wall.png -m fill
+fcitx5 &amp;
+udiskie --no-automount --no-notify --tray &amp;
+# cfw &amp;"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#!</span>/bin/sh</span>
+
+<span class="pl-c"><span class="pl-c">#</span> Small and big:</span>
+<span class="pl-c"><span class="pl-c">#</span> xrandr --output eDP-1 --mode 1920x1080 --pos 320x1440 --rotate normal --output HDMI-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-2 --off</span>
+<span class="pl-c"><span class="pl-c">#</span> Small and middle:</span>
+xrandr --output eDP-1 --mode 1920x1080 --pos 0x1024 --rotate normal --output HDMI-1 --off --output DP-1 --primary --mode 1280x1024 --pos 320x0 --rotate normal --output HDMI-2 --off
+<span class="pl-c"><span class="pl-c">#</span> Small and TV:</span>
+<span class="pl-c"><span class="pl-c">#</span> xrandr --output eDP-1 --mode 1920x1080 --pos 0x768 --rotate normal --output HDMI-1 --primary --mode 1360x768 --pos 280x0 --rotate normal --output DP-1 --off --output HDMI-2 --off</span>
+feh --bg-fill <span class="pl-k">~</span>/Pictures/wallpapers/2560x1440.svg
+<span class="pl-c"><span class="pl-c">#</span> feh --bg-fill ~/Pictures/flowers.jpg</span>
+<span class="pl-c"><span class="pl-c">#</span> swaybg -i ~/Pictures/wall.png -m fill</span>
+fcitx5 <span class="pl-k">&amp;</span>
+udiskie --no-automount --no-notify --tray <span class="pl-k">&amp;</span>
+<span class="pl-c"><span class="pl-c">#</span> cfw &amp;</span></pre></div>
+<hr>
+<p dir="auto"><code class="notranslate">~/.gitconfig.localhost</code></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="[user]
+        name = xxx
+        email = xxx@xxx.com"><pre class="notranslate"><code class="notranslate">[user]
+        name = xxx
+        email = xxx@xxx.com
+</code></pre></div>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/93</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/93</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Sun, 04 May 2025 05:54:07 GMT</pubDate></item><item><title><![CDATA[`"${HOME}/.${SHELL}rc"` file source order of login shell / non-login shell]]></title><description><![CDATA[<h2 dir="auto">Conclusion</h2>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="mv ~/.bash_login ~/.bash_login_
+mv ~/.bash_profile ~/.bash_profile_
+[ &quot;$(uname)&quot; = Darwin ] &amp;&amp; mv ~/.profile ~/.profile_
+[ &quot;$(uname)&quot; = Darwin ] &amp;&amp; mv ~/.zshenv ~/.zshenv_"><pre class="notranslate">mv <span class="pl-k">~</span>/.bash_login <span class="pl-k">~</span>/.bash_login_
+mv <span class="pl-k">~</span>/.bash_profile <span class="pl-k">~</span>/.bash_profile_
+[ <span class="pl-s"><span class="pl-pds">"</span><span class="pl-s"><span class="pl-pds">$(</span>uname<span class="pl-pds">)</span></span><span class="pl-pds">"</span></span> <span class="pl-k">=</span> Darwin ] <span class="pl-k">&amp;&amp;</span> mv <span class="pl-k">~</span>/.profile <span class="pl-k">~</span>/.profile_
+[ <span class="pl-s"><span class="pl-pds">"</span><span class="pl-s"><span class="pl-pds">$(</span>uname<span class="pl-pds">)</span></span><span class="pl-pds">"</span></span> <span class="pl-k">=</span> Darwin ] <span class="pl-k">&amp;&amp;</span> mv <span class="pl-k">~</span>/.zshenv <span class="pl-k">~</span>/.zshenv_</pre></div>
+<hr>
+<p dir="auto">对于zsh，只需要一个文件<code class="notranslate">~/.zshrc</code>就可以，<code class="notranslate">~/.zshenv</code>和<code class="notranslate">~/.zprofile</code>有没有不影响，但是neovide的环境变量需要写到<code class="notranslate">~/.zprofile</code>里面。</p>
+<p dir="auto">对于bash，需要两个文件<code class="notranslate">~/.profile</code>和<code class="notranslate">~/.bashrc</code>，同时不能有<code class="notranslate">~/.bash_profile</code>和<code class="notranslate">~/.bash_login</code>（否则轮不到<code class="notranslate">~/.profile</code>加载）。</p>
+<p dir="auto">对于tmux，每打开一个pane都是登录shell，按照上面说的顺序加载。</p>
+<p dir="auto">对于startx，startx本身的过程不走这一套，而是走<code class="notranslate">~/.xinitrc</code>那些。但是startx之前，是按照上面这两个顺序加载的。</p>
+<p dir="auto">对于gdm登录i3的时候，是按照上面bash这套流程走的。因此条件和上面这个bash的一样。</p>
+<p dir="auto">TODO: gnomerc是给ubuntu用的？</p>
+<hr>
+<p dir="auto">因此<code class="notranslate">~/.profile</code>链接到<code class="notranslate">~/.bashrc</code>用来满足bash的登录shell以及gdm登录，<code class="notranslate">~/.zshrc</code>也链接到<code class="notranslate">~/.bashrc</code>用来同步zsh和bash的设置。</p>
+<p dir="auto">删掉<code class="notranslate">~/.bash_profile</code>和<code class="notranslate">~/.bash_login</code>。</p>
+<p dir="auto">在<code class="notranslate">~/.bashrc</code>中补充按照当前情况停止source的条件判断，用来满足开机等特殊情况。</p>
+<hr>
+<blockquote>
+<p dir="auto">对于zsh，只需要一个文件<code class="notranslate">~/.zshrc</code>就可以，<code class="notranslate">~/.zshenv</code>和<code class="notranslate">~/.zprofile</code>有没有不影响<br>
+<code class="notranslate">~/.profile</code>链接到<code class="notranslate">~/.bashrc</code>用来满足bash的登录shell以及gdm登录</p>
+</blockquote>
+<p dir="auto">补充：对于Mac，由于不涉及通过dm登录到桌面的场景，并且默认$SHELL是zsh（tmux过程走上述zsh路径），因此不需要有<code class="notranslate">~/.profile</code>文件</p>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/92</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/92</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Sat, 03 May 2025 17:23:22 GMT</pubDate></item><item><title><![CDATA[[mac] Localhost configs]]></title><description><![CDATA[<p dir="auto"><code class="notranslate">~/.bashrc.localhost.post</code></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="myquit() {
+  [ -n &quot;$TMUX&quot; ] &amp;&amp; exit || aerospace close
+}
+alias :q='myquit'"><pre class="notranslate"><span class="pl-en">myquit</span>() {
+  [ <span class="pl-k">-n</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$TMUX</span><span class="pl-pds">"</span></span> ] <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">exit</span> <span class="pl-k">||</span> aerospace close
+}
+<span class="pl-c1">alias</span> :q=<span class="pl-s"><span class="pl-pds">'</span>myquit<span class="pl-pds">'</span></span></pre></div>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/91</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/91</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Sat, 03 May 2025 06:19:41 GMT</pubDate></item><item><title><![CDATA[[mac] Known issues & New features]]></title><description><![CDATA[<h2 dir="auto">System Settings</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> 通知显示超时时间设置
+<ul dir="auto">
+<li>Ref: <a href="https://www.cnblogs.com/itcomputer/p/6613230.html" rel="nofollow">https://www.cnblogs.com/itcomputer/p/6613230.html</a></li>
+<li><code class="notranslate">defaults read com.apple.notificationcenterui bannerTime</code></li>
+<li><code class="notranslate">defaults write com.apple.notificationcenterui bannerTime #</code> 在<code class="notranslate">#</code>里面设置秒数</li>
+<li><code class="notranslate">defaults delete com.apple.notificationcenterui bannerTime</code></li>
+<li><code class="notranslate">killall NotificationCenter</code></li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> 多次空格会生成英文句号 (已经记录到installation中了)</li>
+</ul>
+<h2 dir="auto">Aerospace &amp; Sketchybar</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> 拼音 / ABC，内置输入法和搜狗输入法适配</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> 高版本aerospace，关闭window切换工作区切回的问题 (通过alias暂时规避)</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> 快捷键close功能的适配，避免直接kill进程</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> resize的问题，考虑关联enable norm问题</li>
+</ul>
+<h2 dir="auto">Nvim</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> 全功能适配</li>
+</ul>
+<h2 dir="auto">dotfiles</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Completed task" checked=""> yazi无法显示当前目录下的文件/文件夹内容</li>
+</ul>
+<h2 dir="auto">Hardwere</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> trackpad: cmd + tap to click, sometimes not work: <a href="https://github.com/lcomplete/hammerspoon_mbp14_tap_to_click_fix">https://github.com/lcomplete/hammerspoon_mbp14_tap_to_click_fix</a>
+<ul dir="auto">
+<li><a href="https://www.hammerspoon.org/docs/hs.eventtap.html" rel="nofollow">https://www.hammerspoon.org/docs/hs.eventtap.html</a></li>
+<li><a href="https://www.hammerspoon.org/docs/hs.eventtap.event.html" rel="nofollow">https://www.hammerspoon.org/docs/hs.eventtap.event.html</a></li>
+<li><a href="https://www.hammerspoon.org/docs/hs.html#loadSpoon" rel="nofollow">https://www.hammerspoon.org/docs/hs.html#loadSpoon</a></li>
+<li><a href="https://github.com/Hammerspoon/Spoons/blob/master/Source/ForceTouchMapper.spoon/init.lua">https://github.com/Hammerspoon/Spoons/blob/master/Source/ForceTouchMapper.spoon/init.lua</a></li>
+<li>Add into .dotfiles</li>
+</ul>
+</li>
+</ul>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/90</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/90</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Fri, 02 May 2025 16:46:54 GMT</pubDate></item><item><title><![CDATA[[mac] Installation]]></title><description><![CDATA[<h2 dir="auto">网络设置与配置恢复</h2>
+<ul dir="auto">
+<li>手机在mihomo party的github release页面下载dmg，发送到mac上安装。导入节点信息</li>
+<li><code class="notranslate">xcode-select --install</code></li>
+<li>手动添加ssh的github 443端口配置</li>
+<li>创建ssh keypair并添加到github</li>
+<li>git clone dotfiles和dotlinks -b mac，并执行恢复动作</li>
+</ul>
+<h2 dir="auto">依赖安装</h2>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="/bin/bash -c &quot;$(curl -fsSL https://ghfast.top/https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;"><pre class="notranslate"><code class="notranslate">/bin/bash -c "$(curl -fsSL https://ghfast.top/https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+</code></pre></div>
+<h3 dir="auto">包列表</h3>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="❯ brew list
+==&gt; Formulae
+adwaita-icon-theme		harfbuzz			libusb				pango
+aom				hicolor-icon-theme		libuv				pcre2
+at-spi2-core			highway				libvmaf				pinentry
+atuin				htop				libx11				pixman
+borders				icu4c@77			libxau				pkgconf
+brotli				imath				libxcb				poppler
+c-ares				intltool			libxdmcp			python@3.13
+ca-certificates			jbig2dec			libxext				readline
+cairo				jpeg-turbo			libxfixes			reattach-to-user-namespace
+certifi				jpeg-xl				libxi				redshift
+chafa				json-c				libxrender			ripgrep
+cmake				json-glib			libxtst				rustup
+dbus				lazygit				little-cms2			sketchybar
+desktop-file-utils		leptonica			lpeg				sphinx-doc
+fastfetch			lf				luajit				sqlite
+fontconfig			libarchive			luv				starship
+freetype			libassuan			lz4				switchaudio-osx
+fribidi				libavif				lzo				synctex
+fzf				libb2				meson				tesseract
+gdk-pixbuf			libdeflate			mpdecimal			tmux
+gettext				libepoxy			mujs				tree-sitter
+giflib				libevent			mupdf				unbound
+girara				libgcrypt			ncdu				unibilium
+glib				libgpg-error			ncurses				utf8proc
+gmp				libidn2				neovim				uv
+gnu-sed				libksba				nettle				webp
+gnupg				libmagic			ninja				xorgproto
+gnutls				libnghttp2			node				xz
+go				libnotify			npth				zathura
+gpgme				libpng				nspr				zathura-pdf-mupdf
+graphite2			libpthread-stubs		nss				zathura-pdf-poppler
+gsettings-desktop-schemas	librsvg				openexr				zlib
+gtk+3				libtasn1			openjpeg			zstd
+gtk-mac-integration		libtiff				openssl@3
+gumbo-parser			libunistring			p11-kit
+
+==&gt; Casks
+aerospace			font-fira-code-nerd-font	parallels			snipaste
+alt-tab				hammerspoon			quickrecorder
+baidunetdisk			jiggler				raycast
+cursorcerer			keycastr			scroll-reverser"><pre class="notranslate"><code class="notranslate">❯ brew list
+==&gt; Formulae
+adwaita-icon-theme		harfbuzz			libusb				pango
+aom				hicolor-icon-theme		libuv				pcre2
+at-spi2-core			highway				libvmaf				pinentry
+atuin				htop				libx11				pixman
+borders				icu4c@77			libxau				pkgconf
+brotli				imath				libxcb				poppler
+c-ares				intltool			libxdmcp			python@3.13
+ca-certificates			jbig2dec			libxext				readline
+cairo				jpeg-turbo			libxfixes			reattach-to-user-namespace
+certifi				jpeg-xl				libxi				redshift
+chafa				json-c				libxrender			ripgrep
+cmake				json-glib			libxtst				rustup
+dbus				lazygit				little-cms2			sketchybar
+desktop-file-utils		leptonica			lpeg				sphinx-doc
+fastfetch			lf				luajit				sqlite
+fontconfig			libarchive			luv				starship
+freetype			libassuan			lz4				switchaudio-osx
+fribidi				libavif				lzo				synctex
+fzf				libb2				meson				tesseract
+gdk-pixbuf			libdeflate			mpdecimal			tmux
+gettext				libepoxy			mujs				tree-sitter
+giflib				libevent			mupdf				unbound
+girara				libgcrypt			ncdu				unibilium
+glib				libgpg-error			ncurses				utf8proc
+gmp				libidn2				neovim				uv
+gnu-sed				libksba				nettle				webp
+gnupg				libmagic			ninja				xorgproto
+gnutls				libnghttp2			node				xz
+go				libnotify			npth				zathura
+gpgme				libpng				nspr				zathura-pdf-mupdf
+graphite2			libpthread-stubs		nss				zathura-pdf-poppler
+gsettings-desktop-schemas	librsvg				openexr				zlib
+gtk+3				libtasn1			openjpeg			zstd
+gtk-mac-integration		libtiff				openssl@3
+gumbo-parser			libunistring			p11-kit
+
+==&gt; Casks
+aerospace			font-fira-code-nerd-font	parallels			snipaste
+alt-tab				hammerspoon			quickrecorder
+baidunetdisk			jiggler				raycast
+cursorcerer			keycastr			scroll-reverser
+</code></pre></div>
+<h3 dir="auto">特殊依赖安装</h3>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="brew install rustup
+rustup-init"><pre class="notranslate"><code class="notranslate">brew install rustup
+rustup-init
+</code></pre></div>
+<h2 dir="auto">全局配置</h2>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool false"><pre class="notranslate"><code class="notranslate">defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool false
+</code></pre></div>
+<hr>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439935874-652ae178-ebff-4119-b171-37ce9c26f633.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5MzU4NzQtNjUyYWUxNzgtZWJmZi00MTE5LWIxNzEtMzdjZTljMjZmNjMzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFlZmFlMzFiY2ZjYzdiOWNjODc0MDUzZDRjNWEzZmMwMjQ3NjMwZTUxODk3YjFkNDA0MGUyMjg4Zjc0MDhlZDYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Q-vTLeE38qwCVlUxsQ29MPf5ZoCAyRP_pIg1_sS3Wm4"><img width="715" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439935874-652ae178-ebff-4119-b171-37ce9c26f633.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5MzU4NzQtNjUyYWUxNzgtZWJmZi00MTE5LWIxNzEtMzdjZTljMjZmNjMzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFlZmFlMzFiY2ZjYzdiOWNjODc0MDUzZDRjNWEzZmMwMjQ3NjMwZTUxODk3YjFkNDA0MGUyMjg4Zjc0MDhlZDYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Q-vTLeE38qwCVlUxsQ29MPf5ZoCAyRP_pIg1_sS3Wm4" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/440007185-eafc4890-6112-4276-af98-e32532be35bd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAwMDcxODUtZWFmYzQ4OTAtNjExMi00Mjc2LWFmOTgtZTMyNTMyYmUzNWJkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdjZjM4YTIxMTgyYjNjMWI1NWI2YzcyYzcyMGI3ODI5ZWY4ODk4ODcwNDcyYmU2NThmODI3NmEzZDNjYWIwNjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-RouqfLGYvdCgsHTpAbR7_jFiPYWUgaVnla-xlBl-ak"><img width="715" alt="image" src="https://private-user-images.githubusercontent.com/39717545/440007185-eafc4890-6112-4276-af98-e32532be35bd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAwMDcxODUtZWFmYzQ4OTAtNjExMi00Mjc2LWFmOTgtZTMyNTMyYmUzNWJkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdjZjM4YTIxMTgyYjNjMWI1NWI2YzcyYzcyMGI3ODI5ZWY4ODk4ODcwNDcyYmU2NThmODI3NmEzZDNjYWIwNjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-RouqfLGYvdCgsHTpAbR7_jFiPYWUgaVnla-xlBl-ak" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439939240-1016303c-2ed8-4587-8f8b-2b1052855ad5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5MzkyNDAtMTAxNjMwM2MtMmVkOC00NTg3LThmOGItMmIxMDUyODU1YWQ1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY2ZDMwOTM2Njc3OTE3NGIzYjJhMTBhMTc5YmMxNzI3NWE5M2M1ZDViYjI1ODY5MzA5YTlhYmIxMjY5MDMxMTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.B_-5879Q9z6Eij86GzIV3RQOhEKXKM5LF_PevedIySI"><img width="715" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439939240-1016303c-2ed8-4587-8f8b-2b1052855ad5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5MzkyNDAtMTAxNjMwM2MtMmVkOC00NTg3LThmOGItMmIxMDUyODU1YWQ1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY2ZDMwOTM2Njc3OTE3NGIzYjJhMTBhMTc5YmMxNzI3NWE5M2M1ZDViYjI1ODY5MzA5YTlhYmIxMjY5MDMxMTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.B_-5879Q9z6Eij86GzIV3RQOhEKXKM5LF_PevedIySI" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/440002946-07968bbb-4420-4d02-840b-66ab3edafb0e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAwMDI5NDYtMDc5NjhiYmItNDQyMC00ZDAyLTg0MGItNjZhYjNlZGFmYjBlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM3MDkxOTEzNmI3ZWE0YTljMzVlYTk2MmFhZDUyNTZhZjc5MzMzNTA1YjFjYmVlMzBiZGFiNjYzNjhiMDhhYmYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.mh1HL3vRPVL5SOhK9kHWEBJhqjHKQtYfpzOxMntAjxE"><img width="715" alt="image" src="https://private-user-images.githubusercontent.com/39717545/440002946-07968bbb-4420-4d02-840b-66ab3edafb0e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAwMDI5NDYtMDc5NjhiYmItNDQyMC00ZDAyLTg0MGItNjZhYjNlZGFmYjBlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM3MDkxOTEzNmI3ZWE0YTljMzVlYTk2MmFhZDUyNTZhZjc5MzMzNTA1YjFjYmVlMzBiZGFiNjYzNjhiMDhhYmYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.mh1HL3vRPVL5SOhK9kHWEBJhqjHKQtYfpzOxMntAjxE" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/440119460-2d1c079d-ce82-45c9-b0e7-9120c0980595.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAxMTk0NjAtMmQxYzA3OWQtY2U4Mi00NWM5LWIwZTctOTEyMGMwOTgwNTk1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTY5MWY1ZTQ5ODNhZGM3YTRjYjE1ZTRkYmQ5NjA1N2VlMTAzNjI3NmExNjQ0NjYyNWEyYTk4ODM4MzEwNjRmOTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.uSBwjEkKstrBuNwx_Pwn94yJIeR0Dk41AYrwzgb5928"><img width="715" alt="image" src="https://private-user-images.githubusercontent.com/39717545/440119460-2d1c079d-ce82-45c9-b0e7-9120c0980595.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAxMTk0NjAtMmQxYzA3OWQtY2U4Mi00NWM5LWIwZTctOTEyMGMwOTgwNTk1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTY5MWY1ZTQ5ODNhZGM3YTRjYjE1ZTRkYmQ5NjA1N2VlMTAzNjI3NmExNjQ0NjYyNWEyYTk4ODM4MzEwNjRmOTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.uSBwjEkKstrBuNwx_Pwn94yJIeR0Dk41AYrwzgb5928" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439941764-a770d724-867a-4c22-b258-c6c1e4fb4160.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NDE3NjQtYTc3MGQ3MjQtODY3YS00YzIyLWIyNTgtYzZjMWU0ZmI0MTYwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY4ODFhMDY3NmQzMWE5MGZlZjc1NTlhOGViZDdhZmY3M2QxYWQ2OTI2OWEyZGI0NzQ5NTY3MGRlNWNiMjUzZjkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.5QHjAvZCWzxPRQSzQIijiCVjQnqwD_zqZrjwcnuzjOo"><img width="715" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439941764-a770d724-867a-4c22-b258-c6c1e4fb4160.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NDE3NjQtYTc3MGQ3MjQtODY3YS00YzIyLWIyNTgtYzZjMWU0ZmI0MTYwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY4ODFhMDY3NmQzMWE5MGZlZjc1NTlhOGViZDdhZmY3M2QxYWQ2OTI2OWEyZGI0NzQ5NTY3MGRlNWNiMjUzZjkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.5QHjAvZCWzxPRQSzQIijiCVjQnqwD_zqZrjwcnuzjOo" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/440096514-283d55cb-a3dc-4f21-982d-4b61c9703e8a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAwOTY1MTQtMjgzZDU1Y2ItYTNkYy00ZjIxLTk4MmQtNGI2MWM5NzAzZThhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRmZjQyYmVhNGY2Y2IyOTc0ZTBjMmJhNTBlM2I3ODU5ZTI1ZmU2OTExZjNmNTliNDk2MjBjMjE3MzQ5NzUyZjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-6KlSLLgI8tpzwlqnu6KMeq4K8_0EmGqhTfDlRJhD5U"><img width="715" alt="image" src="https://private-user-images.githubusercontent.com/39717545/440096514-283d55cb-a3dc-4f21-982d-4b61c9703e8a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAwOTY1MTQtMjgzZDU1Y2ItYTNkYy00ZjIxLTk4MmQtNGI2MWM5NzAzZThhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRmZjQyYmVhNGY2Y2IyOTc0ZTBjMmJhNTBlM2I3ODU5ZTI1ZmU2OTExZjNmNTliNDk2MjBjMjE3MzQ5NzUyZjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-6KlSLLgI8tpzwlqnu6KMeq4K8_0EmGqhTfDlRJhD5U" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439942459-0b175b79-7eca-4e5b-bf61-44db7d2e91bb.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NDI0NTktMGIxNzViNzktN2VjYS00ZTViLWJmNjEtNDRkYjdkMmU5MWJiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1NzExNzc5OTZjNTQ4ZGM0OWMwM2ZiMDY2ZjVjMWU5NTIzODI1YTEwZjk0ZjVjMDgxZTViY2NlZjdkNTM3YzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.idjJZUPP_Edtp1nQ8A15AJ0JamMm1TPcQ_l3Cf1dECc"><img width="715" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439942459-0b175b79-7eca-4e5b-bf61-44db7d2e91bb.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NDI0NTktMGIxNzViNzktN2VjYS00ZTViLWJmNjEtNDRkYjdkMmU5MWJiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1NzExNzc5OTZjNTQ4ZGM0OWMwM2ZiMDY2ZjVjMWU5NTIzODI1YTEwZjk0ZjVjMDgxZTViY2NlZjdkNTM3YzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.idjJZUPP_Edtp1nQ8A15AJ0JamMm1TPcQ_l3Cf1dECc" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/447796362-bf245fe4-bbed-4f60-a914-0257fc84f276.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDc3OTYzNjItYmYyNDVmZTQtYmJlZC00ZjYwLWE5MTQtMDI1N2ZjODRmMjc2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFlNTMwYTM0ZWE0OWZjY2NiYTIwNGJkYmI5MGE5Y2UxZjdlN2Q4ZTIwZWU5ZmI5MGM0ODJmOTJhNjlmYzRkMjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.PUkqpWOSmyTDEFJ9kdnkwCruI2zbYa9GN8d6OCEuJsw"><img width="715" alt="Clipboard_Screenshot_1748329272" src="https://private-user-images.githubusercontent.com/39717545/447796362-bf245fe4-bbed-4f60-a914-0257fc84f276.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDc3OTYzNjItYmYyNDVmZTQtYmJlZC00ZjYwLWE5MTQtMDI1N2ZjODRmMjc2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFlNTMwYTM0ZWE0OWZjY2NiYTIwNGJkYmI5MGE5Y2UxZjdlN2Q4ZTIwZWU5ZmI5MGM0ODJmOTJhNjlmYzRkMjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.PUkqpWOSmyTDEFJ9kdnkwCruI2zbYa9GN8d6OCEuJsw" style="max-width: 100%;"></a>
+<hr>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439961114-008dc3da-0a7c-4834-ae09-9e9a82041ed6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjExMTQtMDA4ZGMzZGEtMGE3Yy00ODM0LWFlMDktOWU5YTgyMDQxZWQ2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY5YWIwZjQyZDMwNmMyM2U5Y2M4NWJmOTg1NmFkYjQ5ZTNhNDU3YzYzNGM3MzEzZjEwZDIwODJiZTRkZTkzOWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.hJER7sB8hkQZo_GS0enOy6EslJouuJXEGEYH8Jqnc3c"><img width="556" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439961114-008dc3da-0a7c-4834-ae09-9e9a82041ed6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjExMTQtMDA4ZGMzZGEtMGE3Yy00ODM0LWFlMDktOWU5YTgyMDQxZWQ2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY5YWIwZjQyZDMwNmMyM2U5Y2M4NWJmOTg1NmFkYjQ5ZTNhNDU3YzYzNGM3MzEzZjEwZDIwODJiZTRkZTkzOWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.hJER7sB8hkQZo_GS0enOy6EslJouuJXEGEYH8Jqnc3c" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439961182-8f3b89cc-339a-4dbf-8805-4a6d13719645.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjExODItOGYzYjg5Y2MtMzM5YS00ZGJmLTg4MDUtNGE2ZDEzNzE5NjQ1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTliM2NhODJkNTU0YzE1NmNmNDRiYjcyZjNjYjE4N2VjOTYxZjE5M2ZlNjMxMTdlZjU2YTMyY2ViYWRjZjBiNjkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.gILUpsZlZ7vI3ggmhdYt8BIs3FTxLntCX0iT1-AHvHU"><img width="556" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439961182-8f3b89cc-339a-4dbf-8805-4a6d13719645.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjExODItOGYzYjg5Y2MtMzM5YS00ZGJmLTg4MDUtNGE2ZDEzNzE5NjQ1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTliM2NhODJkNTU0YzE1NmNmNDRiYjcyZjNjYjE4N2VjOTYxZjE5M2ZlNjMxMTdlZjU2YTMyY2ViYWRjZjBiNjkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.gILUpsZlZ7vI3ggmhdYt8BIs3FTxLntCX0iT1-AHvHU" style="max-width: 100%;"></a>
+<hr>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439961541-4376d5f9-70fb-44af-83f6-1aac064bd8dd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjE1NDEtNDM3NmQ1ZjktNzBmYi00NGFmLTgzZjYtMWFhYzA2NGJkOGRkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ0NzgzMDRhZGE4MjljYTIwOTJmNTZkMThhMmUyOWI0MzZlOWNjZTJmMTdjY2I1YjgzNTQ1Y2UxYTYxMzM4YmEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.LljT6ylWNX84Zvazk2Y-HKvxSjPmwMZPc1w6L39n7MU"><img width="560" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439961541-4376d5f9-70fb-44af-83f6-1aac064bd8dd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjE1NDEtNDM3NmQ1ZjktNzBmYi00NGFmLTgzZjYtMWFhYzA2NGJkOGRkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ0NzgzMDRhZGE4MjljYTIwOTJmNTZkMThhMmUyOWI0MzZlOWNjZTJmMTdjY2I1YjgzNTQ1Y2UxYTYxMzM4YmEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.LljT6ylWNX84Zvazk2Y-HKvxSjPmwMZPc1w6L39n7MU" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439961759-00dc7ba1-4e66-4d8c-a1a3-f7f4add57cff.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjE3NTktMDBkYzdiYTEtNGU2Ni00ZDhjLWExYTMtZjdmNGFkZDU3Y2ZmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWJhZTI5YjU5Yjk5N2Y2OTg3MDk5NGExZDVlYjgwOTVkMWY3MDdiM2ZkZjNiYzdlZjk5MzkxZTVlOWMxOGQ2YjEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.UFp_bE7-UggE9l4eGw1FgfQG9x26t-HpIoKw2XFAZfU"><img width="560" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439961759-00dc7ba1-4e66-4d8c-a1a3-f7f4add57cff.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjE3NTktMDBkYzdiYTEtNGU2Ni00ZDhjLWExYTMtZjdmNGFkZDU3Y2ZmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWJhZTI5YjU5Yjk5N2Y2OTg3MDk5NGExZDVlYjgwOTVkMWY3MDdiM2ZkZjNiYzdlZjk5MzkxZTVlOWMxOGQ2YjEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.UFp_bE7-UggE9l4eGw1FgfQG9x26t-HpIoKw2XFAZfU" style="max-width: 100%;"></a>
+<hr>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439963712-f772bcb2-1761-41ba-b0d8-b9f7c64e9596.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjM3MTItZjc3MmJjYjItMTc2MS00MWJhLWIwZDgtYjlmN2M2NGU5NTk2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc3ZTllNmQ1NzhlZGRjOTY5ZGJlODI2ZWY2MGYxYzNmZTA4MTE1YTk5YWQ0OWUwNWY5ZTkzMzUyNzZlZWNhOWUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.QUojkesNNtvKjPVMSKjRXW2NxT1L-lz8-iaCVwbm4VM"><img width="1000" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439963712-f772bcb2-1761-41ba-b0d8-b9f7c64e9596.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjM3MTItZjc3MmJjYjItMTc2MS00MWJhLWIwZDgtYjlmN2M2NGU5NTk2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc3ZTllNmQ1NzhlZGRjOTY5ZGJlODI2ZWY2MGYxYzNmZTA4MTE1YTk5YWQ0OWUwNWY5ZTkzMzUyNzZlZWNhOWUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.QUojkesNNtvKjPVMSKjRXW2NxT1L-lz8-iaCVwbm4VM" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439964019-0877d956-8ebb-461a-918d-506872ac7917.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjQwMTktMDg3N2Q5NTYtOGViYi00NjFhLTkxOGQtNTA2ODcyYWM3OTE3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTVhYjAzZDczNGUyOTg2ZjJhOWQ4NjFkZjEyNGQ2NzQ5NzdhZjJkNzU2NDNlYmNlNTA2YmQwMjBmOGI4ZmMyMTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.z33zCaeoArK2836iPu0qelwat0KYUofFq_4CIjZvq6k"><img width="1000" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439964019-0877d956-8ebb-461a-918d-506872ac7917.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjQwMTktMDg3N2Q5NTYtOGViYi00NjFhLTkxOGQtNTA2ODcyYWM3OTE3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTVhYjAzZDczNGUyOTg2ZjJhOWQ4NjFkZjEyNGQ2NzQ5NzdhZjJkNzU2NDNlYmNlNTA2YmQwMjBmOGI4ZmMyMTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.z33zCaeoArK2836iPu0qelwat0KYUofFq_4CIjZvq6k" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/440119286-ec067083-edcd-420d-a67f-0c26daabbf91.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAxMTkyODYtZWMwNjcwODMtZWRjZC00MjBkLWE2N2YtMGMyNmRhYWJiZjkxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBhMmU3ZDc3Y2IxOTU1OTJlYjMxZjE0NDRhMjY0Yjc3NzQ3MjNmZmExMTdjMTYxMjMyZjE0ODc2ZTkyMjU1NDUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.WINlEM8WASQwzK_407qC1xMHY6C3rj5aKug7wPrMhjM"><img width="1000" alt="image" src="https://private-user-images.githubusercontent.com/39717545/440119286-ec067083-edcd-420d-a67f-0c26daabbf91.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAxMTkyODYtZWMwNjcwODMtZWRjZC00MjBkLWE2N2YtMGMyNmRhYWJiZjkxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBhMmU3ZDc3Y2IxOTU1OTJlYjMxZjE0NDRhMjY0Yjc3NzQ3MjNmZmExMTdjMTYxMjMyZjE0ODc2ZTkyMjU1NDUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.WINlEM8WASQwzK_407qC1xMHY6C3rj5aKug7wPrMhjM" style="max-width: 100%;"></a>
+<hr>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439964638-a2521615-a342-4a96-acd6-4a488c5813e0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjQ2MzgtYTI1MjE2MTUtYTM0Mi00YTk2LWFjZDYtNGE0ODhjNTgxM2UwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTEwODc2ZDc0MTFjNWQ5MWY0YjAxZGJjNTkyYmQ5ZDQ4NDFmZTA0ZWVhMmU1ZDU1ZTk3ZTRiMmM4NWZiZWI3ZWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.io2h9FY_JmNCXP4bCkvrW6rLQlA82-1cUGzNs894s1U"><img width="510" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439964638-a2521615-a342-4a96-acd6-4a488c5813e0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjQ2MzgtYTI1MjE2MTUtYTM0Mi00YTk2LWFjZDYtNGE0ODhjNTgxM2UwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTEwODc2ZDc0MTFjNWQ5MWY0YjAxZGJjNTkyYmQ5ZDQ4NDFmZTA0ZWVhMmU1ZDU1ZTk3ZTRiMmM4NWZiZWI3ZWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.io2h9FY_JmNCXP4bCkvrW6rLQlA82-1cUGzNs894s1U" style="max-width: 100%;"></a>
+<hr>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439965006-a1007869-9f8d-45d9-9444-3846a53a49a2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjUwMDYtYTEwMDc4NjktOWY4ZC00NWQ5LTk0NDQtMzg0NmE1M2E0OWEyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTE0ZThlY2E5ZmMxMzA0MmJlMzM2MzM5MTc0NjMzZTA0ZjUxNDE3OWI3Nzk1OTdiMzZkN2RmY2UxYzkyODViN2YmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.nN5nbgnI1-wjDlkGgEY6fnHICWGXG7lH7TQWCdFEffo"><img width="800" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439965006-a1007869-9f8d-45d9-9444-3846a53a49a2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5NjUwMDYtYTEwMDc4NjktOWY4ZC00NWQ5LTk0NDQtMzg0NmE1M2E0OWEyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTE0ZThlY2E5ZmMxMzA0MmJlMzM2MzM5MTc0NjMzZTA0ZjUxNDE3OWI3Nzk1OTdiMzZkN2RmY2UxYzkyODViN2YmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.nN5nbgnI1-wjDlkGgEY6fnHICWGXG7lH7TQWCdFEffo" style="max-width: 100%;"></a>
+<hr>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439993963-0ad51e3b-6361-40f2-9ed4-78f73613c5e4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5OTM5NjMtMGFkNTFlM2ItNjM2MS00MGYyLTllZDQtNzhmNzM2MTNjNWU0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ5ZTlhMGRmMDMyOWEzMDVlYzJhMjUwMzdhN2YwNTViNzM5ZTFjZjIyMjdlNTI0OTFhZTdiMmQ1M2Y4ZWE5MGMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.pn9I4obzLNLd2RlYe6TDn7ja12kzd3SNenf2YoEbN0o"><img width="400" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439993963-0ad51e3b-6361-40f2-9ed4-78f73613c5e4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5OTM5NjMtMGFkNTFlM2ItNjM2MS00MGYyLTllZDQtNzhmNzM2MTNjNWU0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ5ZTlhMGRmMDMyOWEzMDVlYzJhMjUwMzdhN2YwNTViNzM5ZTFjZjIyMjdlNTI0OTFhZTdiMmQ1M2Y4ZWE5MGMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.pn9I4obzLNLd2RlYe6TDn7ja12kzd3SNenf2YoEbN0o" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439990969-4d201f5e-f22e-4e1b-8bb5-3d2d3ddfe18c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5OTA5NjktNGQyMDFmNWUtZjIyZS00ZTFiLThiYjUtM2QyZDNkZGZlMThjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE3MjFhMDQ0ZGIzMDlmY2Y3MTk1YmMyNzQ3Yjc1OTM3YjQ0YWYyZGIzNGVhMGVjZmI3NjU1NDllMzcyZmNlNDImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.fEGCIhE-UTqfOeoukTNwuFkD_4oqsGT09twT1AbXdeE"><img width="400" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439990969-4d201f5e-f22e-4e1b-8bb5-3d2d3ddfe18c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5OTA5NjktNGQyMDFmNWUtZjIyZS00ZTFiLThiYjUtM2QyZDNkZGZlMThjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE3MjFhMDQ0ZGIzMDlmY2Y3MTk1YmMyNzQ3Yjc1OTM3YjQ0YWYyZGIzNGVhMGVjZmI3NjU1NDllMzcyZmNlNDImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.fEGCIhE-UTqfOeoukTNwuFkD_4oqsGT09twT1AbXdeE" style="max-width: 100%;"></a>
+<hr>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/439992317-052a7f6c-977d-49b6-b0ce-e636650f5ef6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5OTIzMTctMDUyYTdmNmMtOTc3ZC00OWI2LWIwY2UtZTYzNjY1MGY1ZWY2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM4OTg4MjBhMjIzMWU3M2E2MTQzMTdhMTY3ZmUwOGQxZjFjYmY0ZTI3ZTBmOTEwMDY5ZmRjN2FlNmI2YjI4NWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Pi2YczI1EGuu5eiCR76P8QRgzFapj66yLfW8UzcYmsM"><img width="884" alt="image" src="https://private-user-images.githubusercontent.com/39717545/439992317-052a7f6c-977d-49b6-b0ce-e636650f5ef6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80Mzk5OTIzMTctMDUyYTdmNmMtOTc3ZC00OWI2LWIwY2UtZTYzNjY1MGY1ZWY2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM4OTg4MjBhMjIzMWU3M2E2MTQzMTdhMTY3ZmUwOGQxZjFjYmY0ZTI3ZTBmOTEwMDY5ZmRjN2FlNmI2YjI4NWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Pi2YczI1EGuu5eiCR76P8QRgzFapj66yLfW8UzcYmsM" style="max-width: 100%;"></a>
+<hr>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/443505689-c66b4694-24fd-4891-b304-75bc01e1a096.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDM1MDU2ODktYzY2YjQ2OTQtMjRmZC00ODkxLWIzMDQtNzViYzAxZTFhMDk2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZiYTdjZGFjMzBhZTJiZDFlYzQ4ZGVlNTI0NDlmNzkwNmYzZTM4ZjAyYjYzMjA2YTE1MGFjY2Q0MTU0MzY0NzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.0kBcxVpae0wooyXpEbZlwU1skL-f4LYcBqGFYJ7lYi0"><img width="403" alt="image" src="https://private-user-images.githubusercontent.com/39717545/443505689-c66b4694-24fd-4891-b304-75bc01e1a096.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDM1MDU2ODktYzY2YjQ2OTQtMjRmZC00ODkxLWIzMDQtNzViYzAxZTFhMDk2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZiYTdjZGFjMzBhZTJiZDFlYzQ4ZGVlNTI0NDlmNzkwNmYzZTM4ZjAyYjYzMjA2YTE1MGFjY2Q0MTU0MzY0NzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.0kBcxVpae0wooyXpEbZlwU1skL-f4LYcBqGFYJ7lYi0" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/440164060-2a5bc34b-90cc-475e-a653-aba8b913c8b3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAxNjQwNjAtMmE1YmMzNGItOTBjYy00NzVlLWE2NTMtYWJhOGI5MTNjOGIzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQzYjhmYzMxMjUxN2Q3ODVlZTE3YjcwODVlZDE3ZjY2N2Y4NDhkYjlmMTE5ODU2MzZjOWM3YzkyN2FkNjRkYzUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.WKRMG8OkZVcehPH9dcWRHPtjLdkC1QQwK3GPzhITRp4"><img width="350" alt="image" src="https://private-user-images.githubusercontent.com/39717545/440164060-2a5bc34b-90cc-475e-a653-aba8b913c8b3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80NDAxNjQwNjAtMmE1YmMzNGItOTBjYy00NzVlLWE2NTMtYWJhOGI5MTNjOGIzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQzYjhmYzMxMjUxN2Q3ODVlZTE3YjcwODVlZDE3ZjY2N2Y4NDhkYjlmMTE5ODU2MzZjOWM3YzkyN2FkNjRkYzUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.WKRMG8OkZVcehPH9dcWRHPtjLdkC1QQwK3GPzhITRp4" style="max-width: 100%;"></a>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/89</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/89</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Fri, 02 May 2025 13:24:23 GMT</pubDate></item><item><title><![CDATA[Lobe Chat]]></title><description><![CDATA[<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="lobe chat main branch, commit: 2dc712a9be7a8a62a677bfd4220b686eeb0f6b11"><pre class="notranslate"><code class="notranslate">lobe chat main branch, commit: 2dc712a9be7a8a62a677bfd4220b686eeb0f6b11
+</code></pre></div>
+<p dir="auto">注意：重新安装时，只需要删掉lobe-chat容器，然后拉取最新lobe-chat容器，执行<code class="notranslate">docker compose up -d</code>。不要删除<code class="notranslate">docker-compose.yml</code>和<code class="notranslate">init_data.json</code>，也不要删除<code class="notranslate">data</code>和<code class="notranslate">s3_data</code>。否则之前的数据就丢失了。代码是否拉取最新的无所谓。因为使用的并不是最新代码提供的docker compose文件，而是本地的。</p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="docker rm -f lobe-chat
+docker pull lobehub/lobe-chat-database:latest
+docker compose up -d  # Or: docker-compose up -d"><pre class="notranslate">docker rm -f lobe-chat
+docker pull lobehub/lobe-chat-database:latest
+docker compose up -d  <span class="pl-c"><span class="pl-c">#</span> Or: docker-compose up -d</span></pre></div>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="pwd
+# /Users/yusongli/Documents/lobe-chat/docker-compose
+
+docker rm -f lobe-chat lobe-minio lobe-casdoor lobe-network lobe-postgres
+rm -rf data s3_data
+cp local/docker-compose.yml local/init_data.json .
+cp local/.env.example .env
+sed -i 's#./server --createDatabase=true#sleep 5; ./server --createDatabase=true#g' docker-compose.yml
+# Add `S3_SET_ACL=0` to lobe chat for minio
+# sed -i &quot;0,/^\\([ \t]*\\).*S3_BUCKET.*/ { // { h; s//\\1- 'S3_SET_ACL=0'/; H; x; } }&quot; docker-compose.yml
+# For embedding:
+echo &quot;\nDEFAULT_FILES_CONFIG=embedding_model=siliconcloud/Pro/BAAI/bge-m3&quot; &gt;&gt; .env
+sed -i &quot;0,/^\\([ \t]*\\).*NEXT_AUTH_SSO_PROVIDERS.*/ { // { h; s//\\1- 'DEFAULT_FILES_CONFIG=\${DEFAULT_FILES_CONFIG}'/; H; x; } }&quot; docker-compose.yml
+# sed -i 's/host=postgresql/host=&quot;host.docker.internal&quot;/g' docker-compose.yml
+# sed -i 's/postgresql:5432/host.docker.internal:5432/g' docker-compose.yml
+patch &lt; diff
+bash setup.sh
+docker compose up -d  # Or: docker-compose up -d"><pre class="notranslate"><span class="pl-c1">pwd</span>
+<span class="pl-c"><span class="pl-c">#</span> /Users/yusongli/Documents/lobe-chat/docker-compose</span>
+
+docker rm -f lobe-chat lobe-minio lobe-casdoor lobe-network lobe-postgres
+rm -rf data s3_data
+cp local/docker-compose.yml local/init_data.json <span class="pl-c1">.</span>
+cp local/.env.example .env
+sed -i <span class="pl-s"><span class="pl-pds">'</span>s#./server --createDatabase=true#sleep 5; ./server --createDatabase=true#g<span class="pl-pds">'</span></span> docker-compose.yml
+<span class="pl-c"><span class="pl-c">#</span> Add `S3_SET_ACL=0` to lobe chat for minio</span>
+<span class="pl-c"><span class="pl-c">#</span> sed -i "0,/^\\([ \t]*\\).*S3_BUCKET.*/ { // { h; s//\\1- 'S3_SET_ACL=0'/; H; x; } }" docker-compose.yml</span>
+<span class="pl-c"><span class="pl-c">#</span> For embedding:</span>
+<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>\nDEFAULT_FILES_CONFIG=embedding_model=siliconcloud/Pro/BAAI/bge-m3<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> .env
+sed -i <span class="pl-s"><span class="pl-pds">"</span>0,/^<span class="pl-cce">\\</span>([ \t]*<span class="pl-cce">\\</span>).*NEXT_AUTH_SSO_PROVIDERS.*/ { // { h; s//<span class="pl-cce">\\</span>1- 'DEFAULT_FILES_CONFIG=<span class="pl-cce">\$</span>{DEFAULT_FILES_CONFIG}'/; H; x; } }<span class="pl-pds">"</span></span> docker-compose.yml
+<span class="pl-c"><span class="pl-c">#</span> sed -i 's/host=postgresql/host="host.docker.internal"/g' docker-compose.yml</span>
+<span class="pl-c"><span class="pl-c">#</span> sed -i 's/postgresql:5432/host.docker.internal:5432/g' docker-compose.yml</span>
+patch <span class="pl-k">&lt;</span> diff
+bash setup.sh
+docker compose up -d  <span class="pl-c"><span class="pl-c">#</span> Or: docker-compose up -d</span></pre></div>
+<div class="highlight highlight-source-diff notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="diff --git a/docker-compose/setup.sh b/docker-compose/setup.sh
+index c52770aac..fcd1dbeb3 100644
+--- a/docker-compose/setup.sh
++++ b/docker-compose/setup.sh
+@@ -6,13 +6,13 @@
+ 
+ # check operating system
+ # ref: https://github.com/lobehub/lobe-chat/pull/5247
+-if [[ &quot;$OSTYPE&quot; == &quot;darwin&quot;* ]]; then
+-    # macOS
+-    SED_COMMAND=&quot;sed -i ''&quot;
+-else
++# if [[ &quot;$OSTYPE&quot; == &quot;darwin&quot;* ]]; then
++#     # macOS
++#     SED_COMMAND=&quot;sed -i ''&quot;
++# else
+     # not macOS
+     SED_COMMAND=&quot;sed -i&quot;
+-fi
++# fi
+ 
+ # ======================
+ # == Process the args ==
+@@ -446,8 +446,8 @@ section_download_files(){
+ if [ -d &quot;data&quot; ] || [ -d &quot;s3_data&quot; ]; then
+     show_message &quot;tips_already_installed&quot;
+     exit 0
+-else
+-    section_download_files
++# else
++#     section_download_files
+ fi
+ 
+ section_configurate_host() {
+@@ -480,7 +480,11 @@ section_configurate_host() {
+     
+     # If user not specify host, try to get the server ip
+     if [ -z &quot;$HOST&quot; ]; then
+-        HOST=$(hostname -I | awk '{print $1}')
++        if [[ &quot;$OSTYPE&quot; == &quot;darwin&quot;* ]]; then
++            HOST=$(ifconfig en0 |awk '/inet / {print $2; }')
++        else
++            HOST=$(hostname -I | awk '{print $1}')
++        fi
+         # If the host is a private ip and the deploy mode is port mode
+         if [[ &quot;$DEPLOY_MODE&quot; == &quot;1&quot; ]] &amp;&amp; ([[ &quot;$HOST&quot; == &quot;192.168.&quot;* ]] || [[ &quot;$HOST&quot; == &quot;172.&quot;* ]] || [[ &quot;$HOST&quot; == &quot;10.&quot;* ]]); then
+             echo $(show_message &quot;tips_private_ip_detected&quot;)"><pre class="notranslate"><span class="pl-c1">diff --git a/docker-compose/setup.sh b/docker-compose/setup.sh</span>
+index c52770aac..fcd1dbeb3 100644
+<span class="pl-md">--- a/docker-compose/setup.sh</span>
+<span class="pl-mi1">+++ b/docker-compose/setup.sh</span>
+<span class="pl-mdr">@@ -6,13 +6,13 @@</span>
+ 
+ # check operating system
+ # ref: https://github.com/lobehub/lobe-chat/pull/5247
+<span class="pl-md"><span class="pl-md">-</span>if [[ "$OSTYPE" == "darwin"* ]]; then</span>
+<span class="pl-md"><span class="pl-md">-</span>    # macOS</span>
+<span class="pl-md"><span class="pl-md">-</span>    SED_COMMAND="sed -i ''"</span>
+<span class="pl-md"><span class="pl-md">-</span>else</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span># if [[ "$OSTYPE" == "darwin"* ]]; then</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span>#     # macOS</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span>#     SED_COMMAND="sed -i ''"</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span># else</span>
+     # not macOS
+     SED_COMMAND="sed -i"
+<span class="pl-md"><span class="pl-md">-</span>fi</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span># fi</span>
+ 
+ # ======================
+ # == Process the args ==
+<span class="pl-mdr">@@ -446,8 +446,8 @@</span> section_download_files(){
+ if [ -d "data" ] || [ -d "s3_data" ]; then
+     show_message "tips_already_installed"
+     exit 0
+<span class="pl-md"><span class="pl-md">-</span>else</span>
+<span class="pl-md"><span class="pl-md">-</span>    section_download_files</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span># else</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span>#     section_download_files</span>
+ fi
+ 
+ section_configurate_host() {
+<span class="pl-mdr">@@ -480,7 +480,11 @@</span> section_configurate_host() {
+     
+     # If user not specify host, try to get the server ip
+     if [ -z "$HOST" ]; then
+<span class="pl-md"><span class="pl-md">-</span>        HOST=$(hostname -I | awk '{print $1}')</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span>        if [[ "$OSTYPE" == "darwin"* ]]; then</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span>            HOST=$(ifconfig en0 |awk '/inet / {print $2; }')</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span>        else</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span>            HOST=$(hostname -I | awk '{print $1}')</span>
+<span class="pl-mi1"><span class="pl-mi1">+</span>        fi</span>
+         # If the host is a private ip and the deploy mode is port mode
+         if [[ "$DEPLOY_MODE" == "1" ]] &amp;&amp; ([[ "$HOST" == "192.168."* ]] || [[ "$HOST" == "172."* ]] || [[ "$HOST" == "10."* ]]); then
+             echo $(show_message "tips_private_ip_detected")</pre></div>
+<hr>
+<p dir="auto">同样的问题，使用env进行配置时，向量化时返回的错误时401, provider: siliconcloud, 但如果通过webui配置openai key为对应的SILICONCLOUD_API_KEY, 向量化返回的错误是413, 可判断出来embedding model是用了siliconcloud，但是key还是用的openai key...</p>
+<p dir="auto">关键的env配置如下</p>
+<p dir="auto">SILICONCLOUD_API_KEY=sk-xxxxxxxxxxxx<br>
+SILICONCLOUD_PROXY_URL=<a href="https://api.siliconflow.cn/v1/" rel="nofollow">https://api.siliconflow.cn/v1/</a><br>
+DEFAULT_FILES_CONFIG=embedding_model=siliconcloud/netease-youdao/bce-embedding-base_v1<br>
+刚刚去看了代码实现，代码实现是通过从DEFAULT_FILES_CONFIG 截取 PROVIDER 来组合提取env中存在的${PROVIDER}_API_KEY,${PROVIDER}_PROXY_URL 来构建对应的请求的，如果没有${PROVIDER}_API_KEY会使用OPENAI_API_KEY来兜底，兜底这个行为本身需要斟酌，因为可能导致没有正确配置的环境把openai的key暴露到不匹配的provider，但是代码逻辑本身没有问题。<br>
+最后我使用相同环境下重新部署了一次，没有再次复现这个问题。</p>
+<p dir="auto">PS: 413是因为该模型不支持1024维，换了BAAI后正常。</p>
+<h2 dir="auto">把这里换成siliconflow的key和proxy，用于embedding模型</h2>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/39717545/413622642-8813109b-a98c-49d0-86a2-c764cf1566c5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80MTM2MjI2NDItODgxMzEwOWItYTk4Yy00OWQwLTg2YTItYzc2NGNmMTU2NmM1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTcxYzQyODIzZmYxODdhZTNiYzk1MDJmNjAxZjIzOGZkNTkyOTVmYjdhYTkzYjYwOWEyNDA3ODZhNjY0NmJlNDAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.hAVXqGYeKfbwGDNA2tfDQ22rokm_9OQH28YR92lmFeM"><img width="1708" alt="Image" src="https://private-user-images.githubusercontent.com/39717545/413622642-8813109b-a98c-49d0-86a2-c764cf1566c5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyNjk2MzksIm5iZiI6MTc1MTI2OTMzOSwicGF0aCI6Ii8zOTcxNzU0NS80MTM2MjI2NDItODgxMzEwOWItYTk4Yy00OWQwLTg2YTItYzc2NGNmMTU2NmM1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDA3NDIxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTcxYzQyODIzZmYxODdhZTNiYzk1MDJmNjAxZjIzOGZkNTkyOTVmYjdhYTkzYjYwOWEyNDA3ODZhNjY0NmJlNDAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.hAVXqGYeKfbwGDNA2tfDQ22rokm_9OQH28YR92lmFeM" style="max-width: 100%;"></a>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/105</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/105</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Sun, 16 Feb 2025 10:09:59 GMT</pubDate></item><item><title><![CDATA[LLM相关]]></title><description><![CDATA[<h2 dir="auto">在线使用</h2>
+<blockquote>
+<p dir="auto">Ref: <a href="https://www.v2ex.com/t/1108382" rel="nofollow">https://www.v2ex.com/t/1108382</a></p>
+</blockquote>
+<p dir="auto">中转API key提供方：</p>
+<ul dir="auto">
+<li><a href="https://luee.net/key" rel="nofollow">https://luee.net/key</a> ，速度快，但是感觉不是o3-mini</li>
+<li><a href="https://siliconflow.cn" rel="nofollow">https://siliconflow.cn</a> ，可用deepseek。<a href="https://deepinfra.com" rel="nofollow">https://deepinfra.com</a></li>
+</ul>
+<p dir="auto">All in one：<a href="https://www.closechat.org/" rel="nofollow">https://www.closechat.org/</a> ，速度快，并且是o3-mini，但是太贵<br>
+某宝还买了中转api，速度慢，只能o1-mini。直连key效果还行</p>
+<p dir="auto">前端：chatbox，桌面端/移动端都可用</p>
+<h2 dir="auto">本地部署</h2>
+<p dir="auto">显卡：apple m3 silicon</p>
+<p dir="auto">后端：ollama</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="P ollama run deepseek-r1:32b"><pre class="notranslate"><code class="notranslate">P ollama run deepseek-r1:32b
+</code></pre></div>
+<p dir="auto">前端：gpt_academic</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="cp config.py config_private.py
+python main.py"><pre class="notranslate"><code class="notranslate">cp config.py config_private.py
+python main.py
+</code></pre></div>
+<hr>
+<h2 dir="auto">Ollama安装</h2>
+<h3 dir="auto">国内下载参考</h3>
+<blockquote>
+<p dir="auto">Ref: <a href="https://tianhao.tech/default/ollama-installation-guide-china.html" rel="nofollow">https://tianhao.tech/default/ollama-installation-guide-china.html</a></p>
+</blockquote>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="curl -fsSL https://ollama.com/install.sh -o ollama_install.sh"><pre class="notranslate">curl -fsSL https://ollama.com/install.sh -o ollama_install.sh</pre></div>
+<p dir="auto">替换下载链接：</p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="#!/bin/bash
+
+# 文件路径
+FILE=&quot;ollama_install.sh&quot;
+
+# 修改 URL
+sed -i 's|https://ollama.com/download/ollama-linux-${ARCH}${VER_PARAM}|https://github.moeyy.xyz/https://github.com/ollama/ollama/releases/download/v0.3.4/ollama-linux-amd64|g' $FILE
+sed -i 's|https://ollama.com/download/ollama-linux-amd64-rocm.tgz${VER_PARAM}|https://github.moeyy.xyz/https://github.com/ollama/ollama/releases/download/v0.3.4/ollama-linux-amd64-rocm.tgz|g' $FILE"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#!</span>/bin/bash</span>
+
+<span class="pl-c"><span class="pl-c">#</span> 文件路径</span>
+FILE=<span class="pl-s"><span class="pl-pds">"</span>ollama_install.sh<span class="pl-pds">"</span></span>
+
+<span class="pl-c"><span class="pl-c">#</span> 修改 URL</span>
+sed -i <span class="pl-s"><span class="pl-pds">'</span>s|https://ollama.com/download/ollama-linux-${ARCH}${VER_PARAM}|https://github.moeyy.xyz/https://github.com/ollama/ollama/releases/download/v0.3.4/ollama-linux-amd64|g<span class="pl-pds">'</span></span> <span class="pl-smi">$FILE</span>
+sed -i <span class="pl-s"><span class="pl-pds">'</span>s|https://ollama.com/download/ollama-linux-amd64-rocm.tgz${VER_PARAM}|https://github.moeyy.xyz/https://github.com/ollama/ollama/releases/download/v0.3.4/ollama-linux-amd64-rocm.tgz|g<span class="pl-pds">'</span></span> <span class="pl-smi">$FILE</span></pre></div>
+<h3 dir="auto">autodl下载参考</h3>
+<blockquote>
+<p dir="auto">Ref: <a href="https://blog.csdn.net/tirestay/article/details/139773544" rel="nofollow">https://blog.csdn.net/tirestay/article/details/139773544</a></p>
+</blockquote>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="source /etc/network_turbo
+sudo apt update
+sudo apt install systemd systemctl lshw
+curl -fsSL https://ollama.com/install.sh | sh
+# systemctl start ollama.service
+# kill -9 [ollama process number]
+http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 OLLAMA_MODELS=/root/autodl-tmp/ollama ollama serve
+http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 OLLAMA_MODELS=/root/autodl-tmp/ollama ollama run deepseek-r1:70b"><pre class="notranslate"><span class="pl-c1">source</span> /etc/network_turbo
+sudo apt update
+sudo apt install systemd systemctl lshw
+curl -fsSL https://ollama.com/install.sh <span class="pl-k">|</span> sh
+<span class="pl-c"><span class="pl-c">#</span> systemctl start ollama.service</span>
+<span class="pl-c"><span class="pl-c">#</span> kill -9 [ollama process number]</span>
+http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 OLLAMA_MODELS=/root/autodl-tmp/ollama ollama serve
+http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 OLLAMA_MODELS=/root/autodl-tmp/ollama ollama run deepseek-r1:70b</pre></div>
+<hr>
+<h2 dir="auto">GPT Academic安装</h2>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="source /etc/network_turbo
+http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 git clone --depth=1 https://github.com/binary-husky/gpt_academic.git
+cd gpt_academic
+cp config.py config_private.py
+vim config_private.py
+conda init
+source ~/.bashrc
+conda create -n gptac_venv python=3.11
+conda activate gptac_venv
+python -m pip install -r requirements.txt
+python main.py"><pre class="notranslate"><span class="pl-c1">source</span> /etc/network_turbo
+http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 git clone --depth=1 https://github.com/binary-husky/gpt_academic.git
+<span class="pl-c1">cd</span> gpt_academic
+cp config.py config_private.py
+vim config_private.py
+conda init
+<span class="pl-c1">source</span> <span class="pl-k">~</span>/.bashrc
+conda create -n gptac_venv python=3.11
+conda activate gptac_venv
+python -m pip install -r requirements.txt
+python main.py</pre></div>
+<hr>
+<h2 dir="auto">LLMs</h2>
+<p dir="auto">chatbot arena</p>
+<h2 dir="auto">Webs</h2>
+<p dir="auto">chatgpt next web<br>
+lobe chat 一键本地部署（选择第二个模式，port mode）：<a href="https://github.com/lobehub/lobe-chat/blob/main/docker-compose/setup.sh">https://github.com/lobehub/lobe-chat/blob/main/docker-compose/setup.sh</a></p>
+<h2 dir="auto">Apps</h2>
+<p dir="auto">chatbox<br>
+cherry studio<br>
+anythingllm</p>
+<h2 dir="auto">RAG</h2>
+<p dir="auto">RAGFlow<br>
+dify (non-free)</p>
+<h2 dir="auto">Others</h2>
+<p dir="auto">deepclaude</p>]]></description><link>https://github.com/ysl2/.dotfiles/discussions/106</link><guid isPermaLink="true">https://github.com/ysl2/.dotfiles/discussions/106</guid><dc:creator><![CDATA[ysl2]]></dc:creator><pubDate>Wed, 29 Jan 2025 03:52:50 GMT</pubDate></item></channel></rss>
