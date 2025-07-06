@@ -1,25 +1,14 @@
----
-title: 文献工作流
-number: 107
-url: https://github.com/ysl2/.dotfiles/discussions/107
-createdAt: 2025-06-27T03:09:01Z
-lastEditedAt: 2025-06-27T06:45:51Z
-updatedAt: 2025-06-27T06:45:51Z
-author: ysl2
-category: common
-labels: []
-countZH: 180
-countEN: 20
-filename: 2506-文献工作流
----
+# Research workflow software
 
-## 需求
+## 文献阅读与管理
+
+### 需求
 
 - 文献阅读和归档
 - 文献笔记+画图+插入图片
 - 可丝滑导出笔记+cite到latex
 
-## 解决方案
+### 解决方案
 
 - 阅读：zotero提供文献归档、阅读标注功能，并且可通过webdav备份
 - 笔记：obsidian本身提供完备笔记功能，备份可通过git或者webdav
@@ -27,8 +16,14 @@ filename: 2506-文献工作流
 - 联动：obsidian对于文件提供url，可链接到zotero
 - 导出：zotero第三方插件复制biblatex，然后手动粘贴到obsidian的笔记做链接
 
-## Known issues
+### Known issues
 
 - obsidian只提供文件url，不提供文件夹url
 - obsidian的drawio插件，左侧工具栏默认折叠，需要手动打开
 - obsidian的drawio插件，图片刚创建时无预览，必须切换一下笔记才能展示预览
+
+## 论文撰写
+
+- Latex editor：overleaf or lazyvim
+- Tables：<https://www.tablesgenerator.com>
+- Drawings：drawio

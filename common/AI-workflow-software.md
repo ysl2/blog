@@ -1,19 +1,102 @@
----
-title: Lobe Chat
-number: 105
-url: https://github.com/ysl2/.dotfiles/discussions/105
-createdAt: 2025-02-16T10:09:59Z
-lastEditedAt: 2025-06-27T14:44:49Z
-updatedAt: 2025-06-27T14:45:10Z
-author: ysl2
-category: common
-labels: []
-countZH: 320
-countEN: 470
-filename: 2502-Lobe-Chat
----
+# AI workflow software
 
+## Openai official ChatGPT
+
+需要：
+ios设备，梯子环境，美区账号(地区在美国五个免税州内)，支付宝，chatgpt账号
+
+步骤：
+
+- ios设备，地区切换到美国，系统语言切换英文
+- 美区账号下载chatgpt app
+- 通过支付宝小程序给美区账号充值礼品卡
+- chatgpt app登录账号，通过美区账号充值gpt4
+
+其他：
+到这个[链接](https://platform.openai.com/api-keys)中登录获取api key,然后部署到其他地方(但由于后面好像还要充值，没再继续部署)
+
+## API keys
+
+> Ref: <https://www.v2ex.com/t/1108382>
+
+- <https://luee.net/key> ，速度快，但是感觉不是o3-mini
+- <https://siliconflow.cn> ，可用deepseek。<https://deepinfra.com>
+- All in one：<https://www.closechat.org/> ，速度快，并且是o3-mini，但是太贵
+- 某宝还买了中转api，速度慢，只能o1-mini。直连key效果还行
+
+## Chatbots
+
+- chatbot arena
+- chatgpt next web
+- lobe chat 一键本地部署（选择第二个模式，port mode）：<https://github.com/lobehub/lobe-chat/blob/main/docker-compose/setup.sh>
+- chatbox:桌面端/移动端都可用
+- cherry studio
+- anythingllm
+- RAGFlow
+- dify (non-free)
+- deepclaude
+
+## Ollama
+
+### Deploy ollama with Chinese mirror
+
+> Ref: <https://tianhao.tech/default/ollama-installation-guide-china.html>
+
+```bash
+curl -fsSL https://ollama.com/install.sh -o ollama_install.sh
 ```
+
+Replate the download URL in `ollama_install.sh`:
+
+```bash
+#!/bin/bash
+
+FILE="ollama_install.sh"
+
+sed -i 's|https://ollama.com/download/ollama-linux-${ARCH}${VER_PARAM}|https://github.moeyy.xyz/https://github.com/ollama/ollama/releases/download/v0.3.4/ollama-linux-amd64|g' $FILE
+sed -i 's|https://ollama.com/download/ollama-linux-amd64-rocm.tgz${VER_PARAM}|https://github.moeyy.xyz/https://github.com/ollama/ollama/releases/download/v0.3.4/ollama-linux-amd64-rocm.tgz|g' $FILE
+```
+
+```bash
+http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 ollama run deepseek-r1:32b
+```
+
+### Deploy ollama in autodl machine
+
+> Ref: <https://blog.csdn.net/tirestay/article/details/139773544>
+
+```bash
+source /etc/network_turbo
+sudo apt update
+sudo apt install systemd systemctl lshw
+curl -fsSL https://ollama.com/install.sh | sh
+# systemctl start ollama.service
+# kill -9 [ollama process number]
+http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 OLLAMA_MODELS=/root/autodl-tmp/ollama ollama serve
+http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 OLLAMA_MODELS=/root/autodl-tmp/ollama ollama run deepseek-r1:70b
+```
+
+## GPT Academic (in autodl machine)
+
+```bash
+source /etc/network_turbo
+http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890 git clone --depth=1 https://github.com/binary-husky/gpt_academic.git
+cd gpt_academic
+cp config.py config_private.py
+vim config_private.py
+conda init
+source ~/.bashrc
+conda create -n gptac_venv python=3.11
+conda activate gptac_venv
+python -m pip install -r requirements.txt
+python main.py
+```
+
+## Lobe Chat
+
+### Deploy Lobe Chat with docker compose
+
+```text
 lobe chat main branch, commit: 2dc712a9be7a8a62a677bfd4220b686eeb0f6b11
 ```
 
@@ -52,7 +135,7 @@ index c52770aac..fcd1dbeb3 100644
 --- a/docker-compose/setup.sh
 +++ b/docker-compose/setup.sh
 @@ -6,13 +6,13 @@
- 
+
  # check operating system
  # ref: https://github.com/lobehub/lobe-chat/pull/5247
 -if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -67,7 +150,7 @@ index c52770aac..fcd1dbeb3 100644
      SED_COMMAND="sed -i"
 -fi
 +# fi
- 
+
  # ======================
  # == Process the args ==
 @@ -446,8 +446,8 @@ section_download_files(){
@@ -79,10 +162,10 @@ index c52770aac..fcd1dbeb3 100644
 +# else
 +#     section_download_files
  fi
- 
+
  section_configurate_host() {
 @@ -480,7 +480,11 @@ section_configurate_host() {
-     
+
      # If user not specify host, try to get the server ip
      if [ -z "$HOST" ]; then
 -        HOST=$(hostname -I | awk '{print $1}')
@@ -96,20 +179,23 @@ index c52770aac..fcd1dbeb3 100644
              echo $(show_message "tips_private_ip_detected")
 ```
 
----
+### Embedding model configuration
 
 同样的问题，使用env进行配置时，向量化时返回的错误时401, provider: siliconcloud, 但如果通过webui配置openai key为对应的SILICONCLOUD_API_KEY, 向量化返回的错误是413, 可判断出来embedding model是用了siliconcloud，但是key还是用的openai key...
 
 关键的env配置如下
 
+```bash
 SILICONCLOUD_API_KEY=sk-xxxxxxxxxxxx
 SILICONCLOUD_PROXY_URL=https://api.siliconflow.cn/v1/
 DEFAULT_FILES_CONFIG=embedding_model=siliconcloud/netease-youdao/bce-embedding-base_v1
-刚刚去看了代码实现，代码实现是通过从DEFAULT_FILES_CONFIG 截取 PROVIDER 来组合提取env中存在的${PROVIDER}_API_KEY,${PROVIDER}_PROXY_URL 来构建对应的请求的，如果没有${PROVIDER}_API_KEY会使用OPENAI_API_KEY来兜底，兜底这个行为本身需要斟酌，因为可能导致没有正确配置的环境把openai的key暴露到不匹配的provider，但是代码逻辑本身没有问题。
+```
+
+刚刚去看了代码实现，代码实现是通过从`$DEFAULT_FILES_CONFIG` 截取 PROVIDER 来组合提取env中存在的`${PROVIDER}_API_KEY`,`${PROVIDER}_PROXY_URL` 来构建对应的请求的，如果没有`${PROVIDER}_API_KEY`会使用`$OPENAI_API_KEY`来兜底，兜底这个行为本身需要斟酌，因为可能导致没有正确配置的环境把openai的key暴露到不匹配的provider，但是代码逻辑本身没有问题。
 最后我使用相同环境下重新部署了一次，没有再次复现这个问题。
 
 PS: 413是因为该模型不支持1024维，换了BAAI后正常。
 
-## 把这里换成siliconflow的key和proxy，用于embedding模型
+把这里换成siliconflow的key和proxy，用于embedding模型
 
-<img width="1708" alt="Image" src="https://github.com/user-attachments/assets/8813109b-a98c-49d0-86a2-c764cf1566c5" />
+![](assets/AI-workflow-software/2025-07-06-12-05-53.png)

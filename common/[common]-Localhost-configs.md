@@ -1,17 +1,4 @@
----
-title: "[common] Localhost configs"
-number: 93
-url: https://github.com/ysl2/.dotfiles/discussions/93
-createdAt: 2025-05-04T05:54:07Z
-lastEditedAt: 2025-06-27T14:41:07Z
-updatedAt: 2025-06-27T14:41:32Z
-author: ysl2
-category: common
-labels: []
-countZH: 0
-countEN: 220
-filename: 2505-[common]-Localhost-configs
----
+# [common] Localhost configs
 
 `~/.config/alacritty/alacritty.localhost.toml`
 
@@ -40,7 +27,7 @@ opacity = 0.7
 `~/.vocal/0/scripts/wm/autostart.localhost.sh`
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 
 # Small and big:
 # xrandr --output eDP-1 --mode 1920x1080 --pos 320x1440 --rotate normal --output HDMI-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-2 --off
@@ -60,7 +47,7 @@ udiskie --no-automount --no-notify --tray &
 
 `~/.gitconfig.localhost`
 
-```
+```text
 [user]
         name = xxx
         email = xxx@xxx.com

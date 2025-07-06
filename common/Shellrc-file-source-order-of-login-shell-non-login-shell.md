@@ -1,17 +1,4 @@
----
-title: '`"${HOME}/.${SHELL}rc"` file source order of login shell / non-login shell'
-number: 92
-url: https://github.com/ysl2/.dotfiles/discussions/92
-createdAt: 2025-05-03T17:23:22Z
-lastEditedAt: 2025-06-27T14:43:44Z
-updatedAt: 2025-06-27T14:44:08Z
-author: ysl2
-category: common
-labels: []
-countZH: 280
-countEN: 80
-filename: 2505-`-${HOME}-.${SHELL}rc-`-file-source-order-of-login-shell-non-login-shell
----
+# Shellrc file source order of login shell / non-login shell
 
 ## Conclusion
 
