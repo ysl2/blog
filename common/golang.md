@@ -1,4 +1,4 @@
-# Golang
+# golang
 
 1. Build runfile with no C dependencies, and enable debug symbols:
 
