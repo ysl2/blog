@@ -1,14 +1,12 @@
-# [\#7 Issue](https://github.com/ysl2/blog/issues/7) `open`: 内网穿透
+# NAT Traversal
 
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) opened issue at [2024-01-28 15:37](https://github.com/ysl2/blog/issues/7):
+## Frp
 
-### Frp
-
-#### 自建
+### Deploy by self-hosted
 
 按照官网的教程来
 
-https://gofrp.org/docs/examples/ssh/
+<https://gofrp.org/zh-cn/docs/examples/ssh/>
 
 注意公网服务器上面需要开放相应的端口
 
@@ -16,9 +14,9 @@ sdu_net 一旦检测到有 frp 行为，会直接封禁 ip。因此如果要用�
 
 可以采用外部 frp 嵌套内部 autossh 的方法。对于封禁 ip 的网段，采用 autossh 先连接到其他不封禁的网段。然后把不封禁的这台机器的对应端口用 frp 映射出去。比如 yin3 在 2244 端口用 autossh 映射了 server-53 的 22 端口，然后再找个公网机器用 frp 映射 yin3 的 2244 端口。这样在外部访问 frp 端口，就直接映射到了 server-53 的 22 端口，并且 server-53 对应的网段还检测不到。
 
-#### 樱花frp
+### Sakura frp
 
-```
+```bash
 # which sfrpc
 # ~/.Local/bin/my/sfrp/sfrpc
 # ln -s ~/.Local/bin/my/sfrp/sfrpc ~/.Local/bin/sfrpc
@@ -96,12 +94,3 @@ sfrpc -c ~/.Local/bin/my/sfrp/sfrpc.ini --natfrp_tls
       在任意A或者B上，通过`lsof -i:9550`或者`lsof -i:10550`找到对应PID，然后kill掉。
 
       此时另一个主机会自动断开。
-
-
-
-
--------------------------------------------------------------------------------
-
-
-
-[Export of Github issue for [ysl2/blog](https://github.com/ysl2/blog). Generated on 2025.07.03 at 11:43:05.]
