@@ -1,10 +1,8 @@
-# [\#18 Issue](https://github.com/ysl2/blog/issues/18) `open`: Linux file descriptor and redirection
-
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) opened issue at [2024-06-19 15:14](https://github.com/ysl2/blog/issues/18):
+# Linux file descriptor and redirection
 
 Create a new file descriptor
 
-```
+```bash
 touch temp.txt
 # Create a new file descriptor 3
 #  The created file descriptor only available in current shell session, associated with process number.
@@ -20,14 +18,14 @@ sudo lsof -p $$ | grep ' 3w '
 
 Temp file descriptor
 
-```
+```bash
 # Save `ls` command's output to a temp file descriptor and echo this descriptor's path:
 ❯ echo <(ls)
 /proc/self/fd/11
 
 # For example:
-# Save `ls` command's output to a temp file descriptor and return this descriptor by `<(ls)`, 
-# and use this descriptor as the `tee` command's stdin by `<`, 
+# Save `ls` command's output to a temp file descriptor and return this descriptor by `<(ls)`,
+# and use this descriptor as the `tee` command's stdin by `<`,
 # then stdout the content to `temp.txt` by `tee` command
 tee temp.txt < <(ls)
 # This is like:
@@ -36,7 +34,7 @@ ls | tee temp.txt
 
 Case
 
-```
+```bash
 # This below is error
 # That's beacuse the `>` is created before sudo, and sudo only works on `ls`, not works on `>`,
 # and due to we don't have the enough permission for `/etc` folder when creating `>`, so it complains error.
@@ -47,12 +45,3 @@ sudo ls | sudo tee /etc/temp.txt
 # Or
 sudo sh -c 'ls > /etc/temp.txt'
 ```
-
-
-
-
--------------------------------------------------------------------------------
-
-
-
-[Export of Github issue for [ysl2/blog](https://github.com/ysl2/blog). Generated on 2025.07.03 at 11:43:05.]
