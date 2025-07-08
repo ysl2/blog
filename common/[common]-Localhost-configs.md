@@ -4,7 +4,7 @@
 
 ```toml
 [font]
-size = 18
+size = 15
 
 [window]
 opacity = 0.7
@@ -47,8 +47,55 @@ udiskie --no-automount --no-notify --tray &
 
 `~/.gitconfig.localhost`
 
-```text
+```gitconfig
 [user]
         name = xxx
         email = xxx@xxx.com
+; [merge]
+;         conflictstyle = zdiff3
+; [url "https://ghfast.top/https://"]
+;         insteadOf = "https://"
+```
+
+---
+
+`~/.bashrc.localhost.pre`
+
+```bash
+#!/bin/bash
+MYCONDA=/home/yusongli/.vocal/miniconda3
+MYTMUX=/usr/bin/tmux
+```
+
+---
+
+`~/.bashrc.localhost.post`
+
+```bash
+#!/bin/bash
+
+# Setting PATH for Python 2.7
+# The original version is saved in .zprofile.pysave
+# PATH="${PATH}:/Library/Frameworks/Python.framework/Versions/2.7/bin"
+# export PATH
+
+export OPENAI_API_KEY
+
+alias weterm="trzsz -d ssh ${WECOM_ID}@${JUMPSERVER_IP} -p ${JUMPSERVER_PORT}"
+alias ali="trzsz -d ssh ${ALI_USER}@${ALI_HOST} -p ${ALI_PORT}"
+alias psql='docker exec -it mypostgres /usr/bin/psql'
+
+PP() {
+    http_proxy=127.0.0.1:${COMPANY_PORT} https_proxy=127.0.0.1:${COMPANY_PORT} "$@"
+}
+
+# function cd {
+#     builtin cd "$@"
+#     command -v conda &> /dev/null && conda_env
+# }
+#
+# function conda_env {
+#     [[ $PWD/ == $HOME/Documents/TCSTest/* ]] && source venv/bin/activate
+#     [[ $PWD/ == $HOME/Documents/tcs-test-image/* ]] && conda activate tcs-test-image
+# }
 ```
