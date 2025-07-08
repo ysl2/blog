@@ -29,50 +29,42 @@ filename: 2505-[mac]-Installation
 
 ### 包列表
 
+```text
+❯ brew list --installed-on-request
+atuin
+borders
+chafa
+fastfetch
+fzf
+gnu-sed
+go
+htop
+lazygit
+lf
+ncdu
+neovim
+node
+pngpaste
+reattach-to-user-namespace
+redshift
+ripgrep
+rustup
+sketchybar
+starship
+switchaudio-osx
+tmux
+trzsz-go
+uv
+zathura
+zathura-pdf-mupdf
+zathura-pdf-poppler
 ```
-❯ brew list
-==> Formulae
-adwaita-icon-theme		harfbuzz			libusb				pango
-aom				hicolor-icon-theme		libuv				pcre2
-at-spi2-core			highway				libvmaf				pinentry
-atuin				htop				libx11				pixman
-borders				icu4c@77			libxau				pkgconf
-brotli				imath				libxcb				poppler
-c-ares				intltool			libxdmcp			python@3.13
-ca-certificates			jbig2dec			libxext				readline
-cairo				jpeg-turbo			libxfixes			reattach-to-user-namespace
-certifi				jpeg-xl				libxi				redshift
-chafa				json-c				libxrender			ripgrep
-cmake				json-glib			libxtst				rustup
-dbus				lazygit				little-cms2			sketchybar
-desktop-file-utils		leptonica			lpeg				sphinx-doc
-fastfetch			lf				luajit				sqlite
-fontconfig			libarchive			luv				starship
-freetype			libassuan			lz4				switchaudio-osx
-fribidi				libavif				lzo				synctex
-fzf				libb2				meson				tesseract
-gdk-pixbuf			libdeflate			mpdecimal			tmux
-gettext				libepoxy			mujs				tree-sitter
-giflib				libevent			mupdf				unbound
-girara				libgcrypt			ncdu				unibilium
-glib				libgpg-error			ncurses				utf8proc
-gmp				libidn2				neovim				uv
-gnu-sed				libksba				nettle				webp
-gnupg				libmagic			ninja				xorgproto
-gnutls				libnghttp2			node				xz
-go				libnotify			npth				zathura
-gpgme				libpng				nspr				zathura-pdf-mupdf
-graphite2			libpthread-stubs		nss				zathura-pdf-poppler
-gsettings-desktop-schemas	librsvg				openexr				zlib
-gtk+3				libtasn1			openjpeg			zstd
-gtk-mac-integration		libtiff				openssl@3
-gumbo-parser			libunistring			p11-kit
 
-==> Casks
-aerospace			font-fira-code-nerd-font	parallels			snipaste
-alt-tab				hammerspoon			quickrecorder
-baidunetdisk			jiggler				raycast
-cursorcerer			keycastr			scroll-reverser
+```text
+❯ brew list --casks
+aerospace			cursorcerer			keycastr			quickrecorder			snipaste
+alt-tab				font-fira-code-nerd-font	obsidian			raycast
+baidunetdisk			jiggler				parallels			scroll-reverser
 ```
 
 ### 特殊依赖安装
