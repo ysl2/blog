@@ -1,17 +1,4 @@
----
-title: "[mac] Installation"
-number: 89
-url: https://github.com/ysl2/.dotfiles/discussions/89
-createdAt: 2025-05-02T13:24:23Z
-lastEditedAt: 2025-06-27T14:38:11Z
-updatedAt: 2025-06-27T14:39:58Z
-author: ysl2
-category: mac
-labels: []
-countZH: 80
-countEN: 270
-filename: 2505-[mac]-Installation
----
+# [mac] Home
 
 ## 网络设置与配置恢复
 
@@ -62,9 +49,9 @@ zathura-pdf-poppler
 
 ```text
 ❯ brew list --casks
-aerospace			cursorcerer			keycastr			quickrecorder			snipaste
-alt-tab				font-fira-code-nerd-font	obsidian			raycast
-baidunetdisk			jiggler				parallels			scroll-reverser
+aerospace   cursorcerer   keycastr   quickrecorder   snipaste
+alt-tab    font-fira-code-nerd-font obsidian   raycast
+baidunetdisk   jiggler    parallels   scroll-reverser
 ```
 
 ### 特殊依赖安装
@@ -82,52 +69,66 @@ defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
----
+## System settings
 
-<img width="715" alt="image" src="https://github.com/user-attachments/assets/652ae178-ebff-4119-b171-37ce9c26f633" />
-<img width="715" alt="image" src="https://github.com/user-attachments/assets/eafc4890-6112-4276-af98-e32532be35bd" />
-<img width="715" alt="image" src="https://github.com/user-attachments/assets/1016303c-2ed8-4587-8f8b-2b1052855ad5" />
-<img width="715" alt="image" src="https://github.com/user-attachments/assets/07968bbb-4420-4d02-840b-66ab3edafb0e" />
-<img width="715" alt="image" src="https://github.com/user-attachments/assets/2d1c079d-ce82-45c9-b0e7-9120c0980595" />
-<img width="715" alt="image" src="https://github.com/user-attachments/assets/a770d724-867a-4c22-b258-c6c1e4fb4160" />
-<img width="715" alt="image" src="https://github.com/user-attachments/assets/283d55cb-a3dc-4f21-982d-4b61c9703e8a" />
-<img width="715" alt="image" src="https://github.com/user-attachments/assets/0b175b79-7eca-4e5b-bf61-44db7d2e91bb" />
-<img width="715" alt="Clipboard_Screenshot_1748329272" src="https://github.com/user-attachments/assets/bf245fe4-bbed-4f60-a914-0257fc84f276" />
+![](assets/[mac]-Home/2025-07-09-09-07-43.png)
 
----
+![](assets/[mac]-Home/2025-07-09-13-49-23.png)
 
-<img width="556" alt="image" src="https://github.com/user-attachments/assets/008dc3da-0a7c-4834-ae09-9e9a82041ed6" />
-<img width="556" alt="image" src="https://github.com/user-attachments/assets/8f3b89cc-339a-4dbf-8805-4a6d13719645" />
+![](assets/[mac]-Home/2025-07-09-13-50-14.png)
 
----
+![](assets/[mac]-Home/2025-07-09-13-51-02.png)
 
-<img width="560" alt="image" src="https://github.com/user-attachments/assets/4376d5f9-70fb-44af-83f6-1aac064bd8dd" />
-<img width="560" alt="image" src="https://github.com/user-attachments/assets/00dc7ba1-4e66-4d8c-a1a3-f7f4add57cff" />
+![](assets/[mac]-Home/2025-07-09-13-52-18.png)
 
----
+![](assets/[mac]-Home/2025-07-09-13-52-53.png)
 
-<img width="1000" alt="image" src="https://github.com/user-attachments/assets/f772bcb2-1761-41ba-b0d8-b9f7c64e9596" />
-<img width="1000" alt="image" src="https://github.com/user-attachments/assets/0877d956-8ebb-461a-918d-506872ac7917" />
-<img width="1000" alt="image" src="https://github.com/user-attachments/assets/ec067083-edcd-420d-a67f-0c26daabbf91" />
+![](assets/[mac]-Home/2025-07-09-13-53-44.png)
+
+![](assets/[mac]-Home/2025-07-09-13-54-24.png)
+
+![](assets/[mac]-Home/2025-07-09-13-55-08.png)
+
+## Other settings
+
+![](assets/[mac]-Home/2025-07-09-22-51-58.png)
+
+![](assets/[mac]-Home/2025-07-09-22-53-49.png)
 
 ---
 
-<img width="510" alt="image" src="https://github.com/user-attachments/assets/a2521615-a342-4a96-acd6-4a488c5813e0" />
+![](assets/[mac]-Home/2025-07-09-22-55-03.png)
+
+![](assets/[mac]-Home/2025-07-09-22-56-24.png)
 
 ---
 
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/a1007869-9f8d-45d9-9444-3846a53a49a2" />
+![](assets/[mac]-Home/2025-07-09-22-57-44.png)
+
+![](assets/[mac]-Home/2025-07-09-22-58-51.png)
+
+![](assets/[mac]-Home/2025-07-09-23-00-03.png)
 
 ---
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/0ad51e3b-6361-40f2-9ed4-78f73613c5e4" />
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/4d201f5e-f22e-4e1b-8bb5-3d2d3ddfe18c" />
+![](assets/[mac]-Home/2025-07-09-23-01-21.png)
 
 ---
 
-<img width="884" alt="image" src="https://github.com/user-attachments/assets/052a7f6c-977d-49b6-b0ce-e636650f5ef6" />
+![](assets/[mac]-Home/2025-07-09-23-02-26.png)
 
 ---
 
-<img width="403" alt="image" src="https://github.com/user-attachments/assets/c66b4694-24fd-4891-b304-75bc01e1a096" />
-<img width="350" alt="image" src="https://github.com/user-attachments/assets/2a5bc34b-90cc-475e-a653-aba8b913c8b3" />
+![](assets/[mac]-Home/2025-07-09-23-03-22.png)
+
+![](assets/[mac]-Home/2025-07-09-23-04-07.png)
+
+---
+
+![](assets/[mac]-Home/2025-07-09-23-05-39.png)
+
+---
+
+![](assets/[mac]-Home/2025-07-09-23-06-37.png)
+
+![](assets/[mac]-Home/2025-07-09-23-07-27.png)
