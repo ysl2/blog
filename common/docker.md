@@ -7,6 +7,12 @@ sudo usermod -aG docker "$USER"
 logout  # and login again
 ```
 
+## Install docker on macOS
+
+```bash
+brew install --cask docker
+```
+
 ## Install docker-compose by brew
 
 ```bash
@@ -26,3 +32,7 @@ Compose is a docker plugin. For docker to find the plugin, add `cliPluginsExtraD
 ```bash
 ip route | awk '/default/ { print $3 }'
 ```
+
+## References
+
+- <https://github.com/abiosoft/colima>
