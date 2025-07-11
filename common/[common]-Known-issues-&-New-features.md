@@ -11,7 +11,7 @@
 ---
 
 1. 所有内容全部移动到discussions
-2. 合并.dotfiles和blog的内容
+1. 合并.dotfiles和blog的内容
 
 工具流全部换成开源，并固定长期使用。要求配置可导入导出 (方便通过git跟踪)。将这些工具记录到discussions中
 比如幕布换成开源工具
