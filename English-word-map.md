@@ -1,4 +1,4 @@
-# Word map
+# English word map
 
 ---
 
