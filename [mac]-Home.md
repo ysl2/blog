@@ -64,6 +64,13 @@ brew install rustup
 rustup-init
 ```
 
+### Cleanup
+
+```bash
+brew cleanup --prune=all -s --dry-run
+brew cleanup --prune=all -s
+```
+
 ## 全局配置
 
 ```
