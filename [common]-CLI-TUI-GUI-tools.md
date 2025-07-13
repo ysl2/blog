@@ -1,8 +1,6 @@
-# [\#26 Issue](https://github.com/ysl2/.dotfiles/issues/26) `open`: CLI/TUI/GUI tools (Which I might easily forget)
+# CLI TUI GUI tools
 
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) opened issue at [2023-11-01 11:47](https://github.com/ysl2/.dotfiles/issues/26):
-
-https://github.com/johnalanwoods/maintained-modern-unix
+> Ref: <https://github.com/johnalanwoods/maintained-modern-unix>
 
 | Basic Tool Name | Type (CLI/TUI/GUI) | Note                         | Installation |
 | --------------- | ------------------ | ---------------------------- | ------------ |
@@ -49,10 +47,7 @@ https://github.com/johnalanwoods/maintained-modern-unix
 | `mycli`                                                       | CLI                | mysql                                         | By brew      |
 | `gh-dash`                                                     | TUI                | github                                        | By gh        |
 
-
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) commented at [2023-11-03 01:03](https://github.com/ysl2/.dotfiles/issues/26#issuecomment-1791763059):
-
-brightness: 
+## Brightness
 
 ```bash
 #  Increase by 3%
@@ -62,9 +57,9 @@ brightnessctl set 3%+
 brightnessctl set 3%-
 ```
 
-redshift:
+## redshift
 
-```
+```bash
 # install
 sudo apt install redshift
 # Set to default night mode colur
@@ -73,9 +68,7 @@ redshift -P -O 4500K
 redshift -x
 ```
 
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) commented at [2023-11-03 15:06](https://github.com/ysl2/.dotfiles/issues/26#issuecomment-1792610686):
-
-bluetooth: bluetoothctl
+## Bluetooth: bluetoothctl
 
 ```
 要使用 bluetoothctl 连接蓝牙设备，您可以按照以下步骤进行操作：
@@ -101,11 +94,11 @@ bluetooth: bluetoothctl
 请注意，上述步骤中的 <device MAC> 是要连接的蓝牙设备的 MAC 地址。您可以在扫描步骤中获取它。此外，根据设备的类型和要求，可能还需要进行其他步骤。如果您遇到任何问题，请参考蓝牙设备的用户手册或官方文档，以获取更详细的指导。
 ```
 
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) commented at [2023-11-16 07:31](https://github.com/ysl2/.dotfiles/issues/26#issuecomment-1813922917):
+## Convert image format
 
 img -> pdf
 
-```
+```bash
 pip install img2pdf
 
 img2pdf *.jpg -o output.pdf
@@ -117,25 +110,16 @@ pdf -> svg
 sudo apt install pdf2svg
 ```
 
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) commented at [2024-03-07 05:30](https://github.com/ysl2/.dotfiles/issues/26#issuecomment-1982392881):
-
-audio: alsamixer
+## Audio: alsamixer
 
 For headphone settings:
 
-![image](https://github.com/ysl2/.dotlib/assets/39717545/6d2700b2-6da6-42aa-bc86-3a6ce0d638b3)
+![](assets/[common]-CLI-TUI-GUI-tools/2025-07-13-11-44-36.png)
 
 Or amixer
 
-```
+```bash
 amixer -M get Master
 amixer -M set Master 0%
 amixer -M set Master 5%+
 ```
-
-
--------------------------------------------------------------------------------
-
-
-
-[Export of Github issue for [ysl2/.dotfiles](https://github.com/ysl2/.dotfiles). Generated on 2025.06.30 at 17:53:18.]
