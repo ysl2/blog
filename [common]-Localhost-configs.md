@@ -1,5 +1,75 @@
 # [common] Localhost configs
 
+`/home/yusongli/.dosbox/dosbox.localhost.conf`
+
+```gitconfig
+[autoexec]
+mount c /home/yusongli/Documents/asm/dependencies/MASM
+c:
+```
+
+---
+
+`~/.ssh/config.localhost`
+
+```text
+Host hd202
+    HostName abc.cn
+    User yusongli
+    Port 23332
+    Identityfile ~/.ssh/yusongli_202
+
+Host i53
+    HostName 219.231.164.69
+    User yusongli
+    Port 2444
+```
+
+---
+
+vim hot setting
+
+```vimscript
+set nu rnu sb spr et ts=4 sw=4
+```
+
+vim hot settings for single file
+
+```bash
+# vim: set et ts=4 sw=4:
+```
+
+---
+
+`~/.config/neovide/.config.toml`
+
+```toml
+[font]
+normal = ["FiraCode Nerd Font"]
+size = 15
+```
+
+---
+
+`~/.wezterm.localhost.lua`
+
+```lua
+return {
+  window_background_opacity = 0.7
+}
+```
+
+---
+
+`~/.tmux.localhost.conf`
+
+```bash
+# NOTE: Must be absolute path here.
+set-option -g default-shell "/home/yusongli/.vocal/nushell/bin/nu"
+```
+
+---
+
 `~/.config/alacritty/alacritty.localhost.toml`
 
 ```toml
