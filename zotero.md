@@ -2,10 +2,12 @@
 
 Plugin list:
 
-- [Add-on Market for Zotero](https://github.com/syt2/zotero-addons)
-- [Nutstore](https://github.com/nutstore/zotero-plugin-nutstore)
-- [Translate for Zotero](https://github.com/windingwind/zotero-pdf-translate)
-- [Better BibTex for Zotero](https://github.com/retorquere/zotero-better-bibtex)
+| URL                                                   | Description                                                                                                        |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| <https://github.com/syt2/zotero-addons>               | Zotero Add-on Market \| Zotero插件市场 \| Browsing, installing, and reviewing plugins within Zotero                |
+| <https://github.com/nutstore/zotero-plugin-nutstore>  | Nutstore sso plugin for Zotero                                                                                     |
+| <https://github.com/windingwind/zotero-pdf-translate> | Translate PDF, EPub, webpage, metadata, annotations, notes to the target language. Support 20+ translate services. |
+| <https://github.com/retorquere/zotero-better-bibtex>  | Make Zotero effective for us LaTeX holdouts                                                                        |
 
 ---
 
