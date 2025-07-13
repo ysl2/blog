@@ -38,6 +38,7 @@
 | <https://laozhang.ai/>                  |             |
 | <https://www.closechat.org/>            |             |
 | <https://erlich.fun/deepclaude-pricing> |             |
+| <https://gpt.zhizengzeng.com/>          |             |
 
 | URL                       | Description |
 | ------------------------- | ----------- |
