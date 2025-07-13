@@ -25,72 +25,68 @@ sfrpc -c ~/.Local/bin/my/sfrp/sfrpc.ini --natfrp_tls
 
 ## Autossh
 
-1. 准备
+1. Prepare two machines:
 
-   内网机器 A
+   Inner A
 
    - ip: 172.27.67.80
    - ssh port: 22
-   - username: yusongli
-   - passwd: ysl123
+   - username: neiwang
 
-   公网机器 B
+   Public B
 
    - ip: 47.105.198.227
-   - ssh port: 22
+   - ssh port: 36000
    - username: gongwang
-   - passwd: gw1234
 
-1. 在公网主机 B 上配置`/etc/ssh/sshd_config`文件，改以下字段为`yes`，然后重启 ssh 服务
+1. In Public B, edit `/etc/ssh/sshd_config`, change the settings below to `yes`, then restart ssh service.
 
    ```bash
-   # 意思是监听端口可以绑定到任意其他ip
+   AllowTcpForwarding yes
    GatewayPorts yes
 
    sudo systemctl restart sshd
    ```
 
-1. 在内网主机 A 上生成 ssh key，并对 B 做免密登录
+1. In Inner A, genetate ssh key，and copy it to Public B.
 
    ```bash
    ssh-keygen
    ssh-copy-id gongwang@47.105.198.227
    ```
 
-1. 在内网主机 A 上做端口映射(需要安装`autossh`)
+1. In Inner A, install autossh, and execute the following command to create a reverse ssh tunnel.
 
    ```bash
-   # autossh -M {本地主机端口} -NfR {公网主机端口}:localhost:22 {公网主机用户}@{公网ip}
-   autossh -M 10550 -NfR 9550:localhost:22 gongwang@47.105.198.227
+   autossh -M 34000 -NfR 47.105.198.227:35000:localhost:22 -p 36000 gongwang@47.105.198.227
+
+   # Test login:
+   # NOTE: There must be `neiwang`, not `gongwang`.
+   ssh -p 35000 neiwang@47.105.198.227
    ```
 
-1. 端口占用情况
+   Port occupation table:
 
-   - A 仅有 10550 端口会被占用 (可能是因为学校屏蔽公网下内网穿透的原因。以前的时候好像A也是9550和10550都会被占用)
-   - B 的 9550 端口和 10550 端口都会被占用
-   - 9550 是用来在公网主机上登录的端口
+   | Port  | Inner A | Public B | Note                                 |
+   | ----- | ------- | -------- | ------------------------------------ |
+   | 34000 | Y       | Y        | Monitor port                         |
+   | 35000 |         | Y        | For logging in Inner A from Public B |
+   | 22    | Y       |          | Inner A's ssh port                   |
+   | 36000 | Y       | Y        | Public B's ssh port                  |
 
-1. 开机自启
+1. (optional) In Inner A, set auto start after reboot:
 
    ```bash
    sudo vim /etc/rc.local
 
-   # 加入上面那行代码
-   autossh -M 10550 -NfR 9550:localhost:22 gongwang@47.105.198.227
+   # Add the above code line
+   autossh -M 34000 -NfR 47.105.198.227:35000:localhost:22 -p 36000 gongwang@47.105.198.227
    ```
 
 1. kill
 
-   1. 方式一
+   - In Inner A, `ps aux | grep autossh`, kill -9 the corresponding PID.
 
-      应该先在内网主机A上，通过`ps aux | grep autossh`找到autossh所在的PID，kill掉。
+   - In Inner A, `sudo lsof -i:34000`, kill -9 the corresponding PID.
 
-      此时公网主机B上的9550和10550端口会自动断开。
-
-      然后再在内网主机A上通过`lsof -i:9550`或者`lsof -i:10550`找到对应PID，然后kill掉。
-
-   1. 方式二 (可能不好用，并且可能只适用于学校屏蔽公网下内网穿透的情况)
-
-      在任意A或者B上，通过`lsof -i:9550`或者`lsof -i:10550`找到对应PID，然后kill掉。
-
-      此时另一个主机会自动断开。
+   - In Public B, `sudo lsof -i:34000`, `sudo lsof -i:35000`, kill -9 the corresponding PIDs.
