@@ -21,9 +21,3 @@
 - obsidian只提供文件url，不提供文件夹url
 - obsidian的drawio插件，左侧工具栏默认折叠，需要手动打开
 - obsidian的drawio插件，图片刚创建时无预览，必须切换一下笔记才能展示预览
-
-## 论文撰写
-
-- Latex editor：overleaf or lazyvim
-- Tables：<https://www.tablesgenerator.com>
-- Drawings：drawio
