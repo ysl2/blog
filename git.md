@@ -37,7 +37,15 @@
 
 ## CRLF to LF
 
-```bash
-# brew install dos2unix
-find . -type f -exec dos2unix {} +
-```
+- For Linux/macOS:
+
+  ```bash
+  # brew install dos2unix
+  find . -type f -exec dos2unix {} +
+  ```
+
+- For Windows PowerShell:
+
+  ```powershell
+  (Get-Content "filename.txt") -replace "`r`n", "`n" | Set-Content "filename.txt"
+  ```
