@@ -2,15 +2,17 @@
 
 ## Chatbots overview
 
-| URL                                             | Description                                                                                                                       |
-| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| <https://github.com/langgenius/dify>            | Production-ready platform for agentic workflow development.                                                                       |
-| <https://github.com/ChatGPTNextWeb/NextChat>    | Light and Fast AI Assistant. Support: Web \| iOS \| MacOS \| Android \| Linux \| Windows                                          |
-| <https://github.com/infiniflow/ragflow>         | RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding.                       |
-| <https://github.com/Mintplex-Labs/anything-llm> | The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, MCP compatibility, and more.  |
-| <https://github.com/chatboxai/chatbox>          | User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)                                              |
-| <https://github.com/CherryHQ/cherry-studio>     | 🍒 Cherry Studio is a desktop client that supports for multiple LLM providers.                                                    |
-| <https://github.com/getAsterisk/deepclaude>     | A high-performance LLM inference API and Chat UI that integrates DeepSeek R1's CoT reasoning traces with Anthropic Claude models. |
+| URL                                             | Description                                                                                                                                                        |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <https://github.com/n8n-io/n8n>                 | Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.               |
+| <https://github.com/langgenius/dify>            | Production-ready platform for agentic workflow development.                                                                                                        |
+| <https://github.com/ChatGPTNextWeb/NextChat>    | Light and Fast AI Assistant. Support: Web \| iOS \| MacOS \| Android \| Linux \| Windows                                                                           |
+| <https://github.com/infiniflow/ragflow>         | RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding.                                                        |
+| <https://github.com/Mintplex-Labs/anything-llm> | The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, MCP compatibility, and more.                                   |
+| <https://github.com/chatboxai/chatbox>          | User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)                                                                               |
+| <https://github.com/CherryHQ/cherry-studio>     | 🍒 Cherry Studio is a desktop client that supports for multiple LLM providers.                                                                                     |
+| <https://github.com/1Panel-dev/MaxKB>           | 💬 MaxKB is an open-source AI assistant for enterprise. It seamlessly integrates RAG pipelines, supports robust workflows, and provides MCP tool-use capabilities. |
+| <https://github.com/getAsterisk/deepclaude>     | A high-performance LLM inference API and Chat UI that integrates DeepSeek R1's CoT reasoning traces with Anthropic Claude models.                                  |
 
 ## Openai official ChatGPT
 
@@ -116,6 +118,12 @@ git clone git@github.com:ysl2/lobe-chat.git
 cd lobe-chat/docker-compose/local
 bash setup.sh
 # Select the second option: Port mode
+
+autossh -M 37004 -NfR 47.105.198.227:38004:localhost:36004 -p 36000 yusongli@47.105.198.227
+autossh -M 37005 -NfR 47.105.198.227:38005:localhost:36005 -p 36000 yusongli@47.105.198.227
+autossh -M 37006 -NfR 47.105.198.227:38006:localhost:36006 -p 36000 yusongli@47.105.198.227
+autossh -M 37007 -NfR 47.105.198.227:38007:localhost:36007 -p 36000 yusongli@47.105.198.227
+autossh -M 37008 -NfR 47.105.198.227:38008:localhost:36008 -p 36000 yusongli@47.105.198.227
 
 docker compose up -d
 ```
