@@ -44,6 +44,7 @@ switchaudio-osx
 tmux
 trzsz-go
 uv
+wget
 zathura
 zathura-pdf-mupdf
 zathura-pdf-poppler
