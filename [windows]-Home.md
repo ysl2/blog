@@ -1,16 +1,12 @@
-# [\#25 Issue](https://github.com/ysl2/.dotfiles/issues/25) `open`: [Windows] Installation
-**Labels**: `Windows`
-
-
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) opened issue at [2023-11-01 10:47](https://github.com/ysl2/.dotfiles/issues/25):
+# [windows] Home
 
 ## Installation on Windows
 
 ### dotfiles
 
 ```powershell
-# NOTE: 
-# 1. You should open the `Developer Mode` item in Windows `Settings -> Update & Security -> Developer 
+# NOTE:
+# 1. You should open the `Developer Mode` item in Windows `Settings -> Update & Security -> Developer
 # 2. Don't use administrator terminal, instead, use your normal terminal.
 git clone -c core.symlinks=true git@github.com:ysl2/.dotfiles.git
 git clone -c core.symlinks=true git@github.com:ysl2/.dotlinks.git -b windows
@@ -37,7 +33,7 @@ choco install miniconda3
 
 ### Other packages
 
-```
+```powershell
 ❯ choco list
 Chocolatey v2.4.3
 alacritty 0.15.1
@@ -124,15 +120,13 @@ yazi 25.3.2
 
 1. Lf
 
-    You need to set system variable `EDITOR` to vim (or any other editor), and link neovide to `notepad.exe` to replace default notepad (optional). Use vim to edit single file by pressing `e` key, and use neovim to edit project by pressing `l` key (I tried to inverse those two behavior but failed, so must be this at least now).
+   You need to set system variable `EDITOR` to vim (or any other editor), and link neovide to `notepad.exe` to replace default notepad (optional). Use vim to edit single file by pressing `e` key, and use neovim to edit project by pressing `l` key (I tried to inverse those two behavior but failed, so must be this at least now).
 
 ## WSL2
 
 1. Install wsl2 by choco as above.
-2. Install arch by: https://github.com/yuk7/ArchWSL
-3. Configure arch by: https://github.com/ysl2/.dotfiles/issues/84
-
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) commented at [2024-01-09 13:32](https://github.com/ysl2/.dotfiles/issues/25#issuecomment-1883059047):
+1. Install arch by: <https://github.com/yuk7/ArchWSL>
+1. Configure arch by: <https://github.com/ysl2/.dotfiles/issues/84>
 
 ## Installation on AI Studio
 
@@ -157,23 +151,27 @@ git reset --hard HEAD
 source ~/.bashrc
 ```
 
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) commented at [2025-03-19 15:53](https://github.com/ysl2/.dotfiles/issues/25#issuecomment-2737168624):
+## 解决中英文输入法问题
 
-# 解决中英文输入法问题
+![](assets/[windows]-Home/2025-07-13-11-06-52.png)
 
-![Image](https://github.com/user-attachments/assets/0f28ab99-d3db-4c52-b66b-1886f8203b24)
+![](assets/[windows]-Home/2025-07-13-11-07-29.png)
 
-![Image](https://github.com/user-attachments/assets/5f86adf8-5f23-435d-add5-ca59bd01fb28)
+![](assets/[windows]-Home/2025-07-13-11-07-53.png)
 
-![Image](https://github.com/user-attachments/assets/151f84c0-dcbf-4f6c-aad0-3714e27b0310)
+## Cursor speed
 
-#### <img src="https://avatars.githubusercontent.com/u/39717545?u=3a56d7b47e1688f70c83e440ba0835f8d24c43e3&v=4" width="50">[ysl2](https://github.com/ysl2) commented at [2025-04-04 11:49](https://github.com/ysl2/.dotfiles/issues/25#issuecomment-2778464598):
+![](assets/[windows]-Home/2025-07-13-11-08-15.png)
 
-![Image](https://github.com/user-attachments/assets/4e36e97e-244b-4e6a-bd7d-2c14ed7efaa9)
+## Windows disable WIN+L
 
+> Ref: https://superuser.com/questions/1059511/how-to-disable-winl-in-windows-10
 
--------------------------------------------------------------------------------
+`win_l.reg`, double click to run it.
 
+```
+Windows Registry Editor Version 5.00
 
-
-[Export of Github issue for [ysl2/.dotfiles](https://github.com/ysl2/.dotfiles). Generated on 2025.06.30 at 17:53:18.]
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableLockWorkstation"=dword:00000001
+```
