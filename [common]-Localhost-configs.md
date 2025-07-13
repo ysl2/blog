@@ -105,7 +105,8 @@ opacity = 0.7
 xrandr --output eDP-1 --mode 1920x1080 --pos 0x1024 --rotate normal --output HDMI-1 --off --output DP-1 --primary --mode 1280x1024 --pos 320x0 --rotate normal --output HDMI-2 --off
 # Small and TV:
 # xrandr --output eDP-1 --mode 1920x1080 --pos 0x768 --rotate normal --output HDMI-1 --primary --mode 1360x768 --pos 280x0 --rotate normal --output DP-1 --off --output HDMI-2 --off
-feh --bg-fill ~/Pictures/wallpapers/2560x1440.svg
+feh --bg-fill /usr/share/desktop-base/emerald-theme/wallpaper/contents/images/2560x1440.svg
+# feh --bg-fill ~/Pictures/wallpapers/2560x1440.svg
 # feh --bg-fill ~/Pictures/flowers.jpg
 # swaybg -i ~/Pictures/wall.png -m fill
 fcitx5 &
@@ -129,6 +130,14 @@ udiskie --no-automount --no-notify --tray &
 
 ---
 
+`~/.config/kitty/kitty.localhost.conf`
+
+```yaml
+background_opacity 0.7
+```
+
+---
+
 `~/.bashrc.localhost.pre`
 
 ```bash
@@ -144,6 +153,7 @@ MYTMUX=/usr/bin/tmux
 ```bash
 #!/bin/bash
 
+# Ref: https://www.python.org/downloads/release/python-2718/
 # Setting PATH for Python 2.7
 # The original version is saved in .zprofile.pysave
 # PATH="${PATH}:/Library/Frameworks/Python.framework/Versions/2.7/bin"
@@ -168,4 +178,26 @@ PP() {
 #     [[ $PWD/ == $HOME/Documents/TCSTest/* ]] && source venv/bin/activate
 #     [[ $PWD/ == $HOME/Documents/tcs-test-image/* ]] && conda activate tcs-test-image
 # }
+```
+
+---
+
+- `~/.config/termscp/config.toml`
+- `/Users/yusongli/Library/Application Support/termscp/config.toml`
+
+```
+[user_interface]
+text_editor = "/opt/homebrew/bin/nvim"
+default_protocol = "SFTP"
+show_hidden_files = false
+check_for_updates = true
+prompt_on_file_replace = true
+notifications = true
+notification_threshold = 536870912
+
+[remote]
+ssh_config = "/Users/yusongli/.ssh/config"
+
+[remote.ssh_keys]
+"yusongli@hduiipl.cn" = "/Users/yusongli/Library/Application Support/termscp/.ssh/yusongli@hduiipl.cn.key"
 ```
