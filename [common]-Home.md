@@ -14,7 +14,7 @@
 - 换清华源，testing，然后更新
 - 安装vim，git
 - 设置sudo免密
-  - <img src="assets/[debian]-Home/2025-07-13-11-56-42.png" alt="" width=30%>
+  - <img src="assets/[common]-Home/img/2025-07-13-11-56-42.png" alt="" width=30%>
 - 配置github的ssh走443端口
 - 克隆dotlib，dotfiles，并放好
 - 运行触摸板按压脚本，在`~/.scripts/window-manager/fix-touchpad.sh`
@@ -24,12 +24,12 @@
   - Ref: <https://www.seektao.cc/archives/debian12-input-method-chinese>
   - sudo apt-get install fcitx5 fcitx5-chinese-addons
   - 然后在fcitx- configuration里面添加拼音
-    - <img src="assets/[debian]-Home/2025-07-13-12-01-06.png" alt="" width=25%>
+    - <img src="assets/[common]-Home/img/2025-07-13-12-01-06.png" alt="" width=25%>
   - set keymap
-    - <img src="assets/[debian]-Home/2025-07-13-12-05-25.png" alt="" width=25%>
+    - <img src="assets/[common]-Home/img/2025-07-13-12-05-25.png" alt="" width=25%>
   - 设置菜单大小为15，并且在这个页面往下翻，关闭选项“Use Per Screen DPI on X11”
-    - <img src="assets/[debian]-Home/2025-07-13-12-09-13.png" alt="" width=25%>
-    - <img src="assets/[debian]-Home/2025-07-13-12-13-04.png" alt="" width=25%>
+    - <img src="assets/[common]-Home/img/2025-07-13-12-09-13.png" alt="" width=25%>
+    - <img src="assets/[common]-Home/img/2025-07-13-12-13-04.png" alt="" width=25%>
 - 微信
   - 星火应用商店，注意切换到debian桌面，然后再下载微信，最后把微信启动脚本链接到PATH里面。刚开始的时候会一直提示wine无响应，是因为正在加载，等加载完就好了
 - nvim

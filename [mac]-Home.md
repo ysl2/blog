@@ -81,64 +81,64 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 ## System settings
 
-![](assets/[mac]-Home/2025-07-09-09-07-43.png)
+<img src="assets/[mac]-Home/img/2025-07-09-09-07-43.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-13-49-23.png)
+<img src="assets/[mac]-Home/img/2025-07-09-13-49-23.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-13-50-14.png)
+<img src="assets/[mac]-Home/img/2025-07-09-13-50-14.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-13-51-02.png)
+<img src="assets/[mac]-Home/img/2025-07-09-13-51-02.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-13-52-18.png)
+<img src="assets/[mac]-Home/img/2025-07-09-13-52-18.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-13-52-53.png)
+<img src="assets/[mac]-Home/img/2025-07-09-13-52-53.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-13-53-44.png)
+<img src="assets/[mac]-Home/img/2025-07-09-13-53-44.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-13-54-24.png)
+<img src="assets/[mac]-Home/img/2025-07-09-13-54-24.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-13-55-08.png)
+<img src="assets/[mac]-Home/img/2025-07-09-13-55-08.png" alt="" width=100%>
 
 ## Other settings
 
-![](assets/[mac]-Home/2025-07-09-22-51-58.png)
+<img src="assets/[mac]-Home/img/2025-07-09-22-51-58.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-22-53-49.png)
-
----
-
-![](assets/[mac]-Home/2025-07-09-22-55-03.png)
-
-![](assets/[mac]-Home/2025-07-09-22-56-24.png)
+<img src="assets/[mac]-Home/img/2025-07-09-22-53-49.png" alt="" width=100%>
 
 ---
 
-![](assets/[mac]-Home/2025-07-09-22-57-44.png)
+<img src="assets/[mac]-Home/img/2025-07-09-22-55-03.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-22-58-51.png)
-
-![](assets/[mac]-Home/2025-07-09-23-00-03.png)
+<img src="assets/[mac]-Home/img/2025-07-09-22-56-24.png" alt="" width=100%>
 
 ---
 
-![](assets/[mac]-Home/2025-07-09-23-01-21.png)
+<img src="assets/[mac]-Home/img/2025-07-09-22-57-44.png" alt="" width=100%>
+
+<img src="assets/[mac]-Home/img/2025-07-09-22-58-51.png" alt="" width=100%>
+
+<img src="assets/[mac]-Home/img/2025-07-09-23-00-03.png" alt="" width=100%>
 
 ---
 
-![](assets/[mac]-Home/2025-07-09-23-02-26.png)
+<img src="assets/[mac]-Home/img/2025-07-09-23-01-21.png" alt="" width=100%>
 
 ---
 
-![](assets/[mac]-Home/2025-07-09-23-03-22.png)
-
-![](assets/[mac]-Home/2025-07-09-23-04-07.png)
+<img src="assets/[mac]-Home/img/2025-07-09-23-02-26.png" alt="" width=100%>
 
 ---
 
-![](assets/[mac]-Home/2025-07-09-23-05-39.png)
+<img src="assets/[mac]-Home/img/2025-07-09-23-03-22.png" alt="" width=100%>
+
+<img src="assets/[mac]-Home/img/2025-07-09-23-04-07.png" alt="" width=100%>
 
 ---
 
-![](assets/[mac]-Home/2025-07-09-23-06-37.png)
+<img src="assets/[mac]-Home/img/2025-07-09-23-05-39.png" alt="" width=100%>
 
-![](assets/[mac]-Home/2025-07-09-23-07-27.png)
+---
+
+<img src="assets/[mac]-Home/img/2025-07-09-23-06-37.png" alt="" width=100%>
+
+<img src="assets/[mac]-Home/img/2025-07-09-23-07-27.png" alt="" width=100%>
