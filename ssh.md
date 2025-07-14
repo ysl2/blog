@@ -1,5 +1,7 @@
 # ssh
 
+> Ref: `man sshd_config`
+
 ## add ssh host alias, and ssh-copy-id on windows
 
 ```powershell
@@ -112,7 +114,6 @@ sfrpc -c ~/.Local/bin/my/sfrp/sfrpc.ini --natfrp_tls
 1. In Public B, edit `/etc/ssh/sshd_config`, change the settings below to `yes`, then restart ssh service.
 
    ```bash
-   AllowTcpForwarding yes
    GatewayPorts yes
 
    sudo systemctl restart sshd
@@ -128,19 +129,19 @@ sfrpc -c ~/.Local/bin/my/sfrp/sfrpc.ini --natfrp_tls
 1. In Inner A, install autossh, and execute the following command to create a reverse ssh tunnel.
 
    ```bash
-   autossh -M 34000 -NfR 47.105.198.227:35000:localhost:22 -p 36000 gongwang@47.105.198.227
+   autossh -M 37000 -NfR 47.105.198.227:38000:localhost:22 -p 36000 gongwang@47.105.198.227
 
    # Test login:
    # NOTE: There must be `neiwang`, not `gongwang`.
-   ssh -p 35000 neiwang@47.105.198.227
+   ssh -p 38000 neiwang@47.105.198.227
    ```
 
    Port occupation table:
 
    | Port  | Inner A | Public B | Note                                 |
    | ----- | ------- | -------- | ------------------------------------ |
-   | 34000 | Y       | Y        | Monitor port                         |
-   | 35000 |         | Y        | For logging in Inner A from Public B |
+   | 37000 | Y       | Y        | Monitor port                         |
+   | 38000 |         | Y        | For logging in Inner A from Public B |
    | 22    | Y       |          | Inner A's ssh port                   |
    | 36000 | Y       | Y        | Public B's ssh port                  |
 
@@ -150,13 +151,40 @@ sfrpc -c ~/.Local/bin/my/sfrp/sfrpc.ini --natfrp_tls
    sudo vim /etc/rc.local
 
    # Add the above code line
-   autossh -M 34000 -NfR 47.105.198.227:35000:localhost:22 -p 36000 gongwang@47.105.198.227
+   autossh -M 37000 -NfR 47.105.198.227:38000:localhost:22 -p 36000 gongwang@47.105.198.227
    ```
 
 1. kill
 
    - In Inner A, `ps aux | grep autossh`, kill -9 the corresponding PID.
 
-   - In Inner A, `sudo lsof -i:34000`, kill -9 the corresponding PID.
+   - In Inner A, `sudo lsof -i:37000`, kill -9 the corresponding PID.
 
-   - In Public B, `sudo lsof -i:34000`, `sudo lsof -i:35000`, kill -9 the corresponding PIDs.
+   - In Public B, `sudo lsof -i:37000`, `sudo lsof -i:38000`, kill -9 the corresponding PIDs.
+
+## fail2ban
+
+```bash
+sudo apt install rsyslog fail2ban
+cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+sudo vim /etc/fail2ban/jail.local
+```
+
+```diff
+--- jail.conf   2022-11-09 23:46:15.000000000 +0800
++++ jail.local  2025-07-14 11:14:57.161447157 +0800
+@@ -277,7 +277,8 @@
+ # normal (default), ddos, extra or aggressive (combines all).
+ # See "tests/files/logs/sshd" or "filter.d/sshd.conf" for usage example and details.
+ #mode   = normal
+-port    = ssh
++enabled = true
++port    = 36000
+ logpath = %(sshd_log)s
+ backend = %(sshd_backend)s
+```
+
+```bash
+sudo fail2ban-client reload
+sudo fail2ban-client status
+```
