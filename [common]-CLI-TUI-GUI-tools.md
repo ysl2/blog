@@ -114,7 +114,7 @@ sudo apt install pdf2svg
 
 For headphone settings:
 
-![](assets/[common]-CLI-TUI-GUI-tools/2025-07-13-11-44-36.png)
+<img src="assets/[common]-CLI-TUI-GUI-tools/img/2025-07-13-11-44-36.png" alt="" width=100%>
 
 Or amixer
 

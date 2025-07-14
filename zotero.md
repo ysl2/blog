@@ -15,8 +15,8 @@ Plugin list:
 
 The secret format is `MY_APPID#MY_SECRET#MY_VOCABID(optional)`. Apply [here](https://ai.youdao.com/console).
 
-![](assets/zotero/2025-07-06-13-43-45.png)
+<img src="assets/zotero/img/2025-07-06-13-43-45.png" alt="" width=100%>
 
 ---
 
-![](assets/zotero/2025-07-06-13-45-01.png)
+<img src="assets/zotero/img/2025-07-06-13-45-01.png" alt="" width=100%>
