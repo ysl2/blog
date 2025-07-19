@@ -19,8 +19,11 @@
 - By [colima](https://github.com/abiosoft/colima) (brew):
 
   ```bash
-  brew install colima
+  brew install colima docker
   colima start
+
+  # Start colima in background and enable it to start on login:
+  brew services start colima  # Or: `colima start --background`
   ```
 
 ### Uninstall
