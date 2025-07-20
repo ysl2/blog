@@ -1,5 +1,7 @@
 # docker
 
+> Ref: <https://github.com/carljmosca/colima/blob/main/docs/FAQ.md>
+
 ## Add user into docker group
 
 ```bash
@@ -7,55 +9,46 @@ sudo usermod -aG docker "$USER"
 logout  # and login again
 ```
 
-## Install docker-compose
+## Set Chinese mirror
 
-- By brew:
+- By docker
 
   ```bash
-  brew install docker-compose
-  ```
-
-  Compose is a docker plugin. For docker to find the plugin, add `cliPluginsExtraDirs` to `~/.docker/config.json`:
-
-  ```json
+  sudo mkdir -p /etc/docker
+  sudo tee /etc/docker/daemon.json <<-'EOF'
   {
-    "cliPluginsExtraDirs": ["$HOMEBREW_PREFIX/lib/docker/cli-plugins"]
+      "registry-mirrors": ["https://docker.m.daocloud.io"]
   }
+  EOF
+  sudo systemctl daemon-reload
+  sudo systemctl restart docker
   ```
 
-- By source:
+- By colima
 
   ```bash
-  # Ref: https://stackoverflow.com/a/79052312
+  # Edit the global settings
+  vim ~/.config/colima/_templates/default.yaml
 
-  DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
-  mkdir -p $DOCKER_CONFIG/cli-plugins
-  curl -SL "https://ghfast.top/https://github.com/docker/compose/releases/download/v2.33.0/docker-compose-$(uname -s)-$(uname -m)" -o $DOCKER_CONFIG/cli-plugins/docker-compose
+  # Stop current colima instance
+  colima stop
 
-  chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+  # Remove the current settings
+  rm ~/.config/colima/default
 
-  # test the installation with:
-  docker compose version
-
-  # expected output is: Docker Compose version v2.29.6
+  # Start colima with the new global settings,
+  # this will re-create the default settings in `~/.config/colima/default`.
+  colima start
   ```
 
-## Chinese mirror
-
-> 注：阿里云镜像我试过了，不可用。换成daocloud地址：`"registry-mirrors": ["https://docker.m.daocloud.io"]`
-
-[阿里云加速器(点击管理控制台 -> 登录账号(淘宝账号) -> 左侧镜像工具 -> 镜像加速器 -> 复制加速器地址)](https://cr.console.aliyun.com/cn-hangzhou/instances)
-
-```bash
-sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json <<-'EOF'
-{
-    "registry-mirrors": ["自己的阿里云镜像链接"]
-}
-EOF
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-```
+  ```diff
+  # Ref: https://github.com/carljmosca/colima/blob/main/docs/FAQ.md
+  - docker: {}
+  + docker:
+  +   registry-mirrors:
+  +     - https://my.dockerhub.mirror.something
+  +     - https://my.quayio.mirror.something
+  ```
 
 ## Check the host's IP in docker containers
 
