@@ -4,8 +4,6 @@
 
 - <https://github.com/Hannibal046/Awesome-LLM>
 - <https://lilianweng.github.io/>
-- <https://papers.cool/>
-- <https://huggingface.co/papers>
 - <https://news.mit.edu/>
 - <https://paperswithcode.com/sota>
 - <https://www.producthunt.com/>
