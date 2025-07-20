@@ -27,11 +27,13 @@ sudo chown -R songliyu:songliyu /data/workspace/songliyu
 ```text
 visudo
 
-## Allow root to run any commands anywhere
-root    ALL=(ALL)       ALL
-silasyu        ALL=(ALL:ALL)       NOPASSWD:ALL
+# root and users in group wheel can run anything on any machine as any user
+%admin		ALL = (ALL) ALL
+root		ALL = (ALL) ALL
+songliyu    ALL = (ALL:ALL) NOPASSWD:ALL
 ```
 
 1. `(ALL:ALL)` means the user can run commands as any user and any group.
 1. `NOPASSWD:ALL` means no password required for all commands.
 1. If use `%sudo ALL=(ALL:ALL) NOPASSWD:ALL`, it means all users in the `sudo` group can run commands without password. This is not recommended for security reason.
+1. IMPORTANT: Put the `songliyu ...` line at the end of the file to avoid conflicts with other rules.
