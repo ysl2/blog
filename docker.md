@@ -1,49 +1,13 @@
 # docker
 
-## Installation and settings
-
-### Install
-
-- By brew:
-
-  ```bash
-  brew install --cask docker
-  ```
-
-- By apt:
-
-  ```bash
-  sudo apt install -y docker.io
-  ```
-
-- By [colima](https://github.com/abiosoft/colima) (brew):
-
-  ```bash
-  brew install colima docker
-  colima start
-
-  # Start colima in background and enable it to start on login:
-  brew services start colima  # Or: `colima start --background`
-  ```
-
-### Uninstall
-
-- By brew:
-
-  ```bash
-  # Ref: https://github.com/docker/for-mac/issues/7046#issuecomment-2579215790
-  brew uninstall --cask docker --force --verbose --debug
-  brew uninstall --formula docker --force --verbose --debug
-  ```
-
-### Add user into docker group
+## Add user into docker group
 
 ```bash
 sudo usermod -aG docker "$USER"
 logout  # and login again
 ```
 
-### Install docker-compose
+## Install docker-compose
 
 - By brew:
 
@@ -76,13 +40,13 @@ logout  # and login again
   # expected output is: Docker Compose version v2.29.6
   ```
 
-### Chinese mirror
+## Chinese mirror
 
 > 注：阿里云镜像我试过了，不可用。换成daocloud地址：`"registry-mirrors": ["https://docker.m.daocloud.io"]`
 
 [阿里云加速器(点击管理控制台 -> 登录账号(淘宝账号) -> 左侧镜像工具 -> 镜像加速器 -> 复制加速器地址)](https://cr.console.aliyun.com/cn-hangzhou/instances)
 
-```
+```bash
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
