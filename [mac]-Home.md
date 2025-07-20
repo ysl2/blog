@@ -19,15 +19,20 @@
 ```text
 ❯ brew list --installed-on-request
 atuin
+autossh
 bash
 borders
 chafa
+colima
+docker
+docker-buildx
 docker-compose
 fastfetch
 fzf
 gnu-sed
 go
 htop
+kind
 lazygit
 lf
 ncdu
@@ -52,9 +57,20 @@ zathura-pdf-poppler
 
 ```text
 ❯ brew list --casks
-aerospace			cursorcerer			jiggler				parallels			scroll-reverser
-alt-tab				docker				keycastr			quickrecorder			snipaste
-baidunetdisk			font-fira-code-nerd-font	obsidian			raycast
+aerospace
+alt-tab
+baidunetdisk
+chatbox
+cursorcerer
+font-fira-code-nerd-font
+jiggler
+keycastr
+obsidian
+parallels
+quickrecorder
+raycast
+scroll-reverser
+snipaste
 ```
 
 ### 特殊依赖安装
