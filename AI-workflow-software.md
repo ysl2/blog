@@ -14,6 +14,17 @@
 | <https://github.com/1Panel-dev/MaxKB>           | 💬 MaxKB is an open-source AI assistant for enterprise. It seamlessly integrates RAG pipelines, supports robust workflows, and provides MCP tool-use capabilities. |
 | <https://github.com/getAsterisk/deepclaude>     | A high-performance LLM inference API and Chat UI that integrates DeepSeek R1's CoT reasoning traces with Anthropic Claude models.                                  |
 
+| URL                           | Description |
+| ----------------------------- | ----------- |
+| <https://yuanbao.tencent.com> |             |
+| <https://www.doubao.com>      |             |
+| <https://www.tongyi.com>      |             |
+| <https://www.kimi.com>        |             |
+| <https://www.deepseek.com>    |             |
+| <https://gemini.google.com>   |             |
+| <https://notebooklm.google>   |             |
+| <https://ima.qq.com>          |             |
+
 ## Openai official ChatGPT
 
 需要：
