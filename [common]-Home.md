@@ -1,5 +1,15 @@
 # [common] Home
 
+| URL                                       | Description |
+| ----------------------------------------- | ----------- |
+| <https://github.com/ysl2/blog>            |             |
+| <https://github.com/ysl2/scripts>         |             |
+| <https://github.com/ysl2/dotfiles>        |             |
+| <https://github.com/ysl2/dotlinks>        |             |
+| <https://github.com/ysl2/lazyvim>         |             |
+| <https://github.com/ysl2/i3>              |             |
+| <https://github.com/ysl2/alacritty-sixel> |             |
+
 - debian下载（本地包）
   - <https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd>
 - dd命令做安装盘
