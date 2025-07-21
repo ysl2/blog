@@ -3,10 +3,10 @@
 ## Resources
 
 - <https://github.com/Hannibal046/Awesome-LLM>
-- <https://lilianweng.github.io/>
-- <https://news.mit.edu/>
+- <https://lilianweng.github.io>
+- <https://news.mit.edu>
 - <https://paperswithcode.com/sota>
-- <https://www.producthunt.com/>
+- <https://www.producthunt.com>
 
 ## Other keywords
 

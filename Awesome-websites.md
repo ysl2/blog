@@ -21,24 +21,24 @@
 | <https://cvpr.thecvf.com/virtual/2025/events/AwardCandidates2025> | CVPR 2025 best paper candidates |
 | <https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers>         | CVPR Accepted papers            |
 
-| URL                     | Description                                        |
-| ----------------------- | -------------------------------------------------- |
-| <https://aideadlin.es/> | AI Conference Deadlines by Papers With Code        |
-| <https://ccfddl.com/>   | CCF Recommendation Conference Deadline Countdowns. |
+| URL                    | Description                                        |
+| ---------------------- | -------------------------------------------------- |
+| <https://aideadlin.es> | AI Conference Deadlines by Papers With Code        |
+| <https://ccfddl.com>   | CCF Recommendation Conference Deadline Countdowns. |
 
 | URL                                         | Description                   |
 | ------------------------------------------- | ----------------------------- |
 | <https://github.com/hwanz/SSR-V2ray-Trojan> | ✈️推荐与评测                  |
 | <https://github.com/kjfx/kjfx>              | 2025✈️推荐                    |
-| <https://gfwoff.org/>                       | 好用的✈️推荐 （2025年CN实测） |
+| <https://gfwoff.org>                        | 好用的✈️推荐 （2025年CN实测） |
 
 | URL                                     | Description |
 | --------------------------------------- | ----------- |
 | <https://siliconflow.cn>                |             |
-| <https://laozhang.ai/>                  |             |
-| <https://www.closechat.org/>            |             |
+| <https://laozhang.ai>                   |             |
+| <https://www.closechat.org>             |             |
 | <https://erlich.fun/deepclaude-pricing> |             |
-| <https://gpt.zhizengzeng.com/>          |             |
+| <https://gpt.zhizengzeng.com>           |             |
 
 | URL                       | Description |
 | ------------------------- | ----------- |

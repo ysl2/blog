@@ -44,7 +44,7 @@ set index-active-bg          "#CCD0DA"
 
 ## Smooth scroll
 
-> Ref: <https://www.reddit.com/r/archlinux/comments/oh0m6n/zathura_smooth_scrolling/>
+> Ref: <https://www.reddit.com/r/archlinux/comments/oh0m6n/zathura_smooth_scrolling>
 
 ```text
 map j feedkeys "<C-Down>"

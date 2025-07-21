@@ -64,7 +64,7 @@ ssh-keygen -R 10.0.224.7 -p 36000
 
 按照官网的教程来
 
-<https://gofrp.org/zh-cn/docs/examples/ssh/>
+<https://gofrp.org/zh-cn/docs/examples/ssh>
 
 注意公网服务器上面需要开放相应的端口
 
