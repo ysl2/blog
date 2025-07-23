@@ -1,30 +1,5 @@
 # AI workflow software
 
-## Chatbots overview
-
-| URL                                             | Description                                                                                                                                                        |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <https://github.com/n8n-io/n8n>                 | Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.               |
-| <https://github.com/langgenius/dify>            | Production-ready platform for agentic workflow development.                                                                                                        |
-| <https://github.com/ChatGPTNextWeb/NextChat>    | Light and Fast AI Assistant. Support: Web \| iOS \| MacOS \| Android \| Linux \| Windows                                                                           |
-| <https://github.com/infiniflow/ragflow>         | RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding.                                                        |
-| <https://github.com/Mintplex-Labs/anything-llm> | The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, MCP compatibility, and more.                                   |
-| <https://github.com/chatboxai/chatbox>          | User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)                                                                               |
-| <https://github.com/CherryHQ/cherry-studio>     | 🍒 Cherry Studio is a desktop client that supports for multiple LLM providers.                                                                                     |
-| <https://github.com/1Panel-dev/MaxKB>           | 💬 MaxKB is an open-source AI assistant for enterprise. It seamlessly integrates RAG pipelines, supports robust workflows, and provides MCP tool-use capabilities. |
-| <https://github.com/getAsterisk/deepclaude>     | A high-performance LLM inference API and Chat UI that integrates DeepSeek R1's CoT reasoning traces with Anthropic Claude models.                                  |
-
-| URL                           | Description |
-| ----------------------------- | ----------- |
-| <https://yuanbao.tencent.com> |             |
-| <https://www.doubao.com>      |             |
-| <https://www.tongyi.com>      |             |
-| <https://www.kimi.com>        |             |
-| <https://www.deepseek.com>    |             |
-| <https://gemini.google.com>   |             |
-| <https://notebooklm.google>   |             |
-| <https://ima.qq.com>          |             |
-
 ## Openai official ChatGPT
 
 需要：
