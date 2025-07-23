@@ -10,14 +10,14 @@
 
 ## 依赖安装
 
-```
+```bash
 /bin/bash -c "$(curl -fsSL https://ghfast.top/https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ### 包列表
 
 ```text
-❯ brew list --installed-on-request
+❯ brew list -1 --installed-on-request
 atuin
 autossh
 bash
@@ -29,11 +29,11 @@ docker-buildx
 docker-compose
 fastfetch
 fzf
+gemini-cli
 gnu-sed
 go
 htop
 kind
-lazygit
 lf
 ncdu
 neovim
@@ -56,7 +56,7 @@ zathura-pdf-poppler
 ```
 
 ```text
-❯ brew list --casks
+❯ brew list -1 --casks
 aerospace
 alt-tab
 baidunetdisk
@@ -75,7 +75,7 @@ snipaste
 
 ### 特殊依赖安装
 
-```
+```bash
 brew install rustup
 rustup-init
 ```
@@ -89,7 +89,7 @@ brew cleanup --prune=all -s
 
 ## 全局配置
 
-```
+```bash
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write -g ApplePressAndHoldEnabled -bool false
