@@ -20,7 +20,7 @@ Refer to: <https://openclaw.ai/>
 
 ## Add skills
 
-Refer to [./claude-code.md#add-skills](./claude-code.md#add-skills)
+Refer to [./skill.md](./skill.md)
 
 ## Add browser support
 

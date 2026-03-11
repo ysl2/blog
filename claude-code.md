@@ -59,14 +59,7 @@ Add this:
 
 ## Add skills
 
-### Add skills from `http://skills.sh`
-
-```bash
-npx skills add vercel-labs/skills -s find-skills -g -y
-npx skills add obra/superpowers -g -y
-npx skills add othmanadi/planning-with-files -s planning-with-files -g -y
-npx skills add vercel-labs/agent-browser -s agent-browser -g -y
-```
+> Ref: [./skill.md](./skill.md)
 
 ### Add skills from marketplace
 
@@ -83,14 +76,9 @@ npx skills add vercel-labs/agent-browser -s agent-browser -g -y
 # Ref: https://github.com/OthmanAdi/planning-with-files
 /plugin marketplace add OthmanAdi/planning-with-files
 /plugin install planning-with-files@planning-with-files
-```
 
-### Add skills from source
-
-```bash
-mkdir -p ~/.claude/skills
-cd ~/.claude
-git clone git@github.com:anthropics/skills.git skills-anthropics
-cd skills
-ln -s ../skills-anthropics/skills/* ./
+# NOTE: Add telegram support
+# Ref: https://github.com/anthropics/claude-plugins-official
+/plugin marketplace add anthropics/claude-plugins-official
+/plugin install telegram@claude-plugins-official
 ```
