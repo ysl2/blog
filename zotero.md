@@ -4,34 +4,42 @@
 
 <p><img src=".assets/zotero/img/2026-01-06-19-16-41.png" alt="" width=100% style="display: block; margin: auto;"></p>
 
-| URL                                                  | Description                                                                                                               |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| <https://github.com/syt2/zotero-addons>              | Zotero Add-on Market \| Zotero插件市场 \| Browsing, installing, and reviewing plugins within Zotero                       |
-| <https://github.com/nutstore/zotero-plugin-nutstore> | Nutstore sso plugin for Zotero                                                                                            |
-| <https://github.com/windingwind/zotero-better-notes> | Everything about note management. All in Zotero.                                                                          |
-| <https://github.com/redleafnew/zotero-updateifsE>    | Green Frog <https://github.com/redleafnew/zotero-updateifs> 的easyScholar数据版。更新影响因子，其他一系列工具，详见Readme |
-| <https://github.com/q77190858/zotero-pdf-background> | a zotero plugin of changing pdf background color to care your eyes                                                        |
+| URL                                                  | Description                                                                                                                                                         |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <https://github.com/syt2/zotero-addons>              | Zotero Add-on Market \| Zotero插件市场 \| Browsing, installing, and reviewing plugins within Zotero                                                                 |
+| <https://github.com/nutstore/zotero-plugin-nutstore> | Nutstore sso plugin for Zotero                                                                                                                                      |
+| <https://github.com/windingwind/zotero-better-notes> | Everything about note management. All in Zotero.                                                                                                                    |
+| <https://github.com/redleafnew/zotero-updateifsE>    | Green Frog <https://github.com/redleafnew/zotero-updateifs> 的easyScholar数据版。更新影响因子，其他一系列工具，详见Readme                                           |
+| <https://github.com/q77190858/zotero-pdf-background> | a zotero plugin of changing pdf background color to care your eyes                                                                                                  |
+| <https://codeberg.org/finktank/zotero-vim>           | Vim-like keybindings for the Zotero PDF reader. Navigate, scroll, and annotate with keyboard shortcuts inspired by Tridactyl/Vim. Vibe coded with Claude Sonnet 4.5 |
 
 ## [zotero-pdf-translate](https://github.com/windingwind/zotero-pdf-translate)
 
 > Ref: <https://github.com/windingwind/zotero-pdf-translate?tab=readme-ov-file#service>
 
-| Engine                    | Translation                                                                   | Note                                                                                                                             |
-| ------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Gemini Web App (baseline) | stClinic 通过整合空间多切片和多组学数据到动态图中，来解析具有临床意义的微环境 | stClinic dissects clinically relevant niches by integrating spatial multi-slice multi-omics data in dynamic graphs               |
-| Aliyun                    | stClinic通过在动态图中集成空间多切片多组学数据来解剖临床相关的生态位          | Best effect. 阿里云右上角`主账号->权限与安全->AccessKey`. The secret format is `accessKeyId#accessKeySecret#endpoint(optional)`. |
-| Baidu Field               | stClinic通过在动态图中整合空间多层多组学数据来剖析临床相关的生态位            |                                                                                                                                  |
-| Youdao Zhiyun             | stClinic通过将空间多层多组学数据整合到动态图中来解剖临床相关的利基            | The secret format is `MY_APPID#MY_SECRET#MY_VOCABID(optional)`. Apply [here](https://ai.youdao.com/console).                     |
-| Baidu                     | stClinic通过将空间多层多组学数据整合到动态图中来剖析临床相关的利基市场        |                                                                                                                                  |
-| Huoshan                   | 通过将空间多切片多组学数据整合到动态图中，STClinic解剖临床相关的壁龛          |                                                                                                                                  |
+<p><img src=".assets/zotero/img/2025-07-06-13-43-45.png" alt="" width=100% style="display: block; margin: auto;"></p>
 
-<img src=".assets/zotero/img/2025-07-06-13-43-45.png" alt="" width=100%>
+Set font size to 16.
 
 <p><img src=".assets/zotero/img/2025-09-22-12-22-46.png" alt="" width=100% style="display: block; margin: auto;"></p>
 
-Refer to `ChatGPT` settings:
+`ChatGPT` settings:
+
+> Ref: <https://gist.github.com/GrayXu/f1b72353b4b0493d51d47f0f7498b67b>
 
 <p><img src=".assets/zotero/img/2025-09-22-12-22-56.png" alt="" width=100% style="display: block; margin: auto;"></p>
+
+```text
+https://api.siliconflow.cn/v1/chat/completions
+```
+
+```text
+deepseek-ai/DeepSeek-V3.2
+```
+
+```text
+As an academic expert with specialized knowledge in iron and steel making, please provide a proficient and precise translation from ${langFrom} to ${langTo}. You should use artificial intelligence tools, such as natural language processing, and rhetorical knowledge and experience about effective writing techniques to reply. Make the reply looks like a native speaker. Some specific terms such as name do not need to be translated. The text is as follows: ${sourceText} Please provide the translated result without any additional explanation and remove 。
+```
 
 ## [zotero-gpt](https://github.com/MuiseDestiny/zotero-gpt)
 
