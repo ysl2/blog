@@ -1,14 +1,14 @@
 # [study-ai] Home
 
-| URL                                                                             | Description |
-| ------------------------------------------------------------------------------- | ----------- |
-| ⭐<https://arxiv.org/list/cs.CV/new>                                            | Today       |
-| ⭐<https://arxiv.org/catchup/cs.CV/2026-01-01?abs=True>                         | One day     |
-| ⭐<https://arxiv.org/list/cs.CV/recent?show=1000>                               | This week   |
-| ⭐<https://arxiv.org/list/cs.CV/2026-01>                                        | One month   |
-| ⭐<https://arxiv.org/search/?query=vggt&searchtype=all&size=200&abstracts=show> | One field   |
-| ⭐<https://arxiv.org/search/advanced>                                           | Search      |
-| ⭐<https://openreview.net>                                                      |             |
+| URL                                                                                                                                   | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| ⭐<https://arxiv.org/list/cs.CV/new>                                                                                                  | Today       |
+| ⭐<https://arxiv.org/catchup/cs.CV/2026-01-01?abs=True>                                                                               | One day     |
+| ⭐<https://arxiv.org/list/cs.CV/recent?show=1000>                                                                                     | This week   |
+| ⭐<https://arxiv.org/list/cs.CV/2026-01>                                                                                              | One month   |
+| ⭐<https://arxiv.org/search/?query=streaming+semantic+3d+reconstruction&searchtype=all&abstracts=show&order=-submitted_date&size=200> | One field   |
+| ⭐<https://arxiv.org/search/advanced>                                                                                                 | Search      |
+| ⭐<https://openreview.net>                                                                                                            |             |
 
 | URL                                                   | Description             |
 | ----------------------------------------------------- | ----------------------- |
@@ -33,7 +33,6 @@
 | <https://papers.cool>                                          | Immersive Paper Discovery                                                                                                                                                                                                                                                                           |
 | <https://www.connectedpapers.com/>                             |                                                                                                                                                                                                                                                                                                     |
 | <https://www.semanticscholar.org/>                             |                                                                                                                                                                                                                                                                                                     |
-| <https://scholar.google.com/>                                  |                                                                                                                                                                                                                                                                                                     |
 | <https://github.com/trending>                                  | See what the GitHub community is most excited about today.                                                                                                                                                                                                                                          |
 | <https://github.com/bytedance/pasa> / <https://pasa-agent.ai/> | PaSa -- an advanced paper search agent powered by large language models. It can autonomously make a series of decisions, including invoking search tools, reading papers, and selecting relevant references, to ultimately obtain comprehensive and accurate results for complex scholarly queries. |
 | <https://dw-dengwei.github.io/daily-arXiv-ai-enhanced>         |                                                                                                                                                                                                                                                                                                     |
@@ -53,25 +52,27 @@
 
 | URL                                                               | Description                                        |
 | ----------------------------------------------------------------- | -------------------------------------------------- |
-| <https://scholar.google.com/citations?view_op=top_venues>         | Google scholar top publications                    |
-| <https://scholar.google.com/citations?view_op=top_venues&vq=eng>  | Google scholar top publications                    |
 | <https://cvpr.thecvf.com/Conferences/2025/News>                   | CVPR 2025 news                                     |
 | <https://cvpr.thecvf.com/Conferences/2025/News/Awards_Press>      | CVPR 2025 best papers                              |
 | <https://cvpr.thecvf.com/virtual/2025/events/AwardCandidates2025> | CVPR 2025 best paper candidates                    |
 | <https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers>         | CVPR Accepted papers                               |
 | <https://aideadlin.es>                                            | AI Conference Deadlines by Papers With Code        |
 | <https://ccfddl.com>                                              | CCF Recommendation Conference Deadline Countdowns. |
+| <https://openaccess.thecvf.com/menu>                              | Computer Vision Foundation open access             |
 
-| URL                                  |
-| ------------------------------------ |
-| <https://www.google.com/>            |
-| <https://scholar.google.com/>        |
-| <https://gemini.google.com/>         |
-| <https://notebooklm.google/>         |
-| <https://geminicli.com/>             |
-| <https://colab.research.google.com/> |
-| <http://drive.google.com/>           |
-| <https://antigravity.google/>        |
+| URL                                                              |
+| ---------------------------------------------------------------- |
+| <https://www.google.com/>                                        |
+| <https://scholar.google.com/>                                    |
+| <https://scholar.google.com/citations?view_op=top_venues>        |
+| <https://scholar.google.com/citations?view_op=top_venues&vq=eng> |
+| <https://scholar.google.com/scholar_labs/search?hl=en>           |
+| <https://gemini.google.com/>                                     |
+| <https://notebooklm.google/>                                     |
+| <https://geminicli.com/>                                         |
+| <https://colab.research.google.com/>                             |
+| <http://drive.google.com/>                                       |
+| <https://antigravity.google/>                                    |
 
 | URL                                                 | Description                                                                                                                                                                                                                                                                                                              |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -144,3 +145,4 @@
 | <https://ai.ll9e.cn>                    |
 | <http://api.code-relay.com/>            |
 | <https://api.1youth.me/>                |
+| <https://vectorengine.ai/>              |
