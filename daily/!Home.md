@@ -32,3 +32,9 @@
 | <https://universalbus.cn>           | 环球巴士                                                  |
 | <https://www.naifeistation.com>     | 星际放映厅                                                |
 | <https://github.com/chilrr/cheerup> | 👇🏻好用的工具和福利一览，页面下拉查看精彩 ，欢迎关注收藏！ |
+
+| URL                                 | Description  |
+| ----------------------------------- | ------------ |
+| <https://989nst.cloud/invites/join> | ChatGPT Team |
+| <https://uu6.top/>                  | 转转AI商城   |
+| <https://shop.xrdwp.cn/>            | 木木批发     |
