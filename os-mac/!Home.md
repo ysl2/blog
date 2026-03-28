@@ -20,7 +20,7 @@
 ### 2.1 Brew dependencies list
 
 ```bash
-brew list -1 --installed-on-request > '/Users/songliyu/Documents/blog/os-mac/.assets/!Home/brew.txt'; brew list -1 --casks > '/Users/songliyu/Documents/blog/os-mac/.assets/!Home/brew-casks.txt'; brew tap > '/Users/songliyu/Documents/blog/os-mac/.assets/!Home/brew-tap.txt'
+brew list -1 --installed-on-request > '/Users/songliyu/Documents/wiki/os-mac/.assets/!Home/brew.txt'; brew list -1 --casks > '/Users/songliyu/Documents/wiki/os-mac/.assets/!Home/brew-casks.txt'; brew tap > '/Users/songliyu/Documents/wiki/os-mac/.assets/!Home/brew-tap.txt'
 ```
 
 ### 2.2 Brew cache cleanup
@@ -89,15 +89,21 @@ rustup-init
 
 <p><img src=".assets/!Home/img/2025-07-09-23-00-03.png" alt="" width=75% style="display: block; margin: auto;"></p>
 
-### [jiggler](https://formulae.brew.sh/cask/jiggler) (deprecated, use mouse-jiggler instead)
+### [jiggler](https://formulae.brew.sh/cask/jiggler) (deprecated, use Amphetamine instead)
 
 > Note: For macOS Tahoe, you should set jiggle mode to `Standard jiggle` (not `Zen jiggle`) to avoid bug.
 
 <p><img src=".assets/!Home/img/2025-07-09-23-01-21.png" alt="" width=75% style="display: block; margin: auto;"></p>
 
-### [mouse-jiggler](https://mousejigglermac.com)
+### [mouse-jiggler](https://mousejigglermac.com) (deprecated, use Amphetamine instead)
 
 <p><img src=".assets/!Home/img/2025-09-25-14-46-09.png" alt="" width=75% style="display: block; margin: auto;"></p>
+
+### [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
+
+<p><img src=".assets/!Home/img/2026-03-28-15-58-32.png" alt="" width=75% style="display: block; margin: auto;"></p>
+
+<p><img src=".assets/!Home/img/2026-03-28-16-00-25.png" alt="" width=75% style="display: block; margin: auto;"></p>
 
 ### [clash-party](https://formulae.brew.sh/cask/clash-party)
 
