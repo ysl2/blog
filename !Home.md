@@ -36,26 +36,27 @@
 
 ### 2.2 Other tools
 
-| Name                | Platform          | Type    | Note                                | URL                                                                      |
-| ------------------- | ----------------- | ------- | ----------------------------------- | ------------------------------------------------------------------------ |
-| `termscp`           | Linux/Mac/Windows | TUI     | SFTP in terminal                    | <https://github.com/veeso/termscp>                                       |
-| `flameshot`         | Linux/Mac/Windows | GUI     | Image capture                       | <https://github.com/flameshot-org/flameshot>                             |
-| `pdf2svg`           | Linux/Mac/Windows | CLI     | PDF to SVG, for Typst               | <https://github.com/dawbarton/pdf2svg>                                   |
-| `qrcp`              | Linux/Mac/Windows | CLI     | File transfer                       | <https://github.com/claudiodangelis/qrcp>                                |
-| `glow`              | Linux/Mac/Windows | TUI     | Markdown previewer                  | <https://github.com/charmbracelet/glow>                                  |
-| `obs`               | Linux/Mac/Windows | GUI     | Live streaming and screen recording | <https://github.com/obsproject/obs-studio>                               |
-| `eslockdec`         | Linux/Mac/Windows | GUI     | Unlock eslock file                  | <https://github.com/Rambin/eslockdec>                                    |
-| `BaiduPCS-Go`       | Linux/Mac/Windows | CLI     | Baidunetdisk CLI                    | <https://github.com/qjfoidnh/BaiduPCS-Go>                                |
-| `sing-box`          | Linux/Mac/Windows | CLI/GUI | V.P.N                               | <https://github.com/SagerNet/sing-box>                                   |
-| `nvtop` or `nvitop` | Linux/Mac/Windows | TUI     | Check GPU status in terminal        | <https://github.com/Syllo/nvtop> / <https://github.com/XuehaiPan/nvitop> |
-| `carbonyl`          | Linux/Mac         | TUI     | Browser in terminal                 | <https://github.com/fathyb/carbonyl>                                     |
-| `trans`             | Linux/Mac         | CLI     | Language translate                  | <https://github.com/soimort/translate-shell>                             |
-| `chafa`             | Linux/Mac         | CLI     | Terminal image renderer             | <https://github.com/hpjansson/chafa>                                     |
-| `gh`                | Linux/Mac         | CLI     | Official Github CLI                 | <https://github.com/cli/cli>                                             |
-| `gh-dash`           | Linux/Mac         | TUI     | Github dashboard                    | <https://github.com/dlvhdr/gh-dash>                                      |
-| `mycli`             | Linux/Mac         | CLI     | MySQL                               | <https://github.com/dbcli/mycli>                                         |
-| `ilovepdf`          | Web               |         | PDF process                         | <https://www.ilovepdf.com/>                                              |
-| `iloveimg`          | Web               |         | Image process                       | <https://www.iloveimg.com/>                                              |
+| Name                | Platform          | Type    | Note                                                                                                                                    | URL                                                                      |
+| ------------------- | ----------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `termscp`           | Linux/Mac/Windows | TUI     | SFTP in terminal                                                                                                                        | <https://github.com/veeso/termscp>                                       |
+| `flameshot`         | Linux/Mac/Windows | GUI     | Image capture                                                                                                                           | <https://github.com/flameshot-org/flameshot>                             |
+| `pdf2svg`           | Linux/Mac/Windows | CLI     | PDF to SVG, for Typst                                                                                                                   | <https://github.com/dawbarton/pdf2svg>                                   |
+| `qrcp`              | Linux/Mac/Windows | CLI     | File transfer                                                                                                                           | <https://github.com/claudiodangelis/qrcp>                                |
+| `glow`              | Linux/Mac/Windows | TUI     | Markdown previewer                                                                                                                      | <https://github.com/charmbracelet/glow>                                  |
+| `obs`               | Linux/Mac/Windows | GUI     | Live streaming and screen recording                                                                                                     | <https://github.com/obsproject/obs-studio>                               |
+| `eslockdec`         | Linux/Mac/Windows | GUI     | Unlock eslock file                                                                                                                      | <https://github.com/Rambin/eslockdec>                                    |
+| `BaiduPCS-Go`       | Linux/Mac/Windows | CLI     | Baidunetdisk CLI                                                                                                                        | <https://github.com/qjfoidnh/BaiduPCS-Go>                                |
+| `sing-box`          | Linux/Mac/Windows | CLI/GUI | V.P.N                                                                                                                                   | <https://github.com/SagerNet/sing-box>                                   |
+| `nvtop` or `nvitop` | Linux/Mac/Windows | TUI     | Check GPU status in terminal                                                                                                            | <https://github.com/Syllo/nvtop> / <https://github.com/XuehaiPan/nvitop> |
+| `ductor`            | Linux/Mac/Windows | CLI     | Control Claude Code, Codex CLI and Gemini CLI from Telegram. Live streaming, persistent memory, cron jobs, webhooks, Docker sandboxing. | <https://github.com/PleasePrompto/ductor>                                |
+| `carbonyl`          | Linux/Mac         | TUI     | Browser in terminal                                                                                                                     | <https://github.com/fathyb/carbonyl>                                     |
+| `trans`             | Linux/Mac         | CLI     | Language translate                                                                                                                      | <https://github.com/soimort/translate-shell>                             |
+| `chafa`             | Linux/Mac         | CLI     | Terminal image renderer                                                                                                                 | <https://github.com/hpjansson/chafa>                                     |
+| `gh`                | Linux/Mac         | CLI     | Official Github CLI                                                                                                                     | <https://github.com/cli/cli>                                             |
+| `gh-dash`           | Linux/Mac         | TUI     | Github dashboard                                                                                                                        | <https://github.com/dlvhdr/gh-dash>                                      |
+| `mycli`             | Linux/Mac         | CLI     | MySQL                                                                                                                                   | <https://github.com/dbcli/mycli>                                         |
+| `ilovepdf`          | Web               |         | PDF process                                                                                                                             | <https://www.ilovepdf.com/>                                              |
+| `iloveimg`          | Web               |         | Image process                                                                                                                           | <https://www.iloveimg.com/>                                              |
 
 - [`img2pdf`](https://github.com/josch/img2pdf) (Linux/Mac/Windows, CLI, Image to PDF, for Latex)
 
