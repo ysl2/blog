@@ -1,4 +1,4 @@
-# [study-ai] AI workflow software
+# chatgpt
 
 ## Openai official ChatGPT
 
