@@ -25,6 +25,9 @@
 | <https://一分机场.com>                                 |                                  | N              |            |                                                                   |
 | <https://赔钱机场.com>                                 |                                  | N              |            |                                                                   |
 | <https://jike0.com>                                    |                                  |                |            |                                                                   |
+| <https://ly.ccwink.art>                                |                                  |                |            |                                                                   |
+| <https://yuntu.blog>                                   |                                  |                |            |                                                                   |
+| <https://cliproxy.com/>                                |                                  |                |            |                                                                   |
 
 | URL                                 | Description                                               |
 | ----------------------------------- | --------------------------------------------------------- |
@@ -38,3 +41,4 @@
 | <https://989nst.cloud/invites/join> | ChatGPT Team |
 | <https://uu6.top/>                  | 转转AI商城   |
 | <https://shop.xrdwp.cn/>            | 木木批发     |
+| <https://aizhp.site/>               | AI杂货铺     |
