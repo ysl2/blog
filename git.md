@@ -70,3 +70,11 @@ git config core.ignorecase
 # Set to false to make git case-sensitive
 git config core.ignorecase false
 ```
+
+## Fetch from upstream
+
+```bash
+git remote add upstream git@example.com:user/repo.git
+git fetch upstream
+git rebase upstream/master
+```
