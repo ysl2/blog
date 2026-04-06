@@ -1,5 +1,7 @@
 # [study-ai] Home
 
+## Paper tools
+
 | URL                                                                                                                                   | Description |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | ⭐<https://arxiv.org/list/cs.CV/new>                                                                                                  | Today       |
@@ -39,17 +41,6 @@
 | <https://modelscope.cn>                                        |                                                                                                                                                                                                                                                                                                     |
 | <https://github.com/kaixindelele/2025-Awesome-AI-Bloggers>     | 全网最全-2025年AI领域最值得关注的两百位博主和一手信息源盘点                                                                                                                                                                                                                                         |
 
-| URL                                    | Description                                                                 |
-| -------------------------------------- | --------------------------------------------------------------------------- |
-| <https://lmarena.ai/leaderboard>       | See how leading models stack up across text, image, vision, and beyond.     |
-| <https://scale.com/leaderboard>        | SEAL LLM Leaderboards evaluate frontier LLM capabilities.                   |
-| <https://llm-stats.com>                | Analyze and compare AI models across benchmarks, pricing, and capabilities. |
-| <https://livebench.ai>                 | A Challenging, Contamination-Free LLM Benchmark                             |
-| <https://arcprize.org/leaderboard>     | ARC-AGI Leaderboard                                                         |
-| <https://aider.chat/docs/leaderboards> | Aider polyglot coding leaderboard                                           |
-| <https://artificialanalysis.ai/models> | Comparison of Models: Intelligence, Performance & Price Analysis            |
-| <https://openrouter.ai/rankings>       |                                                                             |
-
 | URL                                                               | Description                                        |
 | ----------------------------------------------------------------- | -------------------------------------------------- |
 | <https://cvpr.thecvf.com/Conferences/2025/News>                   | CVPR 2025 news                                     |
@@ -59,6 +50,8 @@
 | <https://aideadlin.es>                                            | AI Conference Deadlines by Papers With Code        |
 | <https://ccfddl.com>                                              | CCF Recommendation Conference Deadline Countdowns. |
 | <https://openaccess.thecvf.com/menu>                              | Computer Vision Foundation open access             |
+
+## Google products
 
 | URL                                                              |
 | ---------------------------------------------------------------- |
@@ -73,6 +66,19 @@
 | <https://colab.research.google.com/>                             |
 | <http://drive.google.com/>                                       |
 | <https://antigravity.google/>                                    |
+
+## LLMs and apps
+
+| URL                                    | Description                                                                 |
+| -------------------------------------- | --------------------------------------------------------------------------- |
+| <https://lmarena.ai/leaderboard>       | See how leading models stack up across text, image, vision, and beyond.     |
+| <https://scale.com/leaderboard>        | SEAL LLM Leaderboards evaluate frontier LLM capabilities.                   |
+| <https://llm-stats.com>                | Analyze and compare AI models across benchmarks, pricing, and capabilities. |
+| <https://livebench.ai>                 | A Challenging, Contamination-Free LLM Benchmark                             |
+| <https://arcprize.org/leaderboard>     | ARC-AGI Leaderboard                                                         |
+| <https://aider.chat/docs/leaderboards> | Aider polyglot coding leaderboard                                           |
+| <https://artificialanalysis.ai/models> | Comparison of Models: Intelligence, Performance & Price Analysis            |
+| <https://openrouter.ai/rankings>       |                                                                             |
 
 | URL                                                 | Description                                                                                                                                                                                                                                                                                                              |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -122,48 +128,3 @@
 | <https://www.codebuddy.ai>                       | IDE/CLI                 |              |
 | <https://qoder.com>                              | IDE/CLI/Plugin          |              |
 | <https://www.augmentcode.com/>                   | CLI/Plugin              |              |
-
-| URL                                                     |
-| ------------------------------------------------------- |
-| <https://bigmodel.cn/usercenter/proj-mgmt/apikeys>      |
-| <https://docs.bigmodel.cn/cn/coding-plan/overview>      |
-| <https://docs.bigmodel.cn/cn/coding-plan/tool/claude>   |
-| <https://docs.bigmodel.cn/cn/coding-plan/tool/opencode> |
-
-| URL                                     |
-| --------------------------------------- |
-| <https://siliconflow.cn>                |
-| <https://anyrouter.top>                 |
-| <https://laozhang.ai>                   |
-| <https://gpt.zhizengzeng.com>           |
-| <https://code.wenwen-ai.com/>           |
-| <https://www.aicodemirror.com>          |
-| <https://qinzhiai.com/>                 |
-| <https://yunwu.ai>                      |
-| <https://www.closechat.org>             |
-| <https://erlich.fun/deepclaude-pricing> |
-| <https://ai.ll9e.cn>                    |
-| <http://api.code-relay.com/>            |
-| <https://api.1youth.me/>                |
-| <https://vectorengine.ai/>              |
-
-| URL                                       |
-| ----------------------------------------- |
-| <https://www.kaggle.com/>                 |
-| <https://tianchi.aliyun.com/notebook-ai/> |
-| <https://aistudio.baidu.com>              |
-
-| URL                         | Name     | RTX 4090 |
-| --------------------------- | -------- | -------- |
-| <https://gpu.ai-galaxy.cn>  | 智星云   | 1.32/h   |
-| <https://www.gpufree.cn>    | 算力自由 | 1.38/h   |
-| <https://www.gpushare.com>  | 恒源云   | 1.59/h   |
-| <https://compshare.cn/>     | 优云智算 | 1.66/h   |
-| <https://suanli.cn>         | 共绩算力 | 1.68/h   |
-| <https://featurize.cn/>     |          | 1.87/h   |
-| <https://www.sunclouds.com> | 尚云     | 2.00/h   |
-| <https://vast.ai>           |          | 2.03/h   |
-| <https://www.autodl.com/>   |          | 2.08/h   |
-| <https://matpool.com>       | 矩池云   | 2.20/h   |
-| <https://openbayes.com>     |          | 2.50/h   |
-| <https://mistgpu.com>       |          | N/A      |
