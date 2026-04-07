@@ -1,4 +1,18 @@
-# github
+# gh
+
+## Installation
+
+```bash
+brew install gh
+```
+
+## Usage
+
+```bash
+gh pr checkout "$PR_NUMBER"
+```
+
+## See also
 
 | Tool Name               | Type | Note                      | URL                                             |
 | ----------------------- | ---- | ------------------------- | ----------------------------------------------- |
