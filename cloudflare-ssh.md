@@ -1,6 +1,4 @@
-# cloudflare
-
-## Cloudflare Tunnel SSH
+# cloudflare-ssh
 
 > Ref:
 >
@@ -9,14 +7,14 @@
 > - <https://blog.csdn.net/SmileHergo/article/details/148078652>
 > - <https://blog.csdn.net/hvdanyan/article/details/142265145>
 
-### Prerequisites
+## Prerequisites
 
 1. **Cloudflare**: Ensure the domain is active in your Cloudflare dashboard.
 1. **Namecheap**: In your Namecheap dashboard, set **Nameservers** to **Custom DNS** and input the nameservers provided by your Cloudflare account.
 
-### Part 1: Server Side (Headless)
+## Part 1: Server Side (Headless)
 
-#### 1. Install `cloudflared`
+### 1. Install `cloudflared`
 
 Download and install the package (example for Debian/Ubuntu/amd64):
 
@@ -25,7 +23,7 @@ wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloud
 sudo dpkg -i cloudflared-linux-amd64.deb
 ```
 
-#### 2. Authenticate
+### 2. Authenticate
 
 Run the login command. It will generate a URL.
 
@@ -36,7 +34,7 @@ cloudflared tunnel login
 - **Action:** Copy the URL printed in the terminal, open it in a browser on your _PC/Laptop_, and authorize the domain.
 - **Result:** A certificate `cert.pem` will be downloaded to `~/.cloudflared/`.
 
-#### 3. Create the Tunnel
+### 3. Create the Tunnel
 
 Create a tunnel named `myssh`.
 
@@ -47,7 +45,7 @@ cloudflared tunnel create myssh
 - **Note:** Save the **Tunnel ID** (UUID) from the output.
 - **Result:** A JSON credentials file is created in `~/.cloudflared/`.
 
-#### 4. Configure DNS Routing
+### 4. Configure DNS Routing
 
 Map a subdomain (e.g., `ssh.example.com`) to the tunnel.
 
@@ -56,7 +54,7 @@ Map a subdomain (e.g., `ssh.example.com`) to the tunnel.
 cloudflared tunnel route dns myssh ssh.example.com
 ```
 
-#### 5. Create Configuration File
+### 5. Create Configuration File
 
 Create the config file using `nano` or `vim`:
 
@@ -76,7 +74,7 @@ ingress:
   - service: http_status:404
 ```
 
-#### 6. Run as a Service
+### 6. Run as a Service
 
 Install and start the tunnel as a system service for persistence.
 
@@ -86,13 +84,13 @@ sudo systemctl start cloudflared
 sudo systemctl enable cloudflared
 ```
 
-### Part 2: Client Side (Your PC/Mac)
+## Part 2: Client Side (Your PC/Mac)
 
-#### 1. Install `cloudflared`
+### 1. Install `cloudflared`
 
 You must have the `cloudflared` binary installed on your local machine as well (via Brew, Winget, or direct download).
 
-#### 2. Configure SSH Client
+### 2. Configure SSH Client
 
 Edit your SSH config file (`~/.ssh/config` on Linux/macOS or `C:\Users\You\.ssh\config` on Windows).
 
@@ -103,7 +101,7 @@ Host ssh.example.com
 ProxyCommand cloudflared access ssh --hostname %h
 ```
 
-### Part 3: Connect
+## Part 3: Connect
 
 Run the standard SSH command from your client terminal:
 
@@ -111,11 +109,11 @@ Run the standard SSH command from your client terminal:
 ssh <username>@ssh.example.com
 ```
 
-### Part 4: (Optional but recommend) Cloudflare Zero Trust (Email Authentication)
+## Part 4: (Optional but recommend) Cloudflare Zero Trust (Email Authentication)
 
 This step ensures that even if someone knows your domain, they cannot attempt an SSH connection without first authenticating via email.
 
-#### 1. Create Access Application
+### 1. Create Access Application
 
 1. Navigate to the **[Cloudflare Zero Trust Dashboard](https://one.dash.cloudflare.com/)**.
 1. Go to **Access** > **Applications** > **Add an Application**.
@@ -127,7 +125,7 @@ This step ensures that even if someone knows your domain, they cannot attempt an
 
 1. Click **Next**.
 
-#### 2. Define Policy (Email Rule)
+### 2. Define Policy (Email Rule)
 
 1. **Policy Name**: `Allow Admin`
 1. **Action**: `Allow`
@@ -137,7 +135,7 @@ This step ensures that even if someone knows your domain, they cannot attempt an
 
 1. Click **Next** > **Add Application**.
 
-#### 3. How to Connect (Client Side Changes)
+### 3. How to Connect (Client Side Changes)
 
 No config file changes are needed if you used the `ProxyCommand` from the previous guide. The behavior simply changes:
 
@@ -153,7 +151,7 @@ No config file changes are needed if you used the `ProxyCommand` from the previo
 1. **Access Granted**:
    - Once approved in the browser, the terminal will automatically establish the SSH connection.
 
-#### 4. Troubleshooting
+### 4. Troubleshooting
 
 If the browser does not open automatically, update your client-side `~/.ssh/config` to force the login prompt:
 
