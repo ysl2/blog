@@ -128,3 +128,28 @@
 | <https://www.codebuddy.ai>                       | IDE/CLI                 |              |
 | <https://qoder.com>                              | IDE/CLI/Plugin          |              |
 | <https://www.augmentcode.com/>                   | CLI/Plugin              |              |
+
+## API reverse and account register
+
+| URL                                              | Github stars | Description                                                                                                                                                                                                                                                                                                |
+| ------------------------------------------------ | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <https://github.com/QuantumNous/new-api>         | 25.2k        | A unified AI model hub for aggregation & distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for personal and enterprise model management. 🍥                                                           |
+| <https://github.com/router-for-me/CLIProxyAPI>   | 23.7k        | Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Qwen Code, iFlow as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini 2.5 Pro, GPT 5, Claude, Qwen model through API                                                                                   |
+| <https://github.com/Wei-Shaw/sub2api>            | 10.7k        | Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。                                                                                                                                                                     |
+| <https://github.com/justlovemaki/AIClient-2-API> | 6.7k         | Simulates Gemini CLI, Antigravity, Codex, Grok, and Kiro client requests, compatible with the OpenAI API. It supports thousands of Gemini model requests per day and offers free use of the built-in Claude model in Kiro. Easily connect to any client via the API, making AI development more efficient! |
+
+| URL                                      | Github stars | Description                                                                                                                  |
+| ---------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| <https://github.com/Amm1rr/WebAI-to-API> | 988          | Gemini to API (Don't need API KEY) (ChatGPT, Claude, DeeepSeek, Grok and more)                                               |
+| <https://github.com/CJackHwang/ds2api>   | 866          | Deepseek客户端对话转API全栈开源工具，高性能，多账号轮询，支持纯vercel、docker部署使用。Google、Claude、ChatGPT多接口格式兼容 |
+| <https://github.com/caiwuu/web2api>      | 447          | 把网页AI转api，如claude2api                                                                                                  |
+| <https://github.com/foxhui/WebAI2API>    | 322          | WebAI2API: 基于 Camoufox 的网页 AI 转 API 工具，支持 LMArena/Gemini等，多窗口并发与账号隔离。                                |
+
+| URL                                                 | Github stars | Description                                                                                                                     |
+| --------------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| <https://github.com/Ttungx/codex_auto_register>     | 618          | 基于 DuckMail 的 ChatGPT / Codex 自动注册与 OAuth Token 生成工具集。                                                            |
+| <https://github.com/dsclca12/auto_reg>              | 348          | codex全自动注册机                                                                                                               |
+| <https://github.com/junjiezhou1122/GptCrate>        | 180          | OpenAI 自动注册工具                                                                                                             |
+| <https://github.com/cnlimiter/codex-manager-v3>     | 150          | ChatGPT 账号无头浏览器自动批量注册工具。                                                                                        |
+| <https://github.com/Msg-Lbo/codeX-register>         | 136          | CodeX Register 是一个本地桌面化控制台，用于统一执行注册流程、邮箱池管理、SMS 接码、代理切换、本地账号库管理、以及云端账号运维。 |
+| <https://github.com/miaoge2026/codex-auto-register> | 79           | Codex Auto Registration Tool - 自动化注册OpenAI Codex账号的Python工具                                                           |
