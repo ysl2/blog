@@ -46,12 +46,18 @@ openclaw configure --section web
 # Then, enter the brave search api key.
 ```
 
-## Bot
+## QQ Bot
 
 <https://q.qq.com/qqbot/openclaw/login.html>
 
-```bash
-openclaw plugins install @sliverp/qqbot@latest
-openclaw channels add --channel qqbot --token "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
-openclaw gateway restart
-```
+1. For old version
+
+   ```bash
+   openclaw plugins install @sliverp/qqbot@latest
+   openclaw channels add --channel qqbot --token "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+   openclaw gateway restart
+   ```
+
+2. For new version
+
+   > Ref: <https://github.com/tencent-connect/openclaw-qqbot>
