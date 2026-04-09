@@ -24,9 +24,9 @@
 
 这步我们用 CF Pages 部署开源项目 Edgetunnel，比老旧的 Workers 方法更稳定。
 
-在 CF 后台点「存储和数据库」->「Workers KV」，随便建个命名空间（名字自定义随便取）。
+在 CF 后台点 `Storage & databases` -> `Workers KV`，随便建个命名空间（名字自定义随便取）。
 
-转到「Workers 和 Pages」，选择创建 Pages。
+转到 `Compute` -> `Workers & Pages`， 下面有一行小字写的是 `Looking to deploy Pages? Get started` 选择 `Get started`。
 
 把准备好的 edgetunnel 代码包传上去（Zip上传或连 GitHub 部署都行）。由 CMliu 开源的程序源码地址：<https://github.com/cmliu/edgetunnel/>；或者小白直接下载现成的压缩包：<https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip>
 
@@ -41,16 +41,19 @@
 
 ## 🔒 第三步：绑定域名与安全配置（环境变量设置）
 
-1. 部署完成后点击 继续处理站点 后，选择 设置 > 环境变量 > 制作为生产环境定义变量 > 添加变量。 变量名称填写ADMIN，值则为你的管理员密码，后点击 保存 即可。返回 部署 选项卡，在右下角点击 创建新部署 后，重新上传 [main.zip](https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip) 文件后点击 保存并部署 即可。
+1. 部署完成后点击 继续处理站点 后，选择 `Settings` -> `Variables and Secrets` > `+ Add`。 变量名称填写 `ADMIN`，值则为你的管理员密码，后点击 `Deploy` 即可。返回 部署 选项卡，在右下角点击 创建新部署 后，重新上传 [main.zip](https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip) 文件后点击 保存并部署 即可。
 
 1. 绑定 KV 命名空间：
-在 设置选项卡中选择 绑定 > + 添加 > KV 命名空间，然后选择一个已有的命名空间或创建一个新的命名空间进行绑定。
-变量名称填写KV，然后点击 保存后重试部署即可。
+在 设置选项卡中选择 `Bindings` -> `+ Add` -> `KV namespace`，变量名称填写 `KV`，然后选择一个已有的命名空间或创建一个新的命名空间进行绑定。然后点击 `Save`。
 
 1. 给 Pages绑定 CNAME自定义域：
-在 Pages控制台的 自定义域 选项卡，下方点击 设置自定义域。
-填入你的自定义次级域名，注意不要使用你的根域名，例如： 您分配到的域名是 [xxxxxx.us.ci](xxxxxx.us.ci)，则添加自定义域填入 [xxxxxx.us.ci](xxxxxx.us.ci) 即可；
-按照 CF 的要求将返回你的域名DNS服务商，添加 该自定义域 lizi的 CNAME记录 <http://edgetunnel.pages.dev> 后，点击 激活域 即可。
+在 Pages控制台的 `Settings` -> `Custom domains` -> `Set up a custom domain`。
+填入你的自定义次级域名，注意不要使用你的根域名，例如： 您分配到的域名是 [xxxxxx.us.ci](xxxxxx.us.ci)，则添加自定义域填入 [xxxxxx.us.ci](xxxxxx.us.ci) 即可.然后点 `Continue`；
+在新标签页打开 <https://dash.cloudflare.com/>, 找到 `Domains` -> `Overview` -> 选择本次要用的域名 -> 右侧有一个 `DNS Records` -> `+ Add record` -> 选择上个页面要求添加的 Type (CNAME), Name, Target (对应上个页面的 Content)
+
+按照 CF 的要求将返回你的域名DNS服务商，添加 该自定义域 lizi的 CNAME记录 <http://edgetunnel.pages.dev> 后，返回上个页面, 点击 `Active domain` 即可。
+
+然后再去这个page控制台的`Deployments` -> All deployments -> 右侧三个点 -> `Retry deployment` -> 等待 Status 变成 Success
 
 1. 访问后台：
 例如：以我的后台为实例访问： <https://pangty06116.us.ci/admin>
@@ -72,15 +75,41 @@
 
 优选订阅地址：
 
-- Cm.Soso.Edu.Kg
-- Sub.Cmliussss.Net
-- Owo.O00o.Ooo
+| Url                 | Description                        |
+| ------------------- | ---------------------------------- |
+| sub.cmliussss.net   | no japan                           |
+| owo.o00o.ooo        | no region                          |
+| cm.soso.edu.kg      | with region                        |
+| zrf.zrf.me          | no region                          |
+| sub.keaeye.icu      | too less                           |
+| sub.mot.cloudns.biz | no region                          |
+| cfsub.cfcdn.xx.kg   | less japan, too many invalid nodes |
+| sub.lzjbaby.com     | with region                        |
 
 PROXYIP 订阅:
 
-- ProxyIP.US.CMLiussss.Net
-- ProxyIP.SG.CMLiussss.Net
-- ProxyIP.JP.CMLiussss.Net
+| Url                      | Description    |
+| ------------------------ | -------------- |
+| ProxyIP.CMLiussss.net    | 区域: 全球     |
+| ProxyIP.HK.CMLiussss.net | 区域: 香港     |
+| ProxyIP.SG.CMLiussss.net | 区域: 新加坡   |
+| ProxyIP.JP.CMLiussss.net | 区域: 日本     |
+| ProxyIP.KR.CMLiussss.net | 区域: 韩国     |
+| ProxyIP.IN.CMLiussss.net | 区域: 印度     |
+| ProxyIP.GB.CMLiussss.net | 区域: 英国     |
+| ProxyIP.FR.CMLiussss.net | 区域: 法国     |
+| ProxyIP.DE.CMLiussss.net | 区域: 德国     |
+| ProxyIP.NL.CMLiussss.net | 区域: 荷兰     |
+| ProxyIP.SE.CMLiussss.net | 区域: 瑞典     |
+| ProxyIP.FI.CMLiussss.net | 区域: 芬兰     |
+| ProxyIP.PL.CMLiussss.net | 区域: 波兰     |
+| ProxyIP.RU.CMLiussss.net | 区域: 俄罗斯   |
+| ProxyIP.CH.CMLiussss.net | 区域: 瑞士     |
+| ProxyIP.LV.CMLiussss.net | 区域: 拉脫維亞 |
+| ProxyIP.US.CMLiussss.net | 区域: 美国     |
+| ProxyIP.CA.CMLiussss.net | 区域: 加拿大   |
+| kr.william.us.ci         |                |
+| tw.william.us.ci         |                |
 
 <p><img src=".assets/cloudflare-edgetunnel/img/2026-04-07-15-16-55.png" alt="" width=100% style="display: block; margin: auto;"></p>
 
