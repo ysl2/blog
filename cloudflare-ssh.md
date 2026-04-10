@@ -12,152 +12,133 @@
 1. **Cloudflare**: Ensure the domain is active in your Cloudflare dashboard.
 1. **Namecheap**: In your Namecheap dashboard, set **Nameservers** to **Custom DNS** and input the nameservers provided by your Cloudflare account.
 
-## Part 1: Server Side (Headless)
+## Installation (Server side)
 
-### 1. Install `cloudflared`
+1. [Common part (for both macOS and Linux)](.assets/cloudflare-ssh/install_common.sh)
+1. [Linux specific part (run common part above first!!!)](.assets/cloudflare-ssh/install_linux_specific.sh)
+1. [macOS specific part (run common part above first!!!)](.assets/cloudflare-ssh/install_mac_specific.sh)
+1. NixOS specific (Do not run scripts above, just run these below):
 
-Download and install the package (example for Debian/Ubuntu/amd64):
+   ```bash
+   cloudflared tunnel login
+   cloudflared tunnel create myssh
+   cloudflared tunnel route dns myssh myssh.example.com
+   # Remember the <UUID> generated in output.
 
-```bash
-wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-sudo dpkg -i cloudflared-linux-amd64.deb
-```
+   UUID="$(cloudflared tunnel list | grep myssh | awk '{print $1}')"
 
-### 2. Authenticate
+   CRED_DIR=/var/lib/secrets/cloudflared
+   sudo mkdir -p "$CRED_DIR"
+   sudo cp ~/.cloudflared/"$UUID".json "$CRED_DIR"
+   sudo chmod 600 "$CRED_DIR"/"$UUID".json
 
-Run the login command. It will generate a URL.
+   cd /etc/nixos
+   sudo su
+   vim configuration.nix
+   # Add this below:
+   ```
 
-```bash
-cloudflared tunnel login
-```
+   ```nix
+   services.cloudflared = {
+     enable = true;
+     tunnels = {
+       "<put the UUID generated above>" = {
+         credentialsFile = "/var/lib/secrets/cloudflared/<put the UUID generated above>.json";
+         ingress = {
+           "myssh.example.com" = "ssh://127.0.0.1:22";
+         };
+         default = "http_status:404";
+       };
+     };
+   };
+   ```
 
-- **Action:** Copy the URL printed in the terminal, open it in a browser on your _PC/Laptop_, and authorize the domain.
-- **Result:** A certificate `cert.pem` will be downloaded to `~/.cloudflared/`.
+   ```bash
+   HTTP_PROXY=http://127.0.0.1:7897 HTTPS_PROXY=http://127.0.0.1:7897 nixos-rebuild switch --flake .
 
-### 3. Create the Tunnel
+   # Verify
+   cloudflared tunnel info "$UUID"
+   ```
 
-Create a tunnel named `myssh`.
+## SSH connection (Client side)
 
-```bash
-cloudflared tunnel create myssh
-```
+1. Install `cloudflared` on client side.
 
-- **Note:** Save the **Tunnel ID** (UUID) from the output.
-- **Result:** A JSON credentials file is created in `~/.cloudflared/`.
+   You must have the `cloudflared` binary installed on your local machine as well (via Brew, Winget, or direct download).
 
-### 4. Configure DNS Routing
+2. Configure client side.
 
-Map a subdomain (e.g., `ssh.example.com`) to the tunnel.
+   Edit your SSH config file (`~/.ssh/config` on Linux/macOS or `C:\Users\You\.ssh\config` on Windows).
 
-```bash
-# Replace ssh.example.com with your desired subdomain
-cloudflared tunnel route dns myssh ssh.example.com
-```
+   Add the following entry:
 
-### 5. Create Configuration File
+   ```text
+   Host *.example.com
+       ProxyCommand cloudflared access ssh --hostname %h
+   ```
 
-Create the config file using `nano` or `vim`:
+3. Start connection
 
-```bash
-vim ~/.cloudflared/config.yml
-```
+   Run the standard SSH command from your client terminal:
 
-Paste the following content (replace `<UUID>` with the ID from Step 3):
+   ```bash
+   ssh <username>@myssh.example.com
+   ```
 
-```yaml
-tunnel: <UUID>
-credentials-file: /root/.cloudflared/<UUID>.json
-
-ingress:
-  - hostname: ssh.example.com
-    service: ssh://localhost:22
-  - service: http_status:404
-```
-
-### 6. Run as a Service
-
-Install and start the tunnel as a system service for persistence.
-
-```bash
-sudo cloudflared service install
-sudo systemctl start cloudflared
-sudo systemctl enable cloudflared
-```
-
-## Part 2: Client Side (Your PC/Mac)
-
-### 1. Install `cloudflared`
-
-You must have the `cloudflared` binary installed on your local machine as well (via Brew, Winget, or direct download).
-
-### 2. Configure SSH Client
-
-Edit your SSH config file (`~/.ssh/config` on Linux/macOS or `C:\Users\You\.ssh\config` on Windows).
-
-Add the following entry:
-
-```text
-Host ssh.example.com
-ProxyCommand cloudflared access ssh --hostname %h
-```
-
-## Part 3: Connect
-
-Run the standard SSH command from your client terminal:
-
-```bash
-ssh <username>@ssh.example.com
-```
-
-## Part 4: (Optional but recommend) Cloudflare Zero Trust (Email Authentication)
+## Advance setting: Cloudflare Zero Trust (Email Authentication)
 
 This step ensures that even if someone knows your domain, they cannot attempt an SSH connection without first authenticating via email.
 
-### 1. Create Access Application
+1. Create Access Application
+   - Navigate to the **[Cloudflare Zero Trust Dashboard](https://one.dash.cloudflare.com/)**.
+   - Go to **Access** > **Applications** > **Add an Application**.
+   - Select **Self-hosted**.
+   - **Configuration**:
+     - **Application Name**: `myssh`
+     - **Session Duration**: `24h` (How often you need to re-login)
+     - **Application Domain**: `myssh` . `example.com` (Must match your Tunnel route)
+   - Click **Next**.
 
-1. Navigate to the **[Cloudflare Zero Trust Dashboard](https://one.dash.cloudflare.com/)**.
-1. Go to **Access** > **Applications** > **Add an Application**.
-1. Select **Self-hosted**.
-1. **Configuration**:
-   - **Application Name**: `myssh`
-   - **Session Duration**: `24h` (How often you need to re-login)
-   - **Application Domain**: `ssh` . `example.com` (Must match your Tunnel route)
+1. Define Policy (Email Rule)
+   - **Policy Name**: `Allow Admin`
+   - **Action**: `Allow`
+   - **Configure Rules**:
+     - **Include** > **Selector**: `Email`
+     - **Value**: `your.email@example.com`
 
-1. Click **Next**.
+   - Click **Next** > **Add Application**.
 
-### 2. Define Policy (Email Rule)
+1. How to Connect (Client Side Changes)
 
-1. **Policy Name**: `Allow Admin`
-1. **Action**: `Allow`
-1. **Configure Rules**:
-   - **Include** > **Selector**: `Email`
-   - **Value**: `your.email@example.com`
+   No config file changes are needed if you used the `ProxyCommand` from the previous guide. The behavior simply changes:
+   - **Run SSH**:
 
-1. Click **Next** > **Add Application**.
+     ```bash
+     ssh <username>@myssh.example.com
+     ```
 
-### 3. How to Connect (Client Side Changes)
+   - **Authenticate**:
+     - `cloudflared` will automatically open a browser window (or print a URL in the terminal).
+     - Enter your email in the browser and input the OTP code sent to your inbox.
+   - **Access Granted**:
+     - Once approved in the browser, the terminal will automatically establish the SSH connection.
 
-No config file changes are needed if you used the `ProxyCommand` from the previous guide. The behavior simply changes:
+1. Troubleshooting
 
-1. **Run SSH**:
+   If the browser does not open automatically, you should manually copy the url and manually open with browser.
 
-   ```bash
-   ssh <username>@ssh.example.com
+   Or, you can choose to disable browser auth, but not safe!!!
+   Update your client-side `~/.ssh/config` to force the login prompt:
+
+   ```text
+   Host *.example.com
+       ProxyCommand cloudflared access ssh --hostname %h --id <your-client-id> --secret <your-client-secret>
    ```
 
-1. **Authenticate**:
-   - `cloudflared` will automatically open a browser window (or print a URL in the terminal).
-   - Enter your email in the browser and input the OTP code sent to your inbox.
-1. **Access Granted**:
-   - Once approved in the browser, the terminal will automatically establish the SSH connection.
+   (Note: Usually not required for basic Email OTP; the standard command works for interactive sessions)
 
-### 4. Troubleshooting
+## Uninstall (Server side)
 
-If the browser does not open automatically, update your client-side `~/.ssh/config` to force the login prompt:
-
-```text
-Host ssh.example.com
-ProxyCommand cloudflared access ssh --hostname %h --id <your-client-id> --secret <your-client-secret>
-```
-
-(Note: Usually not required for basic Email OTP; the standard command works for interactive sessions)
+1. [Common part (for both macOS and Linux)](.assets/cloudflare-ssh/uninstall_common.sh)
+1. [Linux specific part (run common part above first!!!)](.assets/cloudflare-ssh/uninstall_linux_specific.sh)
+1. [macOS specific part (run common part above first!!!)](.assets/cloudflare-ssh/uninstall_mac_specific.sh)
