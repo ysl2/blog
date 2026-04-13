@@ -39,7 +39,7 @@
 
 ### crlf2lf
 
-> Ref: https://github.com/XadillaX/node-crlf2lf
+> Ref: <https://github.com/XadillaX/node-crlf2lf>
 
 ```bash
 npm install -g crlf2lf
@@ -77,4 +77,14 @@ git config core.ignorecase false
 git remote add upstream git@example.com:user/repo.git
 git fetch upstream
 git rebase upstream/master
+```
+
+## Only add new file / deleted file
+
+```bash
+# Only add new file
+git ls-files --others --exclude-standard -z | xargs -0 git add
+
+# Only add deleted file
+git ls-files --deleted -z | xargs -0 git rm --cached
 ```
