@@ -43,6 +43,13 @@
 | <https://nxonearth.com/>                               | 奶昔机场                             |                |            |                                                                   |
 | <https://wd-gold.net/>                                 | WESTDATA                             |                |            |                                                                   |
 
+## SMS
+
+| URL                     |
+| ----------------------- |
+| <https://5sim.net/zh>   |
+| <https://hero-sms.com/> |
+
 ## Domains
 
 | URL                          | Type |
@@ -75,26 +82,34 @@
 | <https://docs.bigmodel.cn/cn/coding-plan/tool/claude>   |
 | <https://docs.bigmodel.cn/cn/coding-plan/tool/opencode> |
 
-| URL                                     |
-| --------------------------------------- |
-| <https://siliconflow.cn>                |
-| <https://anyrouter.top>                 |
-| <https://laozhang.ai>                   |
-| <https://gpt.zhizengzeng.com>           |
-| <https://code.wenwen-ai.com/>           |
-| <https://www.aicodemirror.com>          |
-| <https://qinzhiai.com/>                 |
-| <https://yunwu.ai>                      |
-| <https://www.closechat.org>             |
-| <https://erlich.fun/deepclaude-pricing> |
-| <https://ai.ll9e.cn>                    |
-| <http://api.code-relay.com/>            |
-| <https://api.1youth.me/>                |
-| <https://vectorengine.ai/>              |
-| <https://claudeapi.com>                 |
-| <https://easychat.top/>                 |
-| <https://flapcode.com/>                 |
-| <https://www.ddshub.cc>                 |
+| URL                                     | Description                    |
+| --------------------------------------- | ------------------------------ |
+| <https://siliconflow.cn>                |                                |
+| <https://anyrouter.top>                 |                                |
+| <https://laozhang.ai>                   |                                |
+| <https://gpt.zhizengzeng.com>           |                                |
+| <https://code.wenwen-ai.com/>           |                                |
+| <https://www.aicodemirror.com>          |                                |
+| <https://qinzhiai.com/>                 |                                |
+| <https://yunwu.ai>                      |                                |
+| <https://www.closechat.org>             |                                |
+| <https://erlich.fun/deepclaude-pricing> |                                |
+| <https://ai.ll9e.cn>                    |                                |
+| <http://api.code-relay.com/>            |                                |
+| <https://api.1youth.me/>                |                                |
+| <https://vectorengine.ai/>              |                                |
+| <https://claudeapi.com>                 |                                |
+| <https://easychat.top/>                 |                                |
+| <https://flapcode.com/>                 |                                |
+| <https://www.ddshub.cc>                 |                                |
+| <https://openrouter.ai/>                | The Unified Interface For LLMs |
+| <https://zenmux.ai/>                    |                                |
+| <https://subrouter.ai/>                 |                                |
+| <https://goods.vivijane.pro/>           | Vivi 店铺                      |
+| <https://gmail6868.com/>                | gemini 源头批发网站            |
+| <https://go365-card.com/products>       | Go365 Card                     |
+| <https://talkai.cyou/>                  | 聊聊AI                         |
+| <https://pay.ldxp.cn/shop/DinoAI>       | DinoAI                         |
 
 ## GPU
 
