@@ -2,11 +2,14 @@
 
 ## TZ
 
+| URL                             |
+| ------------------------------- |
+| <https://ip.net.coffee/claude/> |
+
 | URL                                               | Description                                                                                             |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | <https://ghproxy.link>                            | GitHub Proxy 最新地址发布                                                                               |
 | <https://github.com/dongyubin/DockerHub>          | 2025年7月更新，目前国内可用Docker镜像源汇总，DockerHub国内镜像加速列表，🚀DockerHub镜像加速器           |
-| <https://github.com/DaoCloud/public-image-mirror> | 很多镜像都在国外。比如 gcr 。国内下载很慢，需要加速。致力于提供连接全世界的稳定可靠安全的容器镜像服务。 |
 | <https://github.com/DaoCloud/public-image-mirror> | 很多镜像都在国外。比如 gcr 。国内下载很慢，需要加速。致力于提供连接全世界的稳定可靠安全的容器镜像服务。 |
 
 | URL                                            | Description                      |
@@ -42,13 +45,23 @@
 | <https://equaldcdn.com>                                | 国内直连的高质量静态住宅节点网络服务 |                |            |                                                                   |
 | <https://nxonearth.com/>                               | 奶昔机场                             |                |            |                                                                   |
 | <https://wd-gold.net/>                                 | WESTDATA                             |                |            |                                                                   |
+| <http://fzg2025.net/>                                  |                                      |                |            |                                                                   |
+| <https://candytally2.com/>                             |                                      |                |            |                                                                   |
+| <https://sakuracat.com/>                               |                                      |                |            |                                                                   |
+| <https://oixcloud.com/>                                |                                      |                |            |                                                                   |
+| <https://www.tiggerx.com/>                             |                                      |                |            |                                                                   |
+| <https://hanhai.app/>                                  |                                      |                |            |                                                                   |
+| <https://dashcf.metc.uk/>                              |                                      |                |            |                                                                   |
+| <https://www.vvcloud.xyz/>                             |                                      |                |            |                                                                   |
 
 ## SMS
 
-| URL                     |
-| ----------------------- |
-| <https://5sim.net/zh>   |
-| <https://hero-sms.com/> |
+| URL                                    |
+| -------------------------------------- |
+| <https://5sim.net/zh>                  |
+| <https://hero-sms.com/>                |
+| <https://www.ultramobile.com/>         |
+| <https://sms-verification-number.com/> |
 
 ## Domains
 
@@ -59,21 +72,44 @@
 
 ## Accounts
 
-| URL                                 | Description                                               |
-| ----------------------------------- | --------------------------------------------------------- |
-| <https://nf.video>                  | 银河录像局                                                |
-| <https://universalbus.cn>           | 环球巴士                                                  |
-| <https://www.naifeistation.com>     | 星际放映厅                                                |
-| <https://github.com/chilrr/cheerup> | 👇🏻好用的工具和福利一览，页面下拉查看精彩 ，欢迎关注收藏！ |
+| URL                                         | Description                                               |
+| ------------------------------------------- | --------------------------------------------------------- |
+| <https://github.com/chilrr/cheerup>         | 👇🏻好用的工具和福利一览，页面下拉查看精彩 ，欢迎关注收藏！ |
+| <https://nf.video>                          | 银河录像局                                                |
+| <https://universalbus.cn>                   | 环球巴士                                                  |
+| <https://www.naifeistation.com>             | 星际放映厅                                                |
+| <https://www.gamsgo.com/>                   |                                                           |
+| <https://jkhezu.top/>                       |                                                           |
+| <http://web3chirou.com/>                    |                                                           |
+| <https://researchwang13.space/#screen-shop> |                                                           |
 
-| URL                                 | Description  |
-| ----------------------------------- | ------------ |
-| <https://989nst.cloud/invites/join> | ChatGPT Team |
-| <https://uu6.top/>                  | 转转AI商城   |
-| <https://shop.xrdwp.cn/>            | 木木批发     |
-| <https://aizhp.site/>               | AI杂货铺     |
+| URL                                      | Description         |
+| ---------------------------------------- | ------------------- |
+| <https://989nst.cloud/invites/join>      | ChatGPT Team        |
+| <https://uu6.top/>                       | 转转AI商城          |
+| <https://shop.xrdwp.cn/>                 | 木木批发            |
+| <https://aizhp.site/>                    | AI杂货铺            |
+| <https://goods.vivijane.pro/>            | Vivi 店铺           |
+| <https://gmail6868.com/>                 | gemini 源头批发网站 |
+| <https://go365-card.com/products>        | Go365 Card          |
+| <https://talkai.cyou/>                   | 聊聊AI              |
+| <https://pay.ldxp.cn/shop/DinoAI>        | DinoAI              |
+| <https://www.xiaosen.shop/>              |                     |
+| <https://ctok.ai/>                       |                     |
+| <https://www.aihezu.dev/>                |                     |
+| <https://www.chongzhiguanjia.com/buy/11> |                     |
 
 ## API
+
+| URL                               |
+| --------------------------------- |
+| <https://hvoy.ai/en/leaderboard>  |
+| <https://relaypulse.top/>         |
+| <https://www.helpaio.com/transit> |
+| <https://suantoken.xyz/>          |
+| <https://api.daheiai.com/>        |
+| <https://subrouter.ai/providers>  |
+| <https://rate.linux.do/>          |
 
 | URL                                                     |
 | ------------------------------------------------------- |
@@ -81,35 +117,102 @@
 | <https://docs.bigmodel.cn/cn/coding-plan/overview>      |
 | <https://docs.bigmodel.cn/cn/coding-plan/tool/claude>   |
 | <https://docs.bigmodel.cn/cn/coding-plan/tool/opencode> |
+| <https://siliconflow.cn>                                |
 
-| URL                                     | Description                    |
-| --------------------------------------- | ------------------------------ |
-| <https://siliconflow.cn>                |                                |
-| <https://anyrouter.top>                 |                                |
-| <https://laozhang.ai>                   |                                |
-| <https://gpt.zhizengzeng.com>           |                                |
-| <https://code.wenwen-ai.com/>           |                                |
-| <https://www.aicodemirror.com>          |                                |
-| <https://qinzhiai.com/>                 |                                |
-| <https://yunwu.ai>                      |                                |
-| <https://www.closechat.org>             |                                |
-| <https://erlich.fun/deepclaude-pricing> |                                |
-| <https://ai.ll9e.cn>                    |                                |
-| <http://api.code-relay.com/>            |                                |
-| <https://api.1youth.me/>                |                                |
-| <https://vectorengine.ai/>              |                                |
-| <https://claudeapi.com>                 |                                |
-| <https://easychat.top/>                 |                                |
-| <https://flapcode.com/>                 |                                |
-| <https://www.ddshub.cc>                 |                                |
-| <https://openrouter.ai/>                | The Unified Interface For LLMs |
-| <https://zenmux.ai/>                    |                                |
-| <https://subrouter.ai/>                 |                                |
-| <https://goods.vivijane.pro/>           | Vivi 店铺                      |
-| <https://gmail6868.com/>                | gemini 源头批发网站            |
-| <https://go365-card.com/products>       | Go365 Card                     |
-| <https://talkai.cyou/>                  | 聊聊AI                         |
-| <https://pay.ldxp.cn/shop/DinoAI>       | DinoAI                         |
+| URL                                         | Description                    |
+| ------------------------------------------- | ------------------------------ |
+| <https://anyrouter.top>                     |                                |
+| <https://laozhang.ai>                       |                                |
+| <https://gpt.zhizengzeng.com>               |                                |
+| <https://code.wenwen-ai.com/>               |                                |
+| <https://www.aicodemirror.com>              |                                |
+| <https://qinzhiai.com/>                     |                                |
+| <https://yunwu.ai>                          |                                |
+| <https://www.closechat.org>                 |                                |
+| <https://erlich.fun/deepclaude-pricing>     |                                |
+| <https://ai.ll9e.cn>                        |                                |
+| <http://api.code-relay.com/>                |                                |
+| <https://api.1youth.me/>                    |                                |
+| <https://vectorengine.ai/>                  |                                |
+| <https://claudeapi.com>                     |                                |
+| <https://easychat.top/>                     |                                |
+| <https://flapcode.com/>                     |                                |
+| <https://www.ddshub.cc>                     |                                |
+| <https://openrouter.ai/>                    | The Unified Interface For LLMs |
+| <https://zenmux.ai/>                        |                                |
+| <https://subrouter.ai/>                     |                                |
+| <https://manage-xai.ainaibahub.com/>        | 𝐗𝐀𝐈 𝐗𝐀𝐏𝐈                       |
+| <https://m.xairouter.com/>                  | 𝐗𝐀𝐈 𝐗𝐀𝐏𝐈                       |
+| <https://www.packycode.com/>                |                                |
+| <https://dragoncode.codes>                  |                                |
+| <https://www.aigocode.com/>                 |                                |
+| <https://www.lingtrue.com/>                 |                                |
+| <https://right.codes/>                      |                                |
+| <https://xaapi.ai/>                         |                                |
+| <https://aicoding.sh/>                      |                                |
+| <https://www.ai-openclaw.one/>              |                                |
+| <https://portunex.gewulabs.group/>          |                                |
+| <https://api.aipaibox.com/>                 |                                |
+| <https://aibuilder.rich/>                   |                                |
+| <https://aicodewith.com/>                   |                                |
+| <https://apipro.maynor1024.live/>           |                                |
+| <https://hapuppy.com/>                      |                                |
+| <https://realmrouter.cn/>                   |                                |
+| <https://ai.ll9e.cn/>                       |                                |
+| <https://api.api2box.com/>                  |                                |
+| <https://xuedingtoken.com>                  |                                |
+| <http://api.tsbys.com/>                     |                                |
+| <https://ai.duomi.uk/>                      |                                |
+| <https://wanmotong.com/>                    |                                |
+| <https://ofox.ai/>                          |                                |
+| <https://next.aigc2d.com/>                  |                                |
+| <https://api.yycode.net/>                   |                                |
+| <https://yibuapi.com/>                      |                                |
+| <https://www.88code.ai/>                    |                                |
+| <https://www.duckcoding.ai/>                |                                |
+| <https://hongmacc.com/>                     |                                |
+| <https://home.moleapi.com/>                 |                                |
+| <https://api.tu-zi.com/>                    |                                |
+| <https://nexusapi.cn/>                      |                                |
+| <https://www.metachat.fun/>                 |                                |
+| <https://www.fusecode.cc/home>              |                                |
+| <https://ai.17nas.com/>                     |                                |
+| <https://liaobots.com/>                     |                                |
+| <https://ai.holly.ink/>                     |                                |
+| <https://fk.codesome.cn/>                   |                                |
+| <https://co.yes.vg/>                        |                                |
+| <https://api.apiyi.com/>                    |                                |
+| <https://api.ikuncode.cc/>                  |                                |
+| <https://cloudrouter.online/>               |                                |
+| <https://tokencheap.ai/>                    |                                |
+| <https://platform.chatnext.ai/>             |                                |
+| <https://www.openclaudecode.cn/>            |                                |
+| <https://naga.ac/>                          |                                |
+| <https://gaccode.com/login>                 |                                |
+| <https://qcode.cc/>                         |                                |
+| <https://thousandengine.com/>               |                                |
+| <https://apimall.shop/>                     |                                |
+| <https://code.pipellm.ai/>                  |                                |
+| <https://clauddy.com/>                      |                                |
+| <https://new.12ai.org/>                     |                                |
+| <https://kotochain-pay-per-use.zeabur.app/> |                                |
+| <https://api.timebackward.com/>             |                                |
+| <http://pass.fyxyw.top/home>                |                                |
+| <https://jarlessapi.com/home>               |                                |
+| <https://dataeyes.ai/>                      |                                |
+| <https://apimart.ai/>                       |                                |
+| <https://dgrid.ai/>                         |                                |
+| <https://fluxnode.org/>                     |                                |
+| <https://1openapi.com/>                     |                                |
+| <https://fishxcode.com/>                    |                                |
+| <https://happycapy.ai/>                     |                                |
+| <https://ai.nexahub.one/home>               |                                |
+| <https://cubence.com/>                      |                                |
+| <https://www.univibe.cc/>                   |                                |
+| <https://linuxdoapi.223384.xyz/>            | free                           |
+| <https://free.duckcoding.com/>              | free                           |
+| <https://kfc-api.sxxe.net/>                 | free                           |
+| <https://cdk.hybgzs.com/>                   | free                           |
 
 ## GPU
 
