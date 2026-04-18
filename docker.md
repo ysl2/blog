@@ -1,32 +1,24 @@
 # docker
 
-## Install docker
+## Installation
 
-- By brew:
+- For Linux, by brew (Not recommend for macOS. Use `by colima` below)
 
   ```bash
   brew install --cask docker
   ```
 
-- By apt:
+- For Linux, by apt
 
   ```bash
   sudo apt install -y docker.io
   ```
 
-- By [colima](https://github.com/abiosoft/colima) (brew):
+- For macOS, by [colima](https://github.com/abiosoft/colima), refer to [./colima.md#installation](./colima.md#installation)
 
-  ```bash
-  brew install colima docker
-  colima start
+## Uninstallation
 
-  # Start colima in background and enable it to start on login:
-  brew services start colima  # Or: `colima start --background`
-  ```
-
-## Uninstall docker
-
-- By brew:
+- For Linux and macOS, by brew
 
   ```bash
   # Ref: https://github.com/docker/for-mac/issues/7046#issuecomment-2579215790
@@ -34,9 +26,26 @@
   brew uninstall --formula docker --force --verbose --debug
   ```
 
-## Install docker plugins
+## Configuration
 
-- By brew:
+### Install docker plugins
+
+- For Linux and macOS, by source (docker-compose):
+
+  ```bash
+  # Ref: https://stackoverflow.com/a/79052312
+
+  DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+  mkdir -p $DOCKER_CONFIG/cli-plugins
+  curl -SL "https://ghfast.top/https://github.com/docker/compose/releases/download/v2.33.0/docker-compose-$(uname -s)-$(uname -m)" -o $DOCKER_CONFIG/cli-plugins/docker-compose
+
+  chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+
+  # test the installation with:
+  docker compose version
+  ```
+
+- For macOS, by brew:
 
   ```bash
   brew install docker-compose
@@ -51,50 +60,39 @@
   }
   ```
 
-- By source (docker-compose):
-
-  ```bash
-  # Ref: https://stackoverflow.com/a/79052312
-
-  DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
-  mkdir -p $DOCKER_CONFIG/cli-plugins
-  curl -SL "https://ghfast.top/https://github.com/docker/compose/releases/download/v2.33.0/docker-compose-$(uname -s)-$(uname -m)" -o $DOCKER_CONFIG/cli-plugins/docker-compose
-
-  chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
-
-  # test the installation with:
-  docker compose version
-
-  # expected output is: Docker Compose version v2.29.6
-  ```
-
-## Add user into docker group
+### For Linux, add user into docker group
 
 ```bash
 sudo usermod -aG docker "$USER"
 logout  # and login again
 ```
 
-## Set Chinese mirror
+### Set Chinese mirror
 
-```bash
-sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json <<-'EOF'
-{
-    "registry-mirrors": ["https://docker.m.daocloud.io"]
-}
-EOF
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-```
+- For macOS, refer to [./colima.md#set-chinese-mirror](./colima.md#set-chinese-mirror)
 
-## Check the host's IP in docker containers
+- For Linux:
+
+  ```bash
+  sudo mkdir -p /etc/docker
+  sudo tee /etc/docker/daemon.json <<-'EOF'
+  {
+      "registry-mirrors": ["https://docker.m.daocloud.io"]
+  }
+  EOF
+  sudo systemctl daemon-reload
+  sudo systemctl restart docker
+  ```
+
+## Usage
+
+### Check the host's IP in docker containers
 
 ```bash
 ip route | awk '/default/ { print $3 }'
 ```
 
-## Clean docker resources
+### Clean docker resources
 
 ```bash
 docker system prune -a --volumes
