@@ -36,25 +36,25 @@
 
 ### 2.2 Other tools
 
-| Name                | Platform          | Type    | Note                                                                                                                                    | URL                                                                      |
-| ------------------- | ----------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| `termscp`           | Linux/Mac/Windows | TUI     | SFTP in terminal                                                                                                                        | <https://github.com/veeso/termscp>                                       |
-| `flameshot`         | Linux/Mac/Windows | GUI     | Image capture                                                                                                                           | <https://github.com/flameshot-org/flameshot>                             |
-| `pdf2svg`           | Linux/Mac/Windows | CLI     | PDF to SVG, for Typst                                                                                                                   | <https://github.com/dawbarton/pdf2svg>                                   |
-| `qrcp`              | Linux/Mac/Windows | CLI     | File transfer                                                                                                                           | <https://github.com/claudiodangelis/qrcp>                                |
-| `glow`              | Linux/Mac/Windows | TUI     | Markdown previewer                                                                                                                      | <https://github.com/charmbracelet/glow>                                  |
-| `obs`               | Linux/Mac/Windows | GUI     | Live streaming and screen recording                                                                                                     | <https://github.com/obsproject/obs-studio>                               |
-| `eslockdec`         | Linux/Mac/Windows | GUI     | Unlock eslock file                                                                                                                      | <https://github.com/Rambin/eslockdec>                                    |
-| `BaiduPCS-Go`       | Linux/Mac/Windows | CLI     | Baidunetdisk CLI                                                                                                                        | <https://github.com/qjfoidnh/BaiduPCS-Go>                                |
-| `sing-box`          | Linux/Mac/Windows | CLI/GUI | V.P.N                                                                                                                                   | <https://github.com/SagerNet/sing-box>                                   |
-| `nvtop` or `nvitop` | Linux/Mac/Windows | TUI     | Check GPU status in terminal                                                                                                            | <https://github.com/Syllo/nvtop> / <https://github.com/XuehaiPan/nvitop> |
-| `trans`             | Linux/Mac         | CLI     | Language translate                                                                                                                      | <https://github.com/soimort/translate-shell>                             |
-| `chafa`             | Linux/Mac         | CLI     | Terminal image renderer                                                                                                                 | <https://github.com/hpjansson/chafa>                                     |
-| `gh`                | Linux/Mac         | CLI     | Official Github CLI                                                                                                                     | <https://github.com/cli/cli>                                             |
-| `gh-dash`           | Linux/Mac         | TUI     | Github dashboard                                                                                                                        | <https://github.com/dlvhdr/gh-dash>                                      |
-| `mycli`             | Linux/Mac         | CLI     | MySQL                                                                                                                                   | <https://github.com/dbcli/mycli>                                         |
-| `ilovepdf`          | Web               |         | PDF process                                                                                                                             | <https://www.ilovepdf.com/>                                              |
-| `iloveimg`          | Web               |         | Image process                                                                                                                           | <https://www.iloveimg.com/>                                              |
+| Name                | Platform          | Type    | Note                                | URL                                                                      |
+| ------------------- | ----------------- | ------- | ----------------------------------- | ------------------------------------------------------------------------ |
+| `termscp`           | Linux/Mac/Windows | TUI     | SFTP in terminal                    | <https://github.com/veeso/termscp>                                       |
+| `flameshot`         | Linux/Mac/Windows | GUI     | Image capture                       | <https://github.com/flameshot-org/flameshot>                             |
+| `pdf2svg`           | Linux/Mac/Windows | CLI     | PDF to SVG, for Typst               | <https://github.com/dawbarton/pdf2svg>                                   |
+| `qrcp`              | Linux/Mac/Windows | CLI     | File transfer                       | <https://github.com/claudiodangelis/qrcp>                                |
+| `glow`              | Linux/Mac/Windows | TUI     | Markdown previewer                  | <https://github.com/charmbracelet/glow>                                  |
+| `obs`               | Linux/Mac/Windows | GUI     | Live streaming and screen recording | <https://github.com/obsproject/obs-studio>                               |
+| `eslockdec`         | Linux/Mac/Windows | GUI     | Unlock eslock file                  | <https://github.com/Rambin/eslockdec>                                    |
+| `BaiduPCS-Go`       | Linux/Mac/Windows | CLI     | Baidunetdisk CLI                    | <https://github.com/qjfoidnh/BaiduPCS-Go>                                |
+| `sing-box`          | Linux/Mac/Windows | CLI/GUI | V.P.N                               | <https://github.com/SagerNet/sing-box>                                   |
+| `nvtop` or `nvitop` | Linux/Mac/Windows | TUI     | Check GPU status in terminal        | <https://github.com/Syllo/nvtop> / <https://github.com/XuehaiPan/nvitop> |
+| `trans`             | Linux/Mac         | CLI     | Language translate                  | <https://github.com/soimort/translate-shell>                             |
+| `chafa`             | Linux/Mac         | CLI     | Terminal image renderer             | <https://github.com/hpjansson/chafa>                                     |
+| `gh`                | Linux/Mac         | CLI     | Official Github CLI                 | <https://github.com/cli/cli>                                             |
+| `gh-dash`           | Linux/Mac         | TUI     | Github dashboard                    | <https://github.com/dlvhdr/gh-dash>                                      |
+| `mycli`             | Linux/Mac         | CLI     | MySQL                               | <https://github.com/dbcli/mycli>                                         |
+| `ilovepdf`          | Web               |         | PDF process                         | <https://www.ilovepdf.com/>                                              |
+| `iloveimg`          | Web               |         | Image process                       | <https://www.iloveimg.com/>                                              |
 
 - [`img2pdf`](https://github.com/josch/img2pdf) (Linux/Mac/Windows, CLI, Image to PDF, for Latex)
 
@@ -158,23 +158,24 @@
 
 ## 4. Scene: Thesis and notes tools
 
-| Category  | Name                                                 | Read papers     | Write papers    | Presentation (PPT) | Notes (Word)    | Databases (Excel) |
-| --------- | ---------------------------------------------------- | --------------- | --------------- | ------------------ | --------------- | ----------------- |
-| `Storage` | [`git`](https://git-scm.com/)                        | Y               | Y               | Y                  | Y               | Y                 |
-| `Storage` | [`nutstore`](https://www.jianguoyun.com/)            | Y               |                 | Y                  |                 | Y                 |
-| `Storage` | [`baidunetdisk`](https://pan.baidu.com/)             | Y               |                 | Y                  |                 | Y                 |
-| `IDE`     | [`zotero`](https://www.zotero.org/)                  | Y               |                 |                    |                 |                   |
-| `IDE`     | [`lazyvim`](https://www.lazyvim.org/)                |                 | Opt.1 (offline) | Y (latex table)    | Opt.1 (offline) |                   |
-| `IDE`     | [`overleaf`](http://overleaf.com/)                   |                 | Opt.2 (online)  |                    |                 |                   |
-| `IDE`     | [`obsidian`](https://obsidian.md/)                   |                 |                 |                    | Opt.2 (offline) | Opt.1 (offline)   |
-| `IDE`     | [`mubu`](https://mubu.com/)                          | Y (mindmap)     |                 | Y (mindmap)        | Opt.3 (online)  |                   |
-| `IDE`     | [`notion`](https://www.notion.so/)                   | Y (database)    |                 |                    | Opt.4 (online)  | Opt.2 (online)    |
-| `IDE`     | [`wps`](https://www.wps.cn/)                         |                 |                 | Opt.1 (offline)    | Opt.5 (offline) | Opt.3 (offline)   |
-| `IDE`     | [`tencent-doc`](https://docs.qq.com/)                |                 |                 | Opt.2 (online)     | Opt.6 (online)  | Opt.4 (online)    |
-| `IDE`     | [`typora`](https://typora.io/)                       | Y (excel to md) |                 |                    |                 |                   |
-| `IDE`     | [`typst`](https://typst.app/)                        |                 | Opt.3 (offline) |                    |                 |                   |
-| `Tool`    | [`drawio`](https://draw.io/)                         |                 | Y               | Y                  |                 |                   |
-| `Tool`    | [`mermaidchart`](https://mermaidchart.com)           |                 |                 | Y                  |                 |                   |
-| `Tool`    | [`tablesgenerator`](https://www.tablesgenerator.com) |                 | Y               | Y                  |                 |                   |
-| `Tool`    | [`tldraw`](https://www.tldraw.com/)                  | Y               |                 | Y                  |                 |                   |
-| `Tool`    | [`marp`](https://marp.app/)                          |                 |                 | Opt.3 (offline)    |                 |                   |
+| Category  | Name                                                                   | Read papers     | Write papers    | Presentation (PPT) | Notes (Word)    | Databases (Excel) |
+| --------- | ---------------------------------------------------------------------- | --------------- | --------------- | ------------------ | --------------- | ----------------- |
+| `Storage` | [`git`](https://git-scm.com/)                                          | Y               | Y               | Y                  | Y               | Y                 |
+| `Storage` | [`nutstore`](https://www.jianguoyun.com/)                              | Y               |                 | Y                  |                 | Y                 |
+| `Storage` | [`baidunetdisk`](https://pan.baidu.com/)                               | Y               |                 | Y                  |                 | Y                 |
+| `IDE`     | [`zotero`](https://www.zotero.org/)                                    | Y               |                 |                    |                 |                   |
+| `IDE`     | [`lazyvim`](https://www.lazyvim.org/)                                  |                 | Opt.1 (offline) | Y (latex table)    | Opt.1 (offline) |                   |
+| `IDE`     | [`overleaf`](http://overleaf.com/)                                     |                 | Opt.2 (online)  |                    |                 |                   |
+| `IDE`     | [`obsidian`](https://obsidian.md/)                                     |                 |                 |                    | Opt.2 (offline) | Opt.1 (offline)   |
+| `IDE`     | [`mubu`](https://mubu.com/)                                            | Y (mindmap)     |                 | Y (mindmap)        | Opt.3 (online)  |                   |
+| `IDE`     | [`notion`](https://www.notion.so/)                                     | Y (database)    |                 |                    | Opt.4 (online)  | Opt.2 (online)    |
+| `IDE`     | [`wps`](https://www.wps.cn/)                                           |                 |                 | Opt.1 (offline)    | Opt.5 (offline) | Opt.3 (offline)   |
+| `IDE`     | [`tencent-doc`](https://docs.qq.com/)                                  |                 |                 | Opt.2 (online)     | Opt.6 (online)  | Opt.4 (online)    |
+| `IDE`     | [`typora`](https://typora.io/)                                         | Y (excel to md) |                 |                    |                 |                   |
+| `IDE`     | [`typst`](https://typst.app/)                                          |                 | Opt.3 (offline) |                    |                 |                   |
+| `Tool`    | [`drawio`](https://draw.io/)                                           |                 | Y               | Y                  |                 |                   |
+| `Tool`    | [`mermaidchart`](https://mermaidchart.com)                             |                 |                 | Y                  |                 |                   |
+| `Tool`    | [`tablesgenerator`](https://www.tablesgenerator.com)                   |                 | Y               | Y                  |                 |                   |
+| `Tool`    | [`tldraw`](https://www.tldraw.com/)                                    | Y               |                 | Y                  |                 |                   |
+| `Tool`    | [`marp`](https://marp.app/)                                            |                 |                 | Opt.3 (offline)    |                 |                   |
+| `Tool`    | [`arxiv-latex-merger`](https://github.com/iokarkan/arxiv-latex-merger) | Y               |                 |                    |                 |                   |
