@@ -1,8 +1,6 @@
 # cliproxyapi
 
-> Ref:
-> - <https://github.com/router-for-me/CLIProxyAPI>
-> - <https://github.com/router-for-me/CLIProxyAPIPlus>
+> Ref: <https://github.com/router-for-me/CLIProxyAPI>
 
 > Notice:
 > - If you want cliproxyapi website to be public available, you must change the `remote-management.secret-key` and the default `API_KEY`.
@@ -39,8 +37,8 @@ brew services restart cliproxyapi
 
 ```bash
 cd ~/Documents
-git clone git@github.com:router-for-me/CLIProxyAPIPlus.git
-cd CLIProxyAPIPlus
+git clone git@github.com:router-for-me/CLIProxyAPI.git
+cd CLIProxyAPI
 vim docker-compose.yml
 ```
 
@@ -78,7 +76,7 @@ Then, modify configuration file, check the "Configuration" section below.
 After configuration, start service:
 
 ```bash
-CLI_PROXY_CONFIG_PATH="$HOME/.cli-proxy-api/config.yaml" CLI_PROXY_AUTH_PATH="$HOME/.cli-proxy-api" CLI_PROXY_LOG_PATH="$HOME/.cli-proxy-api/logs" docker compose up -d
+CLI_PROXY_CONFIG_PATH="$HOME/.cli-proxy-api/config.yaml" CLI_PROXY_AUTH_PATH="$HOME/.cli-proxy-api/auths" CLI_PROXY_LOG_PATH="$HOME/.cli-proxy-api/logs" docker compose up -d
 ```
 
 ## Configuration
@@ -92,7 +90,7 @@ vim $(brew --prefix)/etc/cliproxyapi.conf
 
 # For docker, download config file first, then install cliproxyapi.
 mkdir -p ~/.cli-proxy-api/logs
-wget -O ~/.cli-proxy-api/config.yaml https://ghfast.top/https://raw.githubusercontent.com/router-for-me/CLIProxyAPIPlus/refs/heads/main/config.example.yaml
+wget -O ~/.cli-proxy-api/config.yaml https://ghfast.top/https://raw.githubusercontent.com/router-for-me/CLIProxyAPI/refs/heads/main/config.example.yaml
 vim ~/.cli-proxy-api/config.yaml
 ```
 
