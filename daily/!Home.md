@@ -82,22 +82,21 @@
 | <https://jkhezu.top/>                       |                                                           |
 | <http://web3chirou.com/>                    |                                                           |
 | <https://researchwang13.space/#screen-shop> |                                                           |
+| <https://www.aihezu.dev/>                   |                                                           |
+| <https://ctok.ai/>                          |                                                           |
 
-| URL                                      | Description         |
-| ---------------------------------------- | ------------------- |
-| <https://989nst.cloud/invites/join>      | ChatGPT Team        |
-| <https://uu6.top/>                       | 转转AI商城          |
-| <https://shop.xrdwp.cn/>                 | 木木批发            |
-| <https://aizhp.site/>                    | AI杂货铺            |
-| <https://goods.vivijane.pro/>            | Vivi 店铺           |
-| <https://gmail6868.com/>                 | gemini 源头批发网站 |
-| <https://go365-card.com/products>        | Go365 Card          |
-| <https://talkai.cyou/>                   | 聊聊AI              |
-| <https://pay.ldxp.cn/shop/DinoAI>        | DinoAI              |
-| <https://www.xiaosen.shop/>              |                     |
-| <https://ctok.ai/>                       |                     |
-| <https://www.aihezu.dev/>                |                     |
-| <https://www.chongzhiguanjia.com/buy/11> |                     |
+| URL                                 | Description         |
+| ----------------------------------- | ------------------- |
+| <https://989nst.cloud/invites/join> | ChatGPT Team        |
+| <https://uu6.top/>                  | 转转AI商城          |
+| <https://shop.xrdwp.cn/>            | 木木批发            |
+| <https://aizhp.site/>               | AI杂货铺            |
+| <https://goods.vivijane.pro/>       | Vivi 店铺           |
+| <https://gmail6868.com/>            | gemini 源头批发网站 |
+| <https://go365-card.com/products>   | Go365 Card          |
+| <https://talkai.cyou/>              | 聊聊AI              |
+| <https://pay.ldxp.cn/shop/DinoAI>   | DinoAI              |
+| <https://www.xiaosen.shop/>         |                     |
 
 ## API
 
@@ -209,6 +208,7 @@
 | <https://ai.nexahub.one/home>               |                                |
 | <https://cubence.com/>                      |                                |
 | <https://www.univibe.cc/>                   |                                |
+| <https://www.chongzhiguanjia.com/buy/11>    |                                |
 | <https://linuxdoapi.223384.xyz/>            | free                           |
 | <https://free.duckcoding.com/>              | free                           |
 | <https://kfc-api.sxxe.net/>                 | free                           |
