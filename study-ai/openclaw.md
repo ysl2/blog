@@ -1,8 +1,15 @@
 # openclaw
 
-## Basic install
+## Installation
 
 Refer to: <https://openclaw.ai/>
+
+Run on windows:
+
+```powershell
+$env:OPENCLAW_DISABLE_BONJOUR="1"; openclaw gateway run --force --verbose
+openclaw dashboard
+```
 
 ## Add full access
 
@@ -61,3 +68,18 @@ openclaw configure --section web
 2. For new version
 
    > Ref: <https://github.com/tencent-connect/openclaw-qqbot>
+
+   ```bash
+   # Uninstall old plugins (skip if first install)
+   openclaw plugins uninstall qqbot
+   openclaw plugins uninstall openclaw-qqbot
+
+   # Install latest
+   openclaw plugins install @tencent-connect/openclaw-qqbot@latest
+
+   # Configure channel (first install only)
+   openclaw channels add --channel qqbot --token "AppID:AppSecret"
+
+   # Start / restart
+   openclaw gateway restart
+   ```
