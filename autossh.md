@@ -30,7 +30,7 @@
 1. In Inner A, install autossh, and execute the following command to create a reverse ssh tunnel.
 
    ```bash
-   autossh -M 46001 -NfR 47.xxx.xxx.227:36001:localhost:22 -p 36000 gongwang@47.xxx.xxx.227
+   autossh -M 46001 -NfR 47.xxx.xxx.227:36001:127.0.0.1:22 -p 36000 gongwang@47.xxx.xxx.227
 
    # Test login:
    # NOTE: There must be `neiwang`, not `gongwang`.
@@ -52,7 +52,7 @@
    sudo vim /etc/rc.local
 
    # Add the above code line
-   autossh -M 46001 -NfR 47.xxx.xxx.227:36001:localhost:22 -p 36000 gongwang@47.xxx.xxx.227
+   autossh -M 46001 -NfR 47.xxx.xxx.227:36001:127.0.0.1:22 -p 36000 gongwang@47.xxx.xxx.227
    ```
 
 1. kill
