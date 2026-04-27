@@ -104,6 +104,8 @@ remote-management:
   # leave empty to disable the management api entirely (404 for all /v0/management routes).
   secret-key: "Enter your password here."
 
+usage-statistics-enabled: true
+
 # NOTE: Proxy url is only needed for docker install. No need for brew install.
 # NOTE: Proxy url is only needed for docker install. No need for brew install.
 # NOTE: Proxy url is only needed for docker install. No need for brew install.
