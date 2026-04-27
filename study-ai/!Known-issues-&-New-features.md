@@ -1,4 +1,4 @@
-# [study-ai] Home
+# [study-ai] Known issues & New features
 
 ## Resources
 
