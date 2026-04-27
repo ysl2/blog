@@ -96,6 +96,9 @@ ip route | awk '/default/ { print $3 }'
 
 ```bash
 docker system prune -a --volumes
+
+# NOTE: For colima on macOS, also run the following command, to get back the disk space occupied by the docker images.
+colima ssh -- sudo fstrim -av
 ```
 
 WARNING! This will remove:
