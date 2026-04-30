@@ -97,6 +97,7 @@
 | <https://talkai.cyou/>              | 聊聊AI              |
 | <https://pay.ldxp.cn/shop/DinoAI>   | DinoAI              |
 | <https://www.xiaosen.shop/>         |                     |
+| <https://hiemail.store/>            | 谷歌邮箱 AI源头批发 |
 
 ## API
 
