@@ -113,6 +113,9 @@ usage-statistics-enabled: true
 # Proxy URL. Supports socks5/http/https protocols. Example: socks5://user:pass@192.168.1.1:1080/
 # Per-entry proxy-url also supports "direct" or "none" to bypass both the global proxy-url and environment proxies explicitly.
 proxy-url: "http://yourname:yourpassword@127.0.0.1:7897"
+
+# Ref: https://github.com/router-for-me/CLIProxyAPI/discussions/2728
+disable-cooling: true
 ```
 
 ## Usage
