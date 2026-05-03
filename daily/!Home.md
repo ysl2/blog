@@ -70,6 +70,12 @@
 | <https://www.namecheap.com/> | Buy  |
 | <https://www.dnshe.com/>     | Free |
 
+## Apple store price
+
+| URL                            | Description |
+| ------------------------------ | ----------- |
+| <https://appstoreprice.org/zh> |             |
+
 ## Accounts
 
 | URL                                         | Description                                               |
