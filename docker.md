@@ -35,11 +35,14 @@
   ```bash
   # Ref: https://stackoverflow.com/a/79052312
 
-  DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
-  mkdir -p $DOCKER_CONFIG/cli-plugins
-  curl -SL "https://ghfast.top/https://github.com/docker/compose/releases/download/v2.33.0/docker-compose-$(uname -s)-$(uname -m)" -o $DOCKER_CONFIG/cli-plugins/docker-compose
+  # DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+  # mkdir -p $DOCKER_CONFIG/cli-plugins
+  # curl -SL "https://ghfast.top/https://github.com/docker/compose/releases/download/v2.33.0/docker-compose-$(uname -s)-$(uname -m)" -o $DOCKER_CONFIG/cli-plugins/docker-compose
+  # chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 
-  chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+  mkdir ~/.docker/cli-plugins
+  curl -SL "https://github.com/docker/compose/releases/download/v5.1.3/docker-compose-linux-x86_64" -o ~/.docker/cli-plugins/docker-compose
+  chmod +x ~/.docker/cli-plugins/docker-compose
 
   # test the installation with:
   docker compose version
@@ -83,6 +86,25 @@ logout  # and login again
   sudo systemctl daemon-reload
   sudo systemctl restart docker
   ```
+
+### For linux, set proxy for docker
+
+```bash
+sudo mkdir -p /etc/systemd/system/docker.service.d
+sudo vim /etc/systemd/system/docker.service.d/http-proxy.conf
+```
+
+```toml
+[Service]
+Environment="HTTP_PROXY=http://127.0.0.1:7897"
+Environment="HTTPS_PROXY=http://127.0.0.1:7897"
+Environment="NO_PROXY=localhost,127.0.0.1"
+```
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
 
 ## Usage
 
