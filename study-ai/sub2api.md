@@ -27,7 +27,7 @@ sed -i '' "s/^SERVER_PORT=.*/SERVER_PORT=8080/" .env
 
 mkdir -p data postgres_data redis_data
 
-docker compose -f docker-compose.local.yml up -d
+docker compose -f docker-compose.local.yml up -d --pull always
 ```
 
 ## Configuration
@@ -58,10 +58,12 @@ TOKEN_REFRESH_RETRY_BACKOFF_SECONDS=2  # Base backoff time in seconds for retrie
 After modifying the `.env` file, restart the services:
 
 ```bash
-docker compose -f docker-compose.local.yml up -d
+docker compose -f docker-compose.local.yml up -d --pull always
 ```
 
 ### Batch token refresh
+
+> Ref: [.assets/sub2api/refresh_tokens.py](.assets/sub2api/refresh_tokens.py)
 
 ```bash
 vim /usr/local/bin/sub2api-refresh-tokens.sh
