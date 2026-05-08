@@ -2,6 +2,7 @@
 import json
 import os
 import sys
+from datetime import datetime
 from urllib import error, parse, request
 
 
@@ -10,6 +11,7 @@ ADMIN_KEY = os.environ.get(
     "ADMIN_KEY",
     "your-admin-key-here",
 )
+EXPORT_DIR = os.environ.get("EXPORT_DIR", "~/.vocal/sub2api")
 
 
 def pretty_print(data):
@@ -66,6 +68,57 @@ def add_account_names(result, account_by_id):
             row["account_name"] = account.get("name", "") if account else ""
 
 
+def ensure_success(resp, action):
+    if str(resp.get("code", "")) == "0":
+        return True
+
+    print(f"{action} failed:")
+    pretty_print(resp)
+    return False
+
+
+def export_all_accounts():
+    query = parse.urlencode({"include_proxies": "true"})
+    export_url = f"{BASE_URL}/admin/accounts/data?{query}"
+    resp = request_json("GET", export_url, ADMIN_KEY)
+
+    if not ensure_success(resp, "export accounts"):
+        return 1
+
+    data = resp.get("data")
+    if not isinstance(data, dict):
+        print("export accounts failed: response data is not an object", file=sys.stderr)
+        return 1
+
+    accounts = data.get("accounts")
+    proxies = data.get("proxies")
+    if not isinstance(accounts, list):
+        print("export accounts failed: response data.accounts is not a list", file=sys.stderr)
+        return 1
+    if proxies is not None and not isinstance(proxies, list):
+        print("export accounts failed: response data.proxies is not a list", file=sys.stderr)
+        return 1
+
+    export_dir = os.path.expanduser(EXPORT_DIR)
+    filename = f"sub2api-account-{datetime.now().strftime('%Y%m%d%H%M%S')}.json"
+    path = os.path.join(export_dir, filename)
+
+    try:
+        os.makedirs(export_dir, exist_ok=True)
+        fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+            json.dump(data, fh, ensure_ascii=False, indent=2)
+            fh.write("\n")
+    except OSError as exc:
+        print(f"export accounts failed: cannot write {path}: {exc}", file=sys.stderr)
+        return 1
+
+    print(f"exported accounts: {len(accounts)}")
+    print(f"exported proxies: {len(proxies) if isinstance(proxies, list) else 0}")
+    print(f"export file: {path}")
+    return 0
+
+
 def main():
     query = parse.urlencode(
         {
@@ -78,9 +131,7 @@ def main():
 
     resp = request_json("GET", list_url, ADMIN_KEY)
 
-    if str(resp.get("code", "")) != "0":
-        print("list accounts failed:")
-        pretty_print(resp)
+    if not ensure_success(resp, "list accounts"):
         return 1
 
     items = resp.get("data", {}).get("items", [])
@@ -89,13 +140,16 @@ def main():
 
     if not account_ids:
         print("no matching accounts")
-        return 0
+        return export_all_accounts()
 
     refresh_url = f"{BASE_URL}/admin/accounts/batch-refresh"
     refresh_resp = request_json("POST", refresh_url, ADMIN_KEY, {"account_ids": account_ids})
     add_account_names(refresh_resp, account_by_id)
     pretty_print(refresh_resp)
-    return 0
+    if not ensure_success(refresh_resp, "refresh accounts"):
+        return 1
+
+    return export_all_accounts()
 
 
 if __name__ == "__main__":
