@@ -67,6 +67,10 @@
 
 ```bash
 sudo usermod -aG docker "$USER"
+
+# If you want to take effect immediately:
+newgrp docker
+# Or, you can also:
 logout  # and login again
 ```
 
