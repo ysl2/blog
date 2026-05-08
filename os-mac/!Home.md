@@ -144,3 +144,11 @@ rustup-init
 ### znotch
 
 <p><img src=".assets/!Home/img/2025-10-11-16-45-59.png" alt="" width=75% style="display: block; margin: auto;"></p>
+
+### keycastr
+
+<p><img src=".assets/!Home/img/2026-05-08-13-11-05.png" alt="" width=75% style="display: block; margin: auto;"></p>
+
+<p><img src=".assets/!Home/img/2026-05-08-13-11-38.png" alt="" width=75% style="display: block; margin: auto;"></p>
+
+<p><img src=".assets/!Home/img/2026-05-08-13-12-02.png" alt="" width=75% style="display: block; margin: auto;"></p>
