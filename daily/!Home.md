@@ -58,8 +58,10 @@
 
 | URL                                    |
 | -------------------------------------- |
-| <https://5sim.net/zh>                  |
 | <https://hero-sms.com/>                |
+| <https://grizzlysms.com/>              |
+| <https://smsbower.app/>                |
+| <https://5sim.net/zh>                  |
 | <https://www.ultramobile.com/>         |
 | <https://sms-verification-number.com/> |
 
