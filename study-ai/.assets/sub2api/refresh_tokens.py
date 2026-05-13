@@ -12,6 +12,9 @@ ADMIN_KEY = os.environ.get(
     "your-admin-key-here",
 )
 EXPORT_DIR = os.environ.get("EXPORT_DIR", "~/.vocal/sub2api")
+REGION_CHECK_URL = "https://www.cloudflare.com/cdn-cgi/trace"
+GOOGLE_CHECK_URL = "https://www.google.com/generate_204"
+PRECHECK_TIMEOUT = 5
 
 
 def pretty_print(data):
@@ -47,6 +50,68 @@ def request_json(method, url, admin_key, payload=None):
         print("request failed: response is not valid JSON", file=sys.stderr)
         print(raw, file=sys.stderr)
         sys.exit(1)
+
+
+def get_exit_country(timeout=PRECHECK_TIMEOUT):
+    try:
+        with request.urlopen(REGION_CHECK_URL, timeout=timeout) as resp:
+            text = resp.read().decode("utf-8", errors="replace")
+    except error.URLError as exc:
+        print(f"region check failed: {exc.reason}", file=sys.stderr)
+        return None
+    except TimeoutError as exc:
+        print(f"region check failed: {exc}", file=sys.stderr)
+        return None
+
+    for line in text.splitlines():
+        key, sep, value = line.partition("=")
+        if sep and key == "loc":
+            return value.strip().upper()
+
+    print("region check failed: country code not found", file=sys.stderr)
+    return None
+
+
+def can_access_google(timeout=PRECHECK_TIMEOUT):
+    req = request.Request(
+        GOOGLE_CHECK_URL,
+        headers={"User-Agent": "refresh_tokens.py/1.0"},
+        method="GET",
+    )
+
+    try:
+        with request.urlopen(req, timeout=timeout) as resp:
+            return resp.status < 400
+    except error.HTTPError as exc:
+        # A Google HTTP response still proves the route reached google.com.
+        if exc.code < 500:
+            return True
+        print(f"google.com check failed: HTTP {exc.code}", file=sys.stderr)
+    except error.URLError as exc:
+        print(f"google.com check failed: {exc.reason}", file=sys.stderr)
+    except TimeoutError as exc:
+        print(f"google.com check failed: {exc}", file=sys.stderr)
+
+    return False
+
+
+def preflight_checks():
+    country = get_exit_country()
+    if not country:
+        print("cannot determine current exit country; skip refresh", file=sys.stderr)
+        return 1
+
+    print(f"current exit country: {country}")
+    if country == "CN":
+        print("current exit country is CN; skip refresh")
+        return 0
+
+    if not can_access_google():
+        print("google.com is not reachable; skip refresh", file=sys.stderr)
+        return 1
+
+    print("google.com reachable")
+    return None
 
 
 def add_account_names(result, account_by_id):
@@ -153,4 +218,8 @@ def main():
 
 
 if __name__ == "__main__":
+    preflight_status = preflight_checks()
+    if preflight_status is not None:
+        sys.exit(preflight_status)
+
     sys.exit(main())
