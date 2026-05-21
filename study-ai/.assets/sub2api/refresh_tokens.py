@@ -15,6 +15,7 @@ EXPORT_DIR = os.environ.get("EXPORT_DIR", "~/.vocal/sub2api")
 REGION_CHECK_URL = "https://www.cloudflare.com/cdn-cgi/trace"
 GOOGLE_CHECK_URL = "https://www.google.com/generate_204"
 PRECHECK_TIMEOUT = 5
+ACCOUNT_PAGE_SIZE = 1000
 
 
 def pretty_print(data):
@@ -130,6 +131,10 @@ def add_account_names(result, account_by_id):
 
             account_id = row.get("account_id")
             account = account_by_id.get(account_id)
+            if account is None:
+                normalized_id = normalize_account_id(account_id)
+                if normalized_id is not None:
+                    account = account_by_id.get(normalized_id)
             row["account_name"] = account.get("name", "") if account else ""
 
 
@@ -142,27 +147,99 @@ def ensure_success(resp, action):
     return False
 
 
+def normalize_account_id(value):
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, int):
+        return value
+    if isinstance(value, str):
+        value = value.strip()
+        if value.isdigit():
+            return int(value)
+    return None
+
+
+def string_value(value):
+    return value.strip() if isinstance(value, str) else ""
+
+
+def list_all_oauth_accounts():
+    page = 1
+    total = None
+    accounts = []
+    seen_ids = set()
+
+    while True:
+        query = parse.urlencode(
+            {
+                "page": page,
+                "page_size": ACCOUNT_PAGE_SIZE,
+                "type": "oauth",
+            }
+        )
+        list_url = f"{BASE_URL}/admin/accounts?{query}"
+        resp = request_json("GET", list_url, ADMIN_KEY)
+
+        if not ensure_success(resp, "list accounts"):
+            return None
+
+        data = resp.get("data")
+        if not isinstance(data, dict):
+            print("list accounts failed: response data is not an object", file=sys.stderr)
+            return None
+
+        items = data.get("items")
+        if not isinstance(items, list):
+            print("list accounts failed: response data.items is not a list", file=sys.stderr)
+            return None
+
+        if total is None:
+            try:
+                total = int(data.get("total"))
+            except (TypeError, ValueError):
+                total = None
+
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            account_id = normalize_account_id(item.get("id"))
+            if account_id is None or account_id in seen_ids:
+                continue
+            seen_ids.add(account_id)
+            item["id"] = account_id
+            accounts.append(item)
+
+        if not items:
+            break
+        if total is not None and len(accounts) >= total:
+            break
+        page += 1
+
+    print(f"matching oauth accounts: {len(accounts)}")
+    return accounts
+
+
 def export_all_accounts():
     query = parse.urlencode({"include_proxies": "true"})
     export_url = f"{BASE_URL}/admin/accounts/data?{query}"
     resp = request_json("GET", export_url, ADMIN_KEY)
 
     if not ensure_success(resp, "export accounts"):
-        return 1
+        return 1, None
 
     data = resp.get("data")
     if not isinstance(data, dict):
         print("export accounts failed: response data is not an object", file=sys.stderr)
-        return 1
+        return 1, None
 
     accounts = data.get("accounts")
     proxies = data.get("proxies")
     if not isinstance(accounts, list):
         print("export accounts failed: response data.accounts is not a list", file=sys.stderr)
-        return 1
+        return 1, None
     if proxies is not None and not isinstance(proxies, list):
         print("export accounts failed: response data.proxies is not a list", file=sys.stderr)
-        return 1
+        return 1, None
 
     export_dir = os.path.expanduser(EXPORT_DIR)
     filename = f"sub2api-account-{datetime.now().strftime('%Y%m%d%H%M%S')}.json"
@@ -176,45 +253,103 @@ def export_all_accounts():
             fh.write("\n")
     except OSError as exc:
         print(f"export accounts failed: cannot write {path}: {exc}", file=sys.stderr)
-        return 1
+        return 1, None
 
     print(f"exported accounts: {len(accounts)}")
     print(f"exported proxies: {len(proxies) if isinstance(proxies, list) else 0}")
     print(f"export file: {path}")
-    return 0
+    return 0, data
+
+
+def print_non_free_openai_emails(export_data):
+    accounts = export_data.get("accounts") if isinstance(export_data, dict) else None
+    if not isinstance(accounts, list):
+        print("list non-free failed: exported accounts is not a list", file=sys.stderr)
+        return
+
+    emails = []
+    seen_emails = set()
+    openai_oauth_count = 0
+    missing_plan_accounts = []
+
+    for account in accounts:
+        if not isinstance(account, dict):
+            continue
+
+        platform = string_value(account.get("platform")).lower()
+        account_type = string_value(account.get("type")).lower()
+        if platform != "openai" or account_type != "oauth":
+            continue
+
+        openai_oauth_count += 1
+        account_label = string_value(account.get("name")) or f"id:{account.get('id', 'unknown')}"
+        credentials = account.get("credentials")
+        if not isinstance(credentials, dict):
+            missing_plan_accounts.append(account_label)
+            continue
+
+        email = string_value(credentials.get("email"))
+        plan_type = string_value(credentials.get("plan_type"))
+
+        if not plan_type:
+            missing_plan_accounts.append(account_label)
+        if not email or not plan_type:
+            continue
+        if plan_type.lower() == "free":
+            continue
+
+        email_key = email.lower()
+        if email_key in seen_emails:
+            continue
+        seen_emails.add(email_key)
+        emails.append(email)
+
+    print()
+    print(f"{'total openai oauth':<19}: {openai_oauth_count}")
+    print(f"{'non-free emails':<19}: {len(emails)}")
+    print(f"{'missing plan_type':<19}: {len(missing_plan_accounts)}")
+
+    print()
+    print("non-free emails:")
+    if emails:
+        for email in emails:
+            print(f"  {email}")
+    else:
+        print("  none")
+
+    print()
+    print("missing plan_type accounts:")
+    if missing_plan_accounts:
+        for account in missing_plan_accounts:
+            print(f"  {account}")
+    else:
+        print("  none")
 
 
 def main():
-    query = parse.urlencode(
-        {
-            "page": 1,
-            "page_size": 1000,
-            "type": "oauth",
-        }
-    )
-    list_url = f"{BASE_URL}/admin/accounts?{query}"
-
-    resp = request_json("GET", list_url, ADMIN_KEY)
-
-    if not ensure_success(resp, "list accounts"):
+    accounts = list_all_oauth_accounts()
+    if accounts is None:
         return 1
 
-    items = resp.get("data", {}).get("items", [])
-    account_by_id = {item["id"]: item for item in items if "id" in item}
+    account_by_id = {item["id"]: item for item in accounts if "id" in item}
     account_ids = list(account_by_id.keys())
 
-    if not account_ids:
-        print("no matching accounts")
-        return export_all_accounts()
+    if account_ids:
+        refresh_url = f"{BASE_URL}/admin/accounts/batch-refresh"
+        refresh_resp = request_json("POST", refresh_url, ADMIN_KEY, {"account_ids": account_ids})
+        add_account_names(refresh_resp, account_by_id)
+        pretty_print(refresh_resp)
+        if not ensure_success(refresh_resp, "refresh accounts"):
+            return 1
+    else:
+        print("no matching oauth accounts")
 
-    refresh_url = f"{BASE_URL}/admin/accounts/batch-refresh"
-    refresh_resp = request_json("POST", refresh_url, ADMIN_KEY, {"account_ids": account_ids})
-    add_account_names(refresh_resp, account_by_id)
-    pretty_print(refresh_resp)
-    if not ensure_success(refresh_resp, "refresh accounts"):
-        return 1
+    export_status, export_data = export_all_accounts()
+    if export_status != 0:
+        return export_status
 
-    return export_all_accounts()
+    print_non_free_openai_emails(export_data)
+    return 0
 
 
 if __name__ == "__main__":
