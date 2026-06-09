@@ -7,6 +7,11 @@
 ```bash
 brew install colima docker
 colima start
+
+# NOTE: if `colima start` failed, run this:
+# brew unlink docker-completion
+# brew link docker
+
 # Start colima in background and enable it to start on login:
 brew services start colima  # Or: `colima start --background`
 ```
