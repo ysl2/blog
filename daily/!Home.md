@@ -95,27 +95,28 @@
 
 | URL                                 | Description         |
 | ----------------------------------- | ------------------- |
-| <https://cheap-ai.uk/>              |                     |
 | <https://gmail6868.com/>            | gemini 源头批发网站 |
 | <https://pay.ldxp.cn/shop/N0IK02WR> | 5, 10               |
 | <https://pay.ldxp.cn/shop/PBY2YIR3> | 13, 17.06           |
-| <https://pay.ldxp.cn/shop/xiamai>   | 15.75, 28.08, 37.7  |
 | <https://pay.ldxp.cn/shop/haoai>    | 23, 45              |
 | <https://pay.ldxp.cn/shop/Kegan04>  | 25.8                |
 | <https://pay.ldxp.cn/shop/xuanplus> | 34.68, 46.88        |
 | <https://pay.ldxp.cn/shop/xcursor>  | N/A                 |
+| <https://pay.ldxp.cn/shop/aishop86> |                     |
+| <https://pay.ldxp.cn/shop/IY16OXB7> |                     |
+| <https://pay.ldxp.cn/shop/xiamai>   | 15.75, 28.08, 37.7  |
 
 ## API
 
-| URL                               |
-| --------------------------------- |
-| <https://hvoy.ai/en/leaderboard>  |
-| <https://relaypulse.top/>         |
-| <https://www.helpaio.com/transit> |
-| <https://suantoken.xyz/>          |
-| <https://api.daheiai.com/>        |
-| <https://subrouter.ai/providers>  |
-| <https://rate.linux.do/>          |
+| URL                                         |
+| ------------------------------------------- |
+| <https://hvoy.ai/en/leaderboard>            |
+| <https://relaypulse.top/>                   |
+| <https://www.helpaio.com/transit>           |
+| <https://apitokencal-g3wdfngf.manus.space/> |
+| <https://api.daheiai.com/>                  |
+| <https://subrouter.ai/providers>            |
+| <https://rate.linux.do/>                    |
 
 | URL                                                     |
 | ------------------------------------------------------- |
