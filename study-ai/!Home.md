@@ -12,6 +12,35 @@
 | ⭐<https://arxiv.org/search/advanced>                                                                                                 | Search      |
 | ⭐<https://openreview.net>                                                                                                            |             |
 
+| URL                                              |
+| ------------------------------------------------ |
+| <https://paperswithcode.co/tasks/agents>         |
+| <https://paperswithcode.co/methods/agent>        |
+| <https://paperswithcode.co/methods/agent-skills> |
+| <https://paperswithcode.co/conferences>          |
+
+| URL                                                                      |
+| ------------------------------------------------------------------------ |
+| <https://paperswithcode.co/conferences/iclr-2026/agents>                 |
+| <https://paperswithcode.co/conferences/iclr-2026/coding-agents>          |
+| <https://paperswithcode.co/conferences/iclr-2026/computer-use-agents>    |
+| <https://paperswithcode.co/conferences/icra-2026/agents>                 |
+| <https://paperswithcode.co/conferences/cvpr-2026/agents>                 |
+| <https://paperswithcode.co/conferences/cvpr-2026/computer-use-agents>    |
+| <https://paperswithcode.co/conferences/iclr-2025/agents>                 |
+| <https://paperswithcode.co/conferences/iclr-2025/coding-agents>          |
+| <https://paperswithcode.co/conferences/iclr-2025/computer-use-agents>    |
+| <https://paperswithcode.co/conferences/cvpr-2025/agents>                 |
+| <https://paperswithcode.co/conferences/cvpr-2025/computer-use-agents>    |
+| <https://paperswithcode.co/conferences/icml-2025/agents>                 |
+| <https://paperswithcode.co/conferences/icml-2025/coding-agents>          |
+| <https://paperswithcode.co/conferences/icml-2025/computer-use-agents>    |
+| <https://paperswithcode.co/conferences/iccv-2025/agents>                 |
+| <https://paperswithcode.co/conferences/iccv-2025/computer-use-agents>    |
+| <https://paperswithcode.co/conferences/neurips-2025/agents>              |
+| <https://paperswithcode.co/conferences/neurips-2025/coding-agents>       |
+| <https://paperswithcode.co/conferences/neurips-2025/computer-use-agents> |
+
 | URL                           | Description |
 | ----------------------------- | ----------- |
 | <https://searchthearxiv.com/> |             |
