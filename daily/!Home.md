@@ -95,16 +95,15 @@
 
 | URL                                 | Description         |
 | ----------------------------------- | ------------------- |
-| <https://gmail6868.com/>            | gemini 源头批发网站 |
-| <https://pay.ldxp.cn/shop/N0IK02WR> | 5, 10               |
 | <https://pay.ldxp.cn/shop/PBY2YIR3> | 13, 17.06           |
+| <https://pay.ldxp.cn/shop/N0IK02WR> | 5, 10               |
 | <https://pay.ldxp.cn/shop/haoai>    | 23, 45              |
 | <https://pay.ldxp.cn/shop/Kegan04>  | 25.8                |
 | <https://pay.ldxp.cn/shop/xuanplus> | 34.68, 46.88        |
 | <https://pay.ldxp.cn/shop/xcursor>  | N/A                 |
 | <https://pay.ldxp.cn/shop/aishop86> |                     |
 | <https://pay.ldxp.cn/shop/IY16OXB7> |                     |
-| <https://pay.ldxp.cn/shop/xiamai>   | 15.75, 28.08, 37.7  |
+| <https://gmail6868.com/>            | gemini 源头批发网站 |
 
 ## API
 
@@ -117,6 +116,20 @@
 | <https://api.daheiai.com/>                  |
 | <https://subrouter.ai/providers>            |
 | <https://rate.linux.do/>                    |
+
+| URL                         | Embedding? | Groups (sorted by pro group)                                | Description                                                                             |
+| --------------------------- | ---------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| <https://sub.989nst.cloud/> | N          | sub2api x0.2(plus/pro混合,1毛1刀) x0.29(pro备用号池,1毛1刀) | (10.0885 \* 0.1) / 5600000 = 0.0000001801 便宜并且赠费$10                               |
+| <https://deepkey.top>       | Y          | newapi x0.12(特价) x0.2(pro为主)                            | 4.74 / 24869628 = 0.0000001906 还可以                                                   |
+| <https://www.cctq.ai>       | N          | newapi x0.15(plus) x0.3(pro)                                | 49.65 / 154029578 = 0.0000003223                                                        |
+| <https://anpin.ai>          | N          | sub2api x0.1(plus+pro混合) x0.25(纯pro)                     |                                                                                         |
+| <https://modcon.top/>       | N          | newapi x0.158(plus) x0.298(pro x20)                         |                                                                                         |
+| <https://aigc.x-see.cn>     | Y          | newapi x0.15 x0.3                                           |                                                                                         |
+| <https://api.butcodex.com/> | N          | newapi x0.17(plus) x0.35(pro)                               |                                                                                         |
+| <https://sub.chancexj.com>  | N          | sub2api x0.2 x0.5(pro)                                      | 4.2549 / 5900000 = 0.0000007212 直接代码调用API成功                                     |
+| <https://api.uu6.top>       | N          | newapi x0.15(x1但是充30给200)                               | (22.82 / 17325033) \* (30 / 200) = 0.0000001976 直接代码调用API失败。不稳定，经常连不上 |
+| <https://api.kksj.org/>     | Y          | newapi x0.6 x0.9                                            | 贵，embedding价格也贵                                                                   |
+| <https://anyaigc.com>       | N          | newapi x0.6 x0.8                                            | 5.55 / 5933226 = 0.0000009354 又贵又巨慢无比                                            |
 
 | URL                                                     |
 | ------------------------------------------------------- |
