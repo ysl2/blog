@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import json
 import os
+import re
+import shutil
 import sys
+import textwrap
 from datetime import datetime
 from urllib import error, parse, request
 
@@ -9,13 +12,18 @@ from urllib import error, parse, request
 BASE_URL = os.environ.get("BASE_URL", "http://127.0.0.1:8080/api/v1")
 ADMIN_KEY = os.environ.get(
     "ADMIN_KEY",
-    "your-admin-key-here",
+    "admin-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 )
 EXPORT_DIR = os.environ.get("EXPORT_DIR", "~/.vocal/sub2api")
 REGION_CHECK_URL = "https://www.cloudflare.com/cdn-cgi/trace"
 GOOGLE_CHECK_URL = "https://www.google.com/generate_204"
 PRECHECK_TIMEOUT = 5
 ACCOUNT_PAGE_SIZE = 1000
+ACCOUNT_LIST_FILTERS = {
+    "platform": "openai",
+    "type": "oauth",
+}
+EMAIL_PATTERN = re.compile(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}")
 
 
 def pretty_print(data):
@@ -163,7 +171,108 @@ def string_value(value):
     return value.strip() if isinstance(value, str) else ""
 
 
-def list_all_oauth_accounts():
+def first_string_value(*values):
+    for value in values:
+        result = string_value(value)
+        if result:
+            return result
+    return ""
+
+
+def extract_email(account, credentials):
+    email = first_string_value(
+        credentials.get("email"),
+        account.get("email"),
+    )
+    if email:
+        return email
+
+    match = EMAIL_PATTERN.search(string_value(account.get("name")))
+    return match.group(0) if match else ""
+
+
+def extract_plan_type(account, credentials):
+    return first_string_value(
+        credentials.get("plan_type"),
+        credentials.get("chatgpt_plan_type"),
+        account.get("plan_type"),
+        account.get("chatgpt_plan_type"),
+    )
+
+
+def visible_width(value):
+    width = 0
+    for char in value:
+        width += 2 if ord(char) > 0xFFFF else 1
+    return width
+
+
+def truncate_to_width(value, max_width):
+    width = 0
+    chars = []
+    for char in value:
+        char_width = 2 if ord(char) > 0xFFFF else 1
+        if width + char_width > max_width:
+            break
+        chars.append(char)
+        width += char_width
+    return "".join(chars)
+
+
+def fit_cell(value, width):
+    value = string_value(value)
+    if not value:
+        return [" " * width]
+
+    lines = []
+    for raw_line in value.splitlines() or [""]:
+        wrapped = textwrap.wrap(
+            raw_line,
+            width=width,
+            break_long_words=True,
+            break_on_hyphens=False,
+        )
+        lines.extend(wrapped or [""])
+
+    fitted = []
+    for line in lines:
+        line = truncate_to_width(line, width)
+        fitted.append(line + " " * max(0, width - visible_width(line)))
+    return fitted or [" " * width]
+
+
+def render_non_free_accounts_table(rows):
+    title = "Non-free OpenAI OAuth Accounts"
+    terminal_width = shutil.get_terminal_size((100, 24)).columns
+    table_width = max(60, min(terminal_width, 120))
+    inner_width = table_width - 4
+    plan_width = max(4, min(12, max(visible_width(plan) for _, _, plan in rows + [("", "", "Plan")])))
+    email_width = max(18, min(36, inner_width // 3))
+    name_width = inner_width - email_width - plan_width - 2
+    if name_width < 20:
+        name_width = 20
+        email_width = max(12, inner_width - name_width - plan_width - 2)
+
+    columns = [("Name", name_width), ("Email", email_width), ("Plan", plan_width)]
+    border = "+" + "+".join("-" * (width + 2) for _, width in columns) + "+"
+
+    print(title)
+    print(border)
+    print("| " + " | ".join(header.ljust(width) for header, width in columns) + " |")
+    print(border)
+
+    for row in rows:
+        rendered_cells = [fit_cell(value, width) for value, (_, width) in zip(row, columns)]
+        row_height = max(len(cell) for cell in rendered_cells)
+        for cell in rendered_cells:
+            cell.extend([" " * len(cell[0])] * (row_height - len(cell)))
+        for index in range(row_height):
+            print("| " + " | ".join(cell[index] for cell in rendered_cells) + " |")
+    print(border)
+    return True
+
+
+def list_refresh_candidate_accounts():
     page = 1
     total = None
     accounts = []
@@ -174,7 +283,7 @@ def list_all_oauth_accounts():
             {
                 "page": page,
                 "page_size": ACCOUNT_PAGE_SIZE,
-                "type": "oauth",
+                **ACCOUNT_LIST_FILTERS,
             }
         )
         list_url = f"{BASE_URL}/admin/accounts?{query}"
@@ -215,7 +324,7 @@ def list_all_oauth_accounts():
             break
         page += 1
 
-    print(f"matching oauth accounts: {len(accounts)}")
+    print(f"matching openai oauth accounts: {len(accounts)}")
     return accounts
 
 
@@ -269,8 +378,10 @@ def print_non_free_openai_emails(export_data):
 
     emails = []
     seen_emails = set()
+    non_free_accounts = []
     openai_oauth_count = 0
     missing_plan_accounts = []
+    missing_email_accounts = []
 
     for account in accounts:
         if not isinstance(account, dict):
@@ -288,32 +399,43 @@ def print_non_free_openai_emails(export_data):
             missing_plan_accounts.append(account_label)
             continue
 
-        email = string_value(credentials.get("email"))
-        plan_type = string_value(credentials.get("plan_type"))
+        email = extract_email(account, credentials)
+        plan_type = extract_plan_type(account, credentials)
 
         if not plan_type:
             missing_plan_accounts.append(account_label)
-        if not email or not plan_type:
+        if not plan_type:
             continue
         if plan_type.lower() == "free":
             continue
 
-        email_key = email.lower()
-        if email_key in seen_emails:
+        non_free_accounts.append((account_label, email, plan_type))
+
+        if not email:
+            missing_email_accounts.append(account_label)
             continue
-        seen_emails.add(email_key)
-        emails.append(email)
+
+        email_key = email.lower()
+        if email_key not in seen_emails:
+            seen_emails.add(email_key)
+            emails.append(email)
 
     print()
     print(f"{'total openai oauth':<19}: {openai_oauth_count}")
+    print(f"{'non-free accounts':<19}: {len(non_free_accounts)}")
     print(f"{'non-free emails':<19}: {len(emails)}")
+    print(f"{'missing email':<19}: {len(missing_email_accounts)}")
     print(f"{'missing plan_type':<19}: {len(missing_plan_accounts)}")
 
+    if non_free_accounts:
+        print()
+        render_non_free_accounts_table(non_free_accounts)
+
     print()
-    print("non-free emails:")
-    if emails:
-        for email in emails:
-            print(f"  {email}")
+    print("missing email non-free accounts:")
+    if missing_email_accounts:
+        for account in missing_email_accounts:
+            print(f"  {account}")
     else:
         print("  none")
 
@@ -327,7 +449,7 @@ def print_non_free_openai_emails(export_data):
 
 
 def main():
-    accounts = list_all_oauth_accounts()
+    accounts = list_refresh_candidate_accounts()
     if accounts is None:
         return 1
 
