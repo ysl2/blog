@@ -24,3 +24,5 @@ brew install visidata
 | TableSheet | selection | unselect-rows      | gu         | unselect all rows                                                     |
 | TableSheet | selection | select-rows        | gs         | select all rows                                                       |
 | TableSheet | selection | unselect-col-regex | \          | unselect rows matching regex in current column                        |
+| TableSheet | sheets    | type-float         | %          | set type of current column to float                                   |
+|            |           |                    | zY         | yank (copy) current cell to system clipboard                          |
