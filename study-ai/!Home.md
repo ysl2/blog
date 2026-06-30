@@ -46,6 +46,7 @@
 | <https://searchthearxiv.com/> |             |
 | <https://arxivxplorer.com/>   |             |
 | <https://deerlit.com/>        |             |
+| <https://elicit.com/>         |             |
 
 | URL                                                   | Description             |
 | ----------------------------------------------------- | ----------------------- |
@@ -66,7 +67,6 @@
 | ⭐<https://huggingface.co/papers/trending>                     | For trending papers.                                                                                                                                                                                                                                                                                |
 | ⭐<https://chinarxiv.chatpaper.top/>                           | ChinArXiv论文翻译器                                                                                                                                                                                                                                                                                 |
 | <https://hjfy.top/>                                            | 幻觉翻译                                                                                                                                                                                                                                                                                            |
-| <https://huggingface.co/papers>                                |                                                                                                                                                                                                                                                                                                     |
 | <https://papers.cool>                                          | Immersive Paper Discovery                                                                                                                                                                                                                                                                           |
 | <https://www.connectedpapers.com/>                             |                                                                                                                                                                                                                                                                                                     |
 | <https://www.semanticscholar.org/>                             |                                                                                                                                                                                                                                                                                                     |
