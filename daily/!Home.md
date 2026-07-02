@@ -72,12 +72,6 @@
 | <https://www.namecheap.com/> | Buy  |
 | <https://www.dnshe.com/>     | Free |
 
-## Apple store price
-
-| URL                            | Description |
-| ------------------------------ | ----------- |
-| <https://appstoreprice.org/zh> |             |
-
 ## Accounts
 
 | URL                                         | Description                                               |
@@ -104,6 +98,13 @@
 | <https://pay.ldxp.cn/shop/aishop86> |                     |
 | <https://pay.ldxp.cn/shop/IY16OXB7> |                     |
 | <https://gmail6868.com/>            | gemini 源头批发网站 |
+
+### Apple ID and store
+
+| URL                            |            |
+| ------------------------------ | ---------- |
+| <https://appstoreprice.org/zh> |            |
+| <https://store.kxsw.org/>      | 数卡杂货铺 |
 
 ## API
 
