@@ -102,3 +102,15 @@ Then, manually write ssh config into `~/.ssh/config`:
 Host *
     Include ~/.colima/ssh_config
 ```
+
+## Troubleshooting
+
+### `brew services start colima`: Bootstrap failed: 5
+
+Usually caused by stale launchd state or Colima already running manually.
+
+```bash
+colima stop
+launchctl bootout "gui/$(id -u)/homebrew.mxcl.colima" 2>/dev/null || true
+brew services start colima
+```
