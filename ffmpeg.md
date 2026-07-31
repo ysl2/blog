@@ -31,3 +31,9 @@ done
 ```bash
 ffmpeg -framerate 30 -pattern_type glob -i '*.png' output.gif
 ```
+
+## MOV to flac
+
+```bash
+ffmpeg -i IMG_9300.MOV -map 0:a:0 -vn -c:a flac IMG_9300.flac
+```
