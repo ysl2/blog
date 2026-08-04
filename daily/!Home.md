@@ -24,13 +24,14 @@
 | ------------------------------------------------------ | ------------------------------------ | -------------- | ---------- | ----------------------------------------------------------------- |
 | <https://glados.rocks>                                 |                                      | Y              | Y          | 速度快，只能季付年付                                              |
 | <https://wgetcloud.ltd>                                |                                      | Y              | Y          | 50/月                                                             |
-| <https://boostqz.com>                                  |                                      | Y              | Y          | 40/月，稳定，可claude                                             |
+| <https://999.boostqz.com>                              |                                      | Y              | Y          | 40/月，稳定，可claude                                             |
 | <https://final.riolu.icu>                              |                                      | Y              | Y          | 不能clash命令行使用                                               |
 | <https://erwanfind.net>                                |                                      | Y              | Y          | 13/月/50G，不好用，节点经常timeout，速度也慢，不能clash命令行使用 |
 | <https://www.dageyun.com> -> <https://aff02.dgy02.com> |                                      | Y              | Y          | 20/月/100G，速度还行，支持clash命令行使用                         |
 | <https://ppg.369.cyou>                                 |                                      | Y              | Y          |                                                                   |
 | <https://1100.gg>                                      |                                      | N              | Y          |                                                                   |
 | <https://一元机场.ink>                                 |                                      | N              | Y          |                                                                   |
+| <https://vpnuk.net>                                    |                                      | N              | Y          | 家宽, 英国UDP, 一个月9.9英镑                                      |
 | <https://一毛机场.com>                                 |                                      | N              |            |                                                                   |
 | <https://一分机场.com>                                 |                                      | Y              | Y          | 纯净度低，10000+ 人共用                                           |
 | <https://赔钱机场.com>                                 |                                      | N              |            |                                                                   |
