@@ -93,3 +93,12 @@ fast_mode = false
 [notice]
 fast_default_opt_out = true
 ```
+
+### Set environment variables for chatgpt app
+
+```toml
+# `~/.codex/config.toml`
+
+[shell_environment_policy.set]
+NO_PROXY = "localhost,127.0.0.1,::1"
+```
