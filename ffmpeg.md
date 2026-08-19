@@ -37,3 +37,12 @@ ffmpeg -framerate 30 -pattern_type glob -i '*.png' output.gif
 ```bash
 ffmpeg -i IMG_9300.MOV -map 0:a:0 -vn -c:a flac IMG_9300.flac
 ```
+
+## Compress video size (From H.264 to H.265)
+
+```bash
+# ffmpeg -i "input.mov" -c:v libx265 -crf 20 -c:a copy "output.mp4"
+
+# NOTE: For more compress efficiency, use this (the default crf is 28, lower is better quality but bigger file size):
+ffmpeg -i 'input.mov' -c:v libx265 -c:a copy 'output.mp4'
+```
