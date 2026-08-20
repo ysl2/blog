@@ -32,8 +32,9 @@
 | <https://1100.gg>                                      |                                      | N              | Y          |                                                                   |
 | <https://一元机场.ink>                                 |                                      | N              | Y          |                                                                   |
 | <https://vpnuk.net>                                    |                                      | N              | Y          | 家宽, 英国UDP, 一个月9.9英镑                                      |
-| <https://一毛机场.com>                                 |                                      | N              |            |                                                                   |
 | <https://一分机场.com>                                 |                                      | Y              | Y          | 纯净度低，10000+ 人共用                                           |
+| <https://love2.p6m6.com/>                              |                                      |                |            | 提供菲律宾节点, 可按量付费                                        |
+| <https://一毛机场.com>                                 |                                      | N              |            |                                                                   |
 | <https://赔钱机场.com>                                 |                                      | N              |            |                                                                   |
 | <https://jike0.com>                                    |                                      |                |            |                                                                   |
 | <https://ly.ccwink.art>                                |                                      |                |            |                                                                   |
