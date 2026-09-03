@@ -23,7 +23,9 @@ brew install anylinuxfs
 
    ```bash
    # Find device number
-   sudo anylinuxfs list
+   # NOTE: If you encnounter network issues, run `sudo su` first, then run with environment variables.
+   sudo su
+   HTTP_PROXY=127.0.0.1:7892 HTTPS_PROXY=127.0.0.1:7892 anylinuxfs list
    # Find the partition, e.g, disk4s2
 
    # Mount disk to the mount point above
