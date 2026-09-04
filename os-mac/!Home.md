@@ -38,6 +38,14 @@ defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
+```bash
+# Disable sleep mode
+sudo pmset -a disablesleep 1
+
+# Enable sleep mode
+sudo pmset -a disablesleep 0
+```
+
 <p><img src=".assets/!Home/img/2025-07-09-09-07-43.png" alt="" width=75% style="display: block; margin: auto;"></p>
 
 <p><img src=".assets/!Home/img/2025-07-09-13-49-23.png" alt="" width=75% style="display: block; margin: auto;"></p>
